@@ -1,13 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
     //= partials/head.html
-<body class="body wrapper">
+<body class="body">
     //= partials/header.html
     <main class="main">
-       <h1>We are
-        Kubernetes
-        experts!</h1>
+    <!-- First screen -->
+        <section class="section hero-section active-section" id="hero-section">
+            <div class="columns wrapper">
+                <div class="column-content hero-content">
+                    <h1 class="main-title hero-title"><span class="blue-text block-text">We are</span> Kubernetes <span class="blue-text block-text">experts!</span></h1>
+                    <p class="text hero-text">Containersised apps are small, extremely portable and they run on almost any underlying infrastructure, allowing you to rapidly expand IT operations to the cloud.</p>
+                    <a data-link="cloud" class="button hero-button blue-link link-button">Go cloud native</a>
+                </div>
+                <div class="hero-animation justify-end">
+                    <img src="../images/hero-animation-pic.png" alt="" class="plug-image">
+                </div>
+            </div>
+            <div class="partners-section">
+                <h4 class="partners-title wrapper">Trusted delivery partners of world leading enterprises</h4>
+                <div class="partners-slider">
+                    <div class="swiper-wrapper partners-slider-wrapper">
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#hsbc"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#abn-amro"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#gsk"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#dwp"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#tp-icap"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#metro-police"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image drax">
+                                    <use href="#drax"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- First screen end -->
+    <!-- Second screen -->
+        <section class="section" id="about-section">
+            <div class="about-section">
+                <div class="about-slider wrapper">
+                    <div class="swiper-wrapper about-slider-wrapper">
+                        <div class="swiper-slide about-slide half-screen">
+                            <div class="about-slide-content hero-content mt-0 column-content">
+                                <h4 class="main-title unuppercase">What is cloud native?</h4>
+                                <p class="text bold-text medium-size">In a nutshell, cloud native is containers on Kubernetes, running in someone elses data centre!</p>
+                                <div class="columns auto-height">
+                                    <div class="info-with-pic">
+                                        <svg class="info-pic">
+                                            <use href="#setup-icon"/>
+                                        </svg>
+                                        <p class="text bold-text info-text">Want to become agile, but don’t release software continuously?</p>
+                                    </div>
+                                    <div class="info-with-pic">
+                                        <svg class="info-pic tight-pic">
+                                            <use href="#safety-icon"/>
+                                        </svg>
+                                        <p class="text bold-text info-text">Want to reduce costs, but locked into legacy systems and process?</p>
+                                    </div>
+                                </div>
+                                <div class="multiple-text">
+                                    <p class="text big-text medium-text">
+                                        Docker was the first huge-scale open source project, a lightweight and portable platform, based on Linux containers.
+                                        Developers loved Docker, but didn’t have the first clue about operating containers in production.
+                                        This caused some serious headaches among early adopters!
+                                    </p>
+                                    <p class="text big-text medium-text">
+                                        Enter Kubernetes: the underlying architecture of the cloud. Kubernetes is the platform that orchestates containers, allowing scaled operations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide about-slide">
+                            <div class="videoplayer-wrapper">
+                                <img src="./images/video-player-pic.png" class="video-plug-pic" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide about-slide">
+                            <div class="columns">
+                                <div class="column-content">
+                                    <h4 class="main-title unuppercase">How does Codification help?</h4>
+                                    <div class="multiple-text">
+                                        <p class="text big-text medium-text">
+                                            We plan, design and build you a managed container platform and tooling, up-front, to requirements. This avoids the nasty suprise you’ll get doing it any other way!
+                                        </p>
+                                        <p class="text big-text medium-text">
+                                            Your manual security processes are replaced, as we automate everything, especially the codification of compliance and the deployment of infrastructure.
+                                        </p>
+                                        <p class="text big-text medium-text">
+                                            We’ll help you shift your governance models from waterfall to continuous delivery, and introduce site reliability engineering as a new discipline.
+                                        </p>
+                                        <p class="text big-text medium-text">
+                                            We’ll retrain your workforce in new and rapidly evolving tools and we pair with your engineers to establish best practices.
+                                        </p>
+                                        <p class="text big-text medium-text">
+                                            Don’t be afraid of other people’s data centres.
+                                        </p>
+                                    </div>
+                                    <a data-link="consultation" class="button hero-button blue-link big-button button-margin link-button">Schedule your free consultation with an expert today!</a>
+                                </div>
+                                <div class="about-animation hide-nets-background">
+                                    <img src="./images/about-animation-pic.png" alt="" class="plug-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar about-slider-scrollbar"></div>
+                    <div class="about-slider-navigation">
+                        <div class="about-slider-prev"></div>
+                        <div class="about-slider-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Second screen end -->
+    <div id="background-nets" class="background-nets"></div>
     </main>
+    //= images/svg.html
     //= partials/scripts.html
 </body>
 </html>

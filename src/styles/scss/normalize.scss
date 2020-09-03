@@ -10,6 +10,8 @@ p, input, span {
 }
 
 html, body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
@@ -23,8 +25,10 @@ html {
 }
 
 main {
-  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
   overflow: hidden;
+  height: 100%;
 }
 
 body {
@@ -42,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-weight: 900;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   font-size: 24px;
 }
 h2 {

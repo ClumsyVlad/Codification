@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 
 function images() {
-    return gulp.src('./src/imgs/*')
+    return gulp.src('./src/images/*')
         .pipe(imagemin([
             imagemin.mozjpeg({quality: 85, progressive: true}),
             imagemin.optipng({optimizationLevel: 6}),
@@ -25,7 +25,7 @@ function images() {
 };
 
 function htmlBuild() {
-    return gulp.src('./src/*.html')
+    return gulp.src('./src/**/*.html')
         .pipe(rigger())
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.stream())
@@ -33,7 +33,7 @@ function htmlBuild() {
 
 function scriptsBuild() {
     return gulp.src('./src/js/*.js')
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'))
         .pipe(browserSync.stream())
 };

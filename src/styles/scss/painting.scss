@@ -1,0 +1,24 @@
+// Mains
+.body {
+    background: radial-gradient(ellipse at top,#005190 5% ,#001029 85%);
+}
+// Buttons
+.button {
+    background-color: $blue;
+}
+.pink-button {
+    background-color: $pink;
+}
+// Links
+
+.active-link {
+    background-color: $pink;
+}
+
+// Images 
+.logo-image {
+    fill: $light;
+}
+.blue-text {
+    color: $blue;
+}
