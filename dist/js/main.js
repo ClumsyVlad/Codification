@@ -5,6 +5,7 @@ let svgObects = document.querySelectorAll('partners-slide__image');
 let svgUses = document.querySelectorAll('partners-slide__image use');
 let tabsList = document.querySelector('.about-tabs-pagination');
 let tabsLink = document.querySelectorAll('.about-tabs-logo');
+let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
 // svgUses.forEach((element) => setSizes());
 
 // function setSizes() {
@@ -122,6 +123,21 @@ let studySlider = new Swiper('.study-slider', {
         prevEl: '.study-slider-prev',
     },
 });
+let bootcampSlider = new Swiper('.bootcamp-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 250,
+    speed: 750,
+    scrollbar: {
+        el: '.bootcamp-slider-scrollbar',
+        hide: false,
+    },
+    navigation: {
+        nextEl: '.bootcamp-slider-next',
+        prevEl: '.bootcamp-slider-prev',
+    },
+});
+
+
 
 tabsLink[0].classList.add('active');
 tabsLink.forEach((link, i) => link.dataset.slide = i);
@@ -138,3 +154,4 @@ aboutTabs.on('slideChange', function (){
         tabsLink[aboutTabs.activeIndex].classList.add('active');
     });
 });
+
