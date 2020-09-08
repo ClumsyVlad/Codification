@@ -48,13 +48,13 @@
         </nav>
     </header>
     <main class="main">
-    <!-- Main screen -->
+    <!-- Main section -->
         <section class="section hero-section active-section" id="hero-section">
             <div class="columns wrapper">
                 <div class="column-content mt-l hero-content">
                     <h1 class="main-title hero-title"><span class="blue-text block-text">We are</span> Kubernetes <span class="blue-text block-text">experts!</span></h1>
                     <p class="text hero-text">Containersised apps are small, extremely portable and they run on almost any underlying infrastructure, allowing you to rapidly expand IT operations to the cloud.</p>
-                    <a data-link="cloud-section" class="button hero-button blue-link link-button">Go cloud native</a>
+                    <a data-link="cloud-section" class="button hero-button blue-link link-button button-margin">Go cloud native</a>
                 </div>
                 <div class="hero-animation justify-end">
                     <img src="../images/hero-animation-pic.png" alt="" class="plug-image">
@@ -201,9 +201,9 @@
                 </div>
             </div>
         </section>
-    <!-- Main screen end -->
+    <!-- Main section end -->
 
-    <!-- Cloud Native screen -->
+    <!-- Cloud Native section -->
         <section class="section" id="cloud-section">
             <div class="cloud-section">
                 <div class="cloud-slider wrapper slider">
@@ -288,7 +288,7 @@
                 </div>
             </div>
         </section>
-    <!-- Cloud Native screen end -->
+    <!-- Cloud Native section end -->
 
     <!-- Team section -->
     <section class="section wrapper" id="team-section">
@@ -355,7 +355,80 @@
     </section>
     <!-- Team section end -->
 
-    <!-- About screen -->
+    <!-- Workshop study section -->
+    <section class="section workshop-section" id="workshop-section">
+        <div class="columns wrapper">
+            <div class="column-content column-less-content justify-evenly h-75 mt-l">
+                <div class="column-content justify-start">
+                    <h4 class="main-title unuppercase">Dockerising a .NET app</h4>
+                    <div class="multiple-text">
+                        <p class="text big-text medium-text medium-text">
+                            Join an expert in this live session covering the basics of how to Dockerise a .NET application in under 30 minutes.
+                        </p>
+                        <p class="text big-text medium-text medium-text">
+                            There’s an opportunity to ask questions at the end.
+                        </p>
+                    </div>
+                </div>
+                <div class="workshop-timer">
+                    <h6 class="workshop-timer-header">VIDEO STREAM WILL START IN:</h6>
+                    <div class="workshop-timer-time">
+                        <div class="workshop-timer-time-units workshop-timer-time-days">
+                            <span class="time-number days-number">03</span>
+                            <span class="time-subtitle">Days</span>
+                        </div>
+                        <div class="workshop-timer-time-units workshop-timer-time-hours">
+                            <span class="time-number hours-number">16</span>
+                            <span class="time-subtitle">Hours</span>
+                        </div>
+                        <div class="workshop-timer-time-units workshop-timer-time-minutes">
+                            <span class="time-number minutes-number">59</span>
+                            <span class="time-subtitle">Minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column-content column-less-content justify-center">
+                <div class="contact-form-block">
+                    <h6 class="main-title form-title unuppercase">Save your seat</h6>
+                    <form method="POST" action="" name="workshop-contact-form" id="workshop-contact-form" class="contact-form">
+                        <input type="hidden" name="Codification.io" value="Workshop contact form"> 
+                        <!-- To name="ownermail" value set your email to get emails -->
+                        <input type="hidden" name="ownermail"  value="example@gmail.com">
+                        <input type="hidden" name="form_subject" value="Contact form from workshop section">
+                        <div class="form-item">
+                            <label for="email" class="form-label">Work Email</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="Work Email" required>
+                        </div>
+                        <div class="form-item">
+                            <label for="name" class="form-label">First Name</label>
+                            <input class="form-input" type="text" id="name" name="name" placeholder="First Name" required>
+                        </div>
+                        <div class="form-item">
+                            <label for="surname" class="form-label">Last Name</label>
+                            <input class="form-input" type="text" id="surname" name="surname" placeholder="Last Name">
+                        </div>
+                        <div class="form-item">
+                            <label for="job" class="form-label">Job Title</label>
+                            <input class="form-input" type="text" id="job" name="job" placeholder="Job Title">
+                        </div>
+                        <div class="form-item">
+                            <label for="company" class="form-label">Company Name</label>
+                            <input class="form-input" type="text" id="company" name="company" placeholder="Company Name">
+                        </div>
+                        <div class="form-item">
+                            <label for="tel" class="form-label">Telephone Number</label>
+                            <input class="form-input" type="tel" id="tel" name="tel" placeholder="Telephone Number">
+                        </div>
+                        <button type="submit" class="button blue-link link-button form-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Wrokshop section end -->
+
+    <!-- About section -->
     <section class="section" id="about-section">
         <div class="about-section">
             <div class="about-slider slider">
@@ -518,9 +591,9 @@
             </div>
         </div>
     </section>
-    <!-- About screen end -->
+    <!-- About section end -->
 
-    <!-- Case study screen -->
+    <!-- Case study section -->
     <section class="section study-section" id="study-section">
         <div class="study-slider slider">
             <div class="swiper-wrapper study-slider-wrapper">
@@ -567,7 +640,7 @@
                                         <p class="scheme-title block-text">Egress</p>
                                     </div>
                                 </div>
-                                <div class="row-content scheme-background dashed scheme-padding align-center justify-evenly h-100 shrink-0">
+                                <div class="row-content scheme-background dashed scheme-padding align-center justify-evenly h-100 shrink-0 big-scheme">
                                     <div class="column-content scheme-padding-small-right">
                                         <p class="scheme-title block-text">Tenant 1</p>
                                         <p class="scheme-title block-text">Tenant 2</p>
@@ -594,6 +667,30 @@
                                         <p class="scheme-blue-title block-text">Job</p>
                                         <p class="scheme-blue-title block-text">Job</p>
                                         <p class="scheme-title block-text">CronJob</p>
+                                    </div>
+                                    <div class="service-stack-block">
+                                        <div class="scheme-image-block">
+                                            <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                <use href="#service-stack"/>
+                                            </svg>
+                                            <p class="scheme-title"><span class="block-text">Kubernetes</span> Service</p>
+                                        </div>
+                                    </div>
+                                    <div class="sql-database-block">
+                                        <div class="scheme-image-block">
+                                            <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                <use href="#sql-cloud"/>
+                                            </svg>
+                                            <p class="scheme-title"><span class="block-text">SQL</span>Database</p>
+                                        </div>
+                                    </div>                                    
+                                    <div class="container-registry-block">
+                                        <div class="scheme-image-block">
+                                            <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                <use href="#cloud-container"/>
+                                            </svg>
+                                            <p class="scheme-title"><span class="block-text">Container</span>Registry</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -663,7 +760,7 @@
             </div>
         </div>
     </section>
-    <!-- Case study screen end -->
+    <!-- Case study section end -->
 
     <!-- Pricing section -->
     <section class="section wrapper pricing-section justify-start" id="pricing-section">

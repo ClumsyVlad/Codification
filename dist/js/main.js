@@ -17,6 +17,10 @@ body.addEventListener('click', function(event){
         sections.forEach((element) => {
             element.classList.remove('active-section');
         });
+        navLinks.forEach((element) => {
+            element.classList.remove('active-section-link');
+        });
+        event.target.classList.add('active-section-link');
         document.querySelector(`#${event.target.dataset.link}`).classList.add('active-section');
     } else if (!event.target.classList.contains('link-button')) {
         console.log('Работает не то');

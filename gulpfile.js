@@ -38,6 +38,12 @@ function scriptsBuild() {
         .pipe(browserSync.stream())
 };
 
+function fontsBuild() {
+    return gulp.src('./src/fonts/*.*')
+        .pipe(gulp.dest('./dist/fonts/'))
+        .pipe(browserSync.stream())
+};
+
 function sassBuild() {
     return gulp.src('./src/styles/scss/**/styles.scss') /* indicate where the .scss file is stored */
         .pipe(sass())
@@ -64,6 +70,7 @@ function watch () {
             baseDir: "./dist/"
         }
     })
+    gulp.watch ('./src/fonts/*.*', fontsBuild);
     gulp.watch ('./src/**/*.scss', series (sassBuild, prefixMin));
     gulp.watch ('./src/**/*.css', prefixMin);
     gulp.watch ('./src/**/*.html', htmlBuild);
@@ -91,7 +98,7 @@ exports.mediaBuild = series(images);
 exports.styleBuild = series (sassBuild, prefixMin);
 exports.build = series(images, htmlBuild, scriptsBuild, sassBuild, prefixMin);
 exports.watch = watch;
-exports.magic = series(images, htmlBuild, scriptsBuild, sassBuild, prefixMin, watch); 
+exports.magic = series(images, htmlBuild, scriptsBuild, fontsBuild, sassBuild, prefixMin, watch); 
 
 exports.cleangit = cleangit;
 exports.buildgit = buildgit;
