@@ -6,6 +6,7 @@ let svgUses = document.querySelectorAll('partners-slide__image use');
 let tabsList = document.querySelector('.about-tabs-pagination');
 let tabsLink = document.querySelectorAll('.about-tabs-logo');
 let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
+let numberOfPanels = panelsItems.length;
 // svgUses.forEach((element) => setSizes());
 
 // function setSizes() {
@@ -24,9 +25,9 @@ body.addEventListener('click', function(event){
         event.target.classList.add('active-section-link');
         document.querySelector(`#${event.target.dataset.link}`).classList.add('active-section');
     } else if (!event.target.classList.contains('link-button')) {
-        console.log('Работает не то');
+        // console.log('Работает не то');
     } else {
-        console.log('Не работает');
+        // console.log('Не работает');
     }
 });
 
@@ -127,6 +128,7 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
+    // allowTouchMove: false,
     scrollbar: {
         el: '.bootcamp-slider-scrollbar',
         hide: false,
@@ -155,3 +157,16 @@ aboutTabs.on('slideChange', function (){
     });
 });
 
+// if (bootcampSlider.activeIndex == 0) {
+//     for (var i = numberOfPanels; i >= 0; i--) {
+//         bootcampSlider.on('slideChangeTransitionStart', function (event) {   
+//             event.preventDefault;
+//             console.log('Работает for');
+//             console.log(i);
+//             bootcampSlider.slideTo(0, 0, false);
+//         }); 
+//     }
+//     console.log('Нулевой');
+// } else {
+//     console.log('Не нулевой');
+// };
