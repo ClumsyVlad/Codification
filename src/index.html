@@ -195,13 +195,15 @@
                             </div>
                         </div>
                         <div class="swiper-slide cloud-slide">
-                            <div class="videoplayer-wrapper">
-                                <img src="./images/video-player-pic.png" class="video-plug-pic" alt="">
+                            <div class="videoplayer-wrapper video-plug">
+                                <div class="video-player">
+                                    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="h9uv7XgP8Io"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide cloud-slide">
                             <div class="columns">
-                                <div class="column-content">
+                                <div class="column-content mt-l">
                                     <h4 class="main-title unuppercase">How does Codification help?</h4>
                                     <div class="multiple-text">
                                         <p class="text big-text medium-text">
@@ -222,8 +224,10 @@
                                     </div>
                                     <a data-link="consultation" class="button hero-button blue-link big-button button-margin link-button">Schedule your free consultation with an expert today!</a>
                                 </div>
-                                <div class="cloud-animation hide-nets-background">
-                                    <img src="./images/cloud-animation-pic.svg" alt="" class="plug-image">
+                                <div class="column-content mt-l">
+                                    <div class="cloud-animation hide-nets-background cloud-animation-object-block">
+                                        <img src="./images/cloud-animation-object.png" alt="" class="plug-image cloud-animation-object">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +252,7 @@
 
     <!-- Team section -->
     <section class="section wrapper" id="team-section">
-        <div class="team-section">
+        <div class="team-section mt-l">
             <h4 class="main-title unuppercase">Meet our team</h4>
             <div class="team-gallery-slider">
                 <div class="swiper-wrapper gallery-slider-wrapper">
@@ -317,7 +321,7 @@
             <div class="about-slider slider">
                 <div class="swiper-wrapper about-slider-wrapper">
                     <div class="swiper-slide about-slide">
-                        <div class="column-content">
+                        <div class="column-content mt-l">
                             <h4 class="main-title unuppercase wrapper">A brief history</h4>
                             <div class="about-progress-info wrapper">
                                 <div class="about-progress-info-item">
@@ -334,48 +338,6 @@
                                     <span class="small-info-header">2019 and beyond</span>
                                     <div class="progress-info-circle"></div>
                                     <p class="progress-info-text big-text medium-height">ABN AMRO, Total, GSK,  Met Police,  Intellectual Property Office, Esure, HMRC, Domino Printing Services, Drax and Cancer Research UK are now among the enteprises benefiting from our transformational services.</p>
-                                </div>
-                            </div>
-                            <div class="bottom-logo-slider aliance-section">
-                                <h4 class="bottom-logo-slider-title wrapper">Trusted delivery partners of world leading enterprises</h4>
-                                <div class="aliance-slider bottom-logo-slider-mask">
-                                    <div class="swiper-wrapper partners-slider-wrapper">
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#opencast"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#nuaware"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#trustack"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#valtech"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#containous"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -469,6 +431,48 @@
                         <svg class="nav-arrow arrow-right">
                             <use href="#nav-arrow"/>
                         </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-logo-slider aliance-section">
+                <h4 class="bottom-logo-slider-title wrapper">Trusted delivery partners of world leading enterprises</h4>
+                <div class="aliance-slider bottom-logo-slider-mask">
+                    <div class="swiper-wrapper partners-slider-wrapper">
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#opencast"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#nuaware"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#trustack"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#valtech"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#containous"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -675,11 +679,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <div class="column-content justify-start">
-                                <div class="hero-animation justify-end">
-                                    <img src="./images/bootcamp-hero.png" alt="" class="plug-image">
-                                </div>
+                            <div class="hero-animation justify-end">
+                                <img src="./images/bootcamp-hero.png" alt="" class="plug-image">
                             </div>
                         </div>
                     </div>

@@ -177,3 +177,10 @@ aboutTabs.on('slideChange', function (){
 //     }
 // });
 //  Конец
+
+
+// Video
+const player = new Plyr('#player', {});
+
+// Expose player so it can be used from the console
+window.player = player;

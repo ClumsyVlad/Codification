@@ -10,8 +10,14 @@ const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 
 function fontsBuild() {
-    return gulp.src('./src/fonts//*.*')
+    return gulp.src('./src/fonts/*.*')
         .pipe(gulp.dest('./dist/fonts/'))
+        .pipe(browserSync.stream())
+};
+
+function video() {
+    return gulp.src('./src/videos/*.*')
+        .pipe(gulp.dest('./dist/videos/'))
         .pipe(browserSync.stream())
 };
 
@@ -87,18 +93,20 @@ function buildgit () {
     return gulp.src('./dist/**/*.*')
         .pipe(gulp.dest('docs'));
 }
-
+exports.video = video;
+exports.fontsBuild = fontsBuild;
 exports.images = images;
 exports.htmlBuild = htmlBuild;
 exports.scriptsBuild = scriptsBuild;
 exports.sassBuild = sassBuild;
 exports.prefixMin = prefixMin;
 
+
 exports.mediaBuild = series(images);
 exports.styleBuild = series (sassBuild, prefixMin);
 exports.build = series(images, htmlBuild, scriptsBuild, sassBuild, prefixMin);
 exports.watch = watch;
-exports.magic = series(fontsBuild, htmlBuild, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
+exports.magic = series(fontsBuild, video, htmlBuild, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
 
 exports.cleangit = cleangit;
 exports.buildgit = buildgit;

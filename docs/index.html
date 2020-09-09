@@ -9,6 +9,7 @@
         <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#ff8a01">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/swiper.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/plyr@3/dist/plyr.css">
         <link rel="stylesheet" href="./css/styles.css">
     </head>
 <body class="body">
@@ -239,13 +240,15 @@
                             </div>
                         </div>
                         <div class="swiper-slide cloud-slide">
-                            <div class="videoplayer-wrapper">
-                                <img src="./images/video-player-pic.png" class="video-plug-pic" alt="">
+                            <div class="videoplayer-wrapper video-plug">
+                                <div class="video-player">
+                                    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="h9uv7XgP8Io"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide cloud-slide">
                             <div class="columns">
-                                <div class="column-content">
+                                <div class="column-content mt-l">
                                     <h4 class="main-title unuppercase">How does Codification help?</h4>
                                     <div class="multiple-text">
                                         <p class="text big-text medium-text">
@@ -266,8 +269,10 @@
                                     </div>
                                     <a data-link="consultation" class="button hero-button blue-link big-button button-margin link-button">Schedule your free consultation with an expert today!</a>
                                 </div>
-                                <div class="cloud-animation hide-nets-background">
-                                    <img src="./images/cloud-animation-pic.svg" alt="" class="plug-image">
+                                <div class="column-content mt-l">
+                                    <div class="cloud-animation hide-nets-background cloud-animation-object-block">
+                                        <img src="./images/cloud-animation-object.png" alt="" class="plug-image cloud-animation-object">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -292,7 +297,7 @@
 
     <!-- Team section -->
     <section class="section wrapper" id="team-section">
-        <div class="team-section">
+        <div class="team-section mt-l">
             <h4 class="main-title unuppercase">Meet our team</h4>
             <div class="team-gallery-slider">
                 <div class="swiper-wrapper gallery-slider-wrapper">
@@ -361,7 +366,7 @@
             <div class="about-slider slider">
                 <div class="swiper-wrapper about-slider-wrapper">
                     <div class="swiper-slide about-slide">
-                        <div class="column-content">
+                        <div class="column-content mt-l">
                             <h4 class="main-title unuppercase wrapper">A brief history</h4>
                             <div class="about-progress-info wrapper">
                                 <div class="about-progress-info-item">
@@ -378,48 +383,6 @@
                                     <span class="small-info-header">2019 and beyond</span>
                                     <div class="progress-info-circle"></div>
                                     <p class="progress-info-text big-text medium-height">ABN AMRO, Total, GSK,  Met Police,  Intellectual Property Office, Esure, HMRC, Domino Printing Services, Drax and Cancer Research UK are now among the enteprises benefiting from our transformational services.</p>
-                                </div>
-                            </div>
-                            <div class="bottom-logo-slider aliance-section">
-                                <h4 class="bottom-logo-slider-title wrapper">Trusted delivery partners of world leading enterprises</h4>
-                                <div class="aliance-slider bottom-logo-slider-mask">
-                                    <div class="swiper-wrapper partners-slider-wrapper">
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#opencast"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#nuaware"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#trustack"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#valtech"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide partners-slide">
-                                            <div class="partners-slide__image-container">
-                                                <svg class="partners-slide__image">
-                                                    <use href="#containous"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -513,6 +476,48 @@
                         <svg class="nav-arrow arrow-right">
                             <use href="#nav-arrow"/>
                         </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-logo-slider aliance-section">
+                <h4 class="bottom-logo-slider-title wrapper">Trusted delivery partners of world leading enterprises</h4>
+                <div class="aliance-slider bottom-logo-slider-mask">
+                    <div class="swiper-wrapper partners-slider-wrapper">
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#opencast"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#nuaware"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#trustack"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#valtech"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-slide partners-slide">
+                            <div class="partners-slide__image-container">
+                                <svg class="partners-slide__image">
+                                    <use href="#containous"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -719,11 +724,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <div class="column-content justify-start">
-                                <div class="hero-animation justify-end">
-                                    <img src="./images/bootcamp-hero.png" alt="" class="plug-image">
-                                </div>
+                            <div class="hero-animation justify-end">
+                                <img src="./images/bootcamp-hero.png" alt="" class="plug-image">
                             </div>
                         </div>
                     </div>
@@ -4112,14 +4114,33 @@
             </radialGradient>
             </defs>          
         </symbol>
+    
+        <symbol id="video-play" viewBox="0 0 168 168">
+            <g>
+                <g filter="url(#filter0_b)">
+                <circle cx="83.9069" cy="84.4753" r="82.4948" stroke="white" stroke-width="2"/>
+                </g>
+                <path d="M104.299 81.6968L69.8145 61.4373C67.0127 59.792 62.7217 61.3886 62.7217 65.458V105.967C62.7217 109.618 66.709 111.818 69.8145 109.988L104.299 89.7383C107.375 87.9372 107.385 83.4979 104.299 81.6968Z" fill="white"/>
+                <defs>
+                <filter id="filter0_b" x="-1.58789" y="-1.01953" width="170.99" height="170.99" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feGaussianBlur in="BackgroundImage" stdDeviation="1"/>
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+                </filter>
+                </defs>                
+            </g>           
+        </symbol>
     </svg>
     <!-- Scripts libs -->
         <script src="./js/swiper.min.js"></script>
         <!-- Project scripts -->
-        <script src="./js/main.js"></script>
+        <!-- <script src="./js/videojs.min.js"></script> -->
+        <script src="https://unpkg.com/plyr@3.6.2/dist/plyr.min.js"></script>
         <script src="./js/three-nets.min.js"></script>
         <script src="./js/nets-param.min.js"></script>
         <script src="./js/nets-initialization.js"></script>
+        <script src="./js/main.js"></script>
         <!-- Project scripts end-->
     <!-- End of scripts libs -->
 </body>
