@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "lcd";
-  src: url("../fonts/lcd.otf") format(opentype);
+  font-family: 'lcd';
+  src: url("./css/fonts/lcd.woff2") format(woff2), url("./css/fonts/lcd.otf") format(opentype);
   font-weight: normal;
   font-style: normal; }
 
@@ -747,7 +747,7 @@ input {
       flex-direction: column;
       align-items: center; }
       .workshop-timer .workshop-timer-time .workshop-timer-time-units .time-number {
-        font-family: "lcd", sans-serif;
+        font-family: 'lcd', sans-serif;
         font-size: 120px;
         position: relative; }
         .workshop-timer .workshop-timer-time .workshop-timer-time-units .time-number:before {

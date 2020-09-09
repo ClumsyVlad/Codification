@@ -7,6 +7,8 @@ let tabsList = document.querySelector('.about-tabs-pagination');
 let tabsLink = document.querySelectorAll('.about-tabs-logo');
 let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
 let numberOfPanels = panelsItems.length;
+let panelsActive = document.querySelectorAll('.bootcamp-section .panel-item.active-panel');
+let numberOfActive = panelsActive.length;
 // svgUses.forEach((element) => setSizes());
 
 // function setSizes() {
@@ -128,7 +130,7 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
-    // allowTouchMove: false,
+    allowTouchMove: false,
     scrollbar: {
         el: '.bootcamp-slider-scrollbar',
         hide: false,
@@ -157,16 +159,22 @@ aboutTabs.on('slideChange', function (){
     });
 });
 
-// if (bootcampSlider.activeIndex == 0) {
-//     for (var i = numberOfPanels; i >= 0; i--) {
-//         bootcampSlider.on('slideChangeTransitionStart', function (event) {   
-//             event.preventDefault;
-//             console.log('Работает for');
-//             console.log(i);
-//             bootcampSlider.slideTo(0, 0, false);
-//         }); 
+// Здесь начало
+// bootcampSlider.on('slideChangeTransitionStart', function (event) {
+//     if (numberOfActive < numberOfPanels) {
+//         for (var i = numberOfActive; i = numberOfPanels; i++) {
+//             bootcampSlider.slideTo(0, 0, true);
+            
+//             let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
+//             let numberOfPanels = panelsItems.length;
+//             let panelsActive = document.querySelectorAll('.bootcamp-section .panel-item.active-panel');
+//             let numberOfActive = panelsActive.length;
+//             panelsItems[i-1].classList.add('active-panel');
+//             console.log(numberOfActive + '/' + numberOfPanels);
+//         }
+//         bootcampSlider.slideTo(bootcampSlider.activeIndex+1, 750, true);
+//     } else {
+//         console.log("work't");
 //     }
-//     console.log('Нулевой');
-// } else {
-//     console.log('Не нулевой');
-// };
+// });
+//  Конец

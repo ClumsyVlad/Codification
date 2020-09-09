@@ -9,6 +9,12 @@ const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 
+function fontsBuild() {
+    return gulp.src('./src/styles/css/fonts/*.*')
+        .pipe(gulp.dest('./dist/css/fonts/'))
+        .pipe(browserSync.stream())
+};
+
 function images() {
     return gulp.src('./src/images/*')
         .pipe(imagemin([
@@ -35,12 +41,6 @@ function scriptsBuild() {
     return gulp.src('./src/js/*.js')
         // .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'))
-        .pipe(browserSync.stream())
-};
-
-function fontsBuild() {
-    return gulp.src('./src/fonts/*.*')
-        .pipe(gulp.dest('./dist/fonts/'))
         .pipe(browserSync.stream())
 };
 
@@ -98,8 +98,8 @@ exports.mediaBuild = series(images);
 exports.styleBuild = series (sassBuild, prefixMin);
 exports.build = series(images, htmlBuild, scriptsBuild, sassBuild, prefixMin);
 exports.watch = watch;
-exports.magic = series(images, htmlBuild, scriptsBuild, fontsBuild, sassBuild, prefixMin, watch); 
+exports.magic = series(fontsBuild, htmlBuild, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
 
 exports.cleangit = cleangit;
 exports.buildgit = buildgit;
-exports.demogit = series(cleangit, buildgit); /*Clean dist folder and build new folder for publishing*/
+exports.demogit = series(cleangit, images, buildgit); /*Clean dist folder and build new folder for publishing*/
