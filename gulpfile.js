@@ -10,8 +10,8 @@ const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 
 function fontsBuild() {
-    return gulp.src('./src/styles/css/fonts/*.*')
-        .pipe(gulp.dest('./dist/css/fonts/'))
+    return gulp.src('./src/fonts//*.*')
+        .pipe(gulp.dest('./dist/fonts/'))
         .pipe(browserSync.stream())
 };
 

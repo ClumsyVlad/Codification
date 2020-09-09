@@ -670,14 +670,14 @@
             align-items: center;
 
             .time-number {
-                font-family: 'lcd', sans-serif;
+                font-family: "lcd", sans-serif;
                 font-size: 120px;
                 position: relative;
 
                 &:before {
                     content: '88';
                     position: absolute;
-                    color: transparentize($color: $light, $amount: 0.8);
+                    color: transparentize($color: $light, $amount: 1);
                     top: 0;
                     left: 0;
                 }
@@ -965,6 +965,18 @@
         opacity: 0;
     }
 }
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) .panel-object {
+    animation: showpanel 1s linear;
+}
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) .panel-object {
+    animation: showpanel 1.5s linear;
+}
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) .panel-object {
+    animation: showpanel 2s linear;
+}
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) .panel-object {
+    animation: showpanel 2.5s linear;
+}
 .panel-item:nth-child(1) .panel-object {
     z-index: 25;
 }
@@ -977,6 +989,7 @@
 .panel-item:nth-child(4) .panel-object {
     z-index: 22;
 }
+/* example */
 .panel-item:nth-child(5) .panel-object {
     z-index: 21;
 }

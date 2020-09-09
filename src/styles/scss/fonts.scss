@@ -1,9 +1,7 @@
 @font-face {
-    font-family: 'lcd';
-    src: url("./fonts/lcd.woff2") format(woff2),
-        url("./fonts/lcd.otf") format(opentype);
-    // url("../fonts/lcd.woff2") format(woff2),
-    // src: url('../fonts/lcd.woff2') format(woff2),
+    font-family: "lcd";
+    src: url("../fonts/lcd.woff2") format('woff2'),
+        url("../fonts/lcd.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }

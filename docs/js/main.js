@@ -5,10 +5,10 @@ let svgObects = document.querySelectorAll('partners-slide__image');
 let svgUses = document.querySelectorAll('partners-slide__image use');
 let tabsList = document.querySelector('.about-tabs-pagination');
 let tabsLink = document.querySelectorAll('.about-tabs-logo');
-let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
-let numberOfPanels = panelsItems.length;
-let panelsActive = document.querySelectorAll('.bootcamp-section .panel-item.active-panel');
-let numberOfActive = panelsActive.length;
+// let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
+// let numberOfPanels = panelsItems.length;
+// let panelsActive = document.querySelectorAll('.bootcamp-section .panel-item.active-panel');
+// let numberOfActive = panelsActive.length;
 // svgUses.forEach((element) => setSizes());
 
 // function setSizes() {
@@ -130,7 +130,6 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
-    allowTouchMove: false,
     scrollbar: {
         el: '.bootcamp-slider-scrollbar',
         hide: false,
