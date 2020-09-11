@@ -11,53 +11,53 @@
 
 /* Panels animation */
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) {
-    animation: hidepanelitem 1s linear;
+    animation: hidepanelitem 0.5s linear;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) {
-    animation: hidepanelitem 2s linear;
+    animation: hidepanelitem 1s linear;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) {
-    animation: hidepanelitem 3s linear;
+    animation: hidepanelitem 1.5s linear;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) {
-    animation: hidepanelitem 4s linear;
+    animation: hidepanelitem 2s linear;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) .panel-object {
-    animation: showpanelitem 1s ease;
-    animation-delay: 1s;
+    animation: showpanelitem 0.5s ease;
+    animation-delay: 0.5s;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) .panel-object {
-    animation: showpanelitem 1s ease;
-    animation-delay: 2s;
+    animation: showpanelitem 0.5s ease;
+    animation-delay: 1s;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) .panel-object {
-    animation: showpanelitem 1s ease;
-    animation-delay: 3s;
+    animation: showpanelitem 0.5s ease;
+    animation-delay: 1.5s;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) .panel-object {
-    animation: showpanelitem 1s ease;
-    animation-delay: 4s;
+    animation: showpanelitem 0.5s ease;
+    animation-delay: 2s;
 }
 
 .bootcamp-section.active-section .swiper-slide-active .panel-item .panel-square {
 
     &:before {
-        animation: showpaneldot 5.5s linear;
+        animation: showpaneldot 2.5s linear;
     }
     &:after {
-        animation: showpanelline 6s linear;
+        animation: showpanelline 3s linear;
     }
 }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) .panel-description {
-    animation: showpaneldescription 7.5s linear;
-}
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) .panel-description {
-    animation: showpaneldescription 7s linear;
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) .panel-description {
+    animation: showpaneldescription 5s linear;
 }
 .bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) .panel-description {
-    animation: showpaneldescription 6.5s linear;
+    animation: showpaneldescription 4.5s linear;
 }
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) .panel-description {
-    animation: showpaneldescription 6s linear;
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) .panel-description {
+    animation: showpaneldescription 4s linear;
+}
+.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) .panel-description {
+    animation: showpaneldescription 3.5s linear;
 }

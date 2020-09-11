@@ -159,23 +159,15 @@ aboutTabs.on('slideChange', function (){
 });
 
 // Здесь начало
-// bootcampSlider.on('slideChangeTransitionStart', function (event) {
-//     if (numberOfActive < numberOfPanels) {
-//         for (var i = numberOfActive; i = numberOfPanels; i++) {
-//             bootcampSlider.slideTo(0, 0, true);
-            
-//             let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
-//             let numberOfPanels = panelsItems.length;
-//             let panelsActive = document.querySelectorAll('.bootcamp-section .panel-item.active-panel');
-//             let numberOfActive = panelsActive.length;
-//             panelsItems[i-1].classList.add('active-panel');
-//             console.log(numberOfActive + '/' + numberOfPanels);
-//         }
-//         bootcampSlider.slideTo(bootcampSlider.activeIndex+1, 750, true);
-//     } else {
-//         console.log("work't");
-//     }
-// });
+bootcampSlider.on('slideChangeTransitionStart', function (event) {
+    if (document.querySelector('.swiper-slide-active.bootcamp-slide.show-hero')) {
+        document.querySelector('.superhero-block').classList.add('show-hero');
+        console.log('work');
+    } else {
+        document.querySelector('.superhero-block').classList.remove('show-hero');
+        console.log('worknt');
+    }
+});
 //  Конец
 
 

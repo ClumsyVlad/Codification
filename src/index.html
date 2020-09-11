@@ -7,7 +7,7 @@
     <!-- Main section -->
         <section class="section hero-section active-section" id="hero-section">
             <div class="columns wrapper">
-                <div class="column-content mt-l hero-content">
+                <div class="column-content mt-l">
                     <h1 class="main-title hero-title"><span class="blue-text block-text">We are</span> Kubernetes <span class="blue-text block-text">experts!</span></h1>
                     <p class="text hero-text">Containersised apps are small, extremely portable and they run on almost any underlying infrastructure, allowing you to rapidly expand IT operations to the cloud.</p>
                     <a data-link="cloud-section" class="button hero-button blue-link link-button button-margin">Go cloud native</a>
@@ -16,8 +16,8 @@
                     <img src="./images/hero-animation-pic.png" alt="" class="plug-image">
                 </div>
             </div>
-            <div class="bottom-logo-slider partners-section">
-                <h4 class="bottom-logo-slider-title wrapper">Trusted delivery partners of world leading enterprises</h4>
+            <div class="bottom-logo-slider partners-section wrapper">
+                <h4 class="bottom-logo-slider-title">Trusted delivery partners of world leading enterprises</h4>
                 <div class="partners-slider bottom-logo-slider-mask">
                     <div class="swiper-wrapper partners-slider-wrapper">
                         <div class="swiper-slide partners-slide">
@@ -165,7 +165,7 @@
                 <div class="cloud-slider wrapper slider">
                     <div class="swiper-wrapper cloud-slider-wrapper">
                         <div class="swiper-slide cloud-slide half-screen">
-                            <div class="cloud-slide-content hero-content mt-0 column-content">
+                            <div class="cloud-slide-content column-content">
                                 <h4 class="main-title unuppercase">What is cloud native?</h4>
                                 <p class="text bold-text medium-size">In a nutshell, cloud native is containers on Kubernetes, running in someone elses data centre!</p>
                                 <div class="columns auto-height">
@@ -197,7 +197,7 @@
                         <div class="swiper-slide cloud-slide">
                             <div class="videoplayer-wrapper video-plug">
                                 <div class="video-player">
-                                    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="h9uv7XgP8Io"></div>
+                                    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="goSv_7-aFTo"></div>
                                 </div>
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                                             Don’t be afraid of other people’s data centres.
                                         </p>
                                     </div>
-                                    <a data-link="consultation" class="button hero-button blue-link big-button button-margin link-button">Schedule your free consultation with an expert today!</a>
+                                    <a data-link="consultation" class="button hero-button blue-link big-button button-margin link-button free-button">Schedule your free consultation with an expert today!</a>
                                 </div>
                                 <div class="column-content mt-l">
                                     <div class="cloud-animation hide-nets-background cloud-animation-object-block">
@@ -254,7 +254,7 @@
     <section class="section wrapper" id="team-section">
         <div class="team-section mt-l">
             <h4 class="main-title unuppercase">Meet our team</h4>
-            <div class="team-gallery-slider">
+            <div class="team-gallery-slider slider">
                 <div class="swiper-wrapper gallery-slider-wrapper">
                     <div class="swiper-slide gallery-slide gallery-parallax">
                         <img src="./images/default-male-teammate.png" class="gallery-image gallery-parallax-back" alt="">
@@ -344,7 +344,7 @@
                     </div>
                     <div class="swiper-slide about-slide">
                         <div class="columns wrapper">
-                            <div class="column-content mt-l about-tabs-column">
+                            <div class="column-content about-tabs-column">
                                 <h4 class="main-title unuppercase">How do we do it?</h4>
                                 <div class="multiple-text">
                                     <p class="text big-text medium-text medium-size">
@@ -434,8 +434,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom-logo-slider aliance-section">
-                <h4 class="bottom-logo-slider-title wrapper">Trusted delivery partners of world leading enterprises</h4>
+            <div class="bottom-logo-slider aliance-section wrapper">
+                <h4 class="bottom-logo-slider-title">Trusted delivery partners of world leading enterprises</h4>
                 <div class="aliance-slider bottom-logo-slider-mask">
                     <div class="swiper-wrapper partners-slider-wrapper">
                         <div class="swiper-slide partners-slide">
@@ -480,10 +480,10 @@
     </section>
     <!-- About section end -->
 
-    <!-- Workshop study section -->
+    <!-- Workshop section -->
     <section class="section workshop-section" id="workshop-section">
         <div class="columns wrapper">
-            <div class="column-content column-less-content justify-evenly h-75 mt-l">
+            <div class="column-content column-less-content justify-evenly">
                 <div class="column-content justify-start">
                     <h4 class="main-title unuppercase">Dockerising a .NET app</h4>
                     <div class="multiple-text">
@@ -522,28 +522,40 @@
                         <input type="hidden" name="ownermail"  value="example@gmail.com">
                         <input type="hidden" name="form_subject" value="Contact form from workshop section">
                         <div class="form-item">
-                            <label for="email" class="form-label">Work Email</label>
-                            <input class="form-input" type="email" id="email" name="email" placeholder="Work Email" required>
+                            <label for="email" class="form-label">
+                                <input class="form-input" type="email" id="email" name="email" placeholder="Work Email" required>
+                                <span class="form-placeholder">Work Email</span>
+                            </label>
                         </div>
                         <div class="form-item">
-                            <label for="name" class="form-label">First Name</label>
-                            <input class="form-input" type="text" id="name" name="name" placeholder="First Name" required>
+                            <label for="name" class="form-label">
+                                <input class="form-input" type="text" id="name" name="name" placeholder="First Name" required>
+                                <span class="form-placeholder">First Name</span>
+                            </label>
                         </div>
                         <div class="form-item">
-                            <label for="surname" class="form-label">Last Name</label>
-                            <input class="form-input" type="text" id="surname" name="surname" placeholder="Last Name">
+                            <label for="surname" class="form-label">
+                                <input class="form-input" type="text" id="surname" name="surname" placeholder="Last Name">
+                                <span class="form-placeholder">Last Name</span>
+                            </label>
                         </div>
                         <div class="form-item">
-                            <label for="job" class="form-label">Job Title</label>
-                            <input class="form-input" type="text" id="job" name="job" placeholder="Job Title">
+                            <label for="job" class="form-label">
+                                <input class="form-input" type="text" id="job" name="job" placeholder="Job Title">
+                                <span class="form-placeholder">Job Title</span>
+                            </label>
                         </div>
                         <div class="form-item">
-                            <label for="company" class="form-label">Company Name</label>
-                            <input class="form-input" type="text" id="company" name="company" placeholder="Company Name">
+                            <label for="company" class="form-label">
+                                <input class="form-input" type="text" id="company" name="company" placeholder="Company Name">
+                                <span class="form-placeholder">Company Name</span>
+                            </label>
                         </div>
                         <div class="form-item">
-                            <label for="tel" class="form-label">Telephone Number</label>
-                            <input class="form-input" type="tel" id="tel" name="tel" placeholder="Telephone Number">
+                            <label for="tel" class="form-label">
+                                <input class="form-input" type="tel" id="tel" name="tel" placeholder="Telephone Number">
+                                <span class="form-placeholder">Telephone Number</span>
+                            </label>
                         </div>
                         <button type="submit" class="button blue-link link-button form-button">Submit</button>
                     </form>
@@ -555,251 +567,303 @@
 
     <!-- Bootcamp section -->
     <section class="section bootcamp-section" id="bootcamp-section">
-        <div class="bootcamp-slider slider">
-            <div class="swiper-wrapper bootcamp-slider-wrapper">
-                <div class="swiper-slide bootcamp-slide bootcamp-steps-slide">
-                    <div class="columns wrapper">
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <h4 class="main-title unuppercase">The cloud native bootcamp</h4>
-                            <div class="column-content justify-start">
-                                <p class="text bold-text medium-size subtitle">
-                                    We’re seeking fast learners that can code.
-                                </p>
-                                <div class="multiple-text">
-                                    <p class="text big-text medium-text medium-text">
-                                        Do you want to be part of a rapidly growing startup and get to work on the hottest stack in the IT industry? 
+        <div class="columns wrapper">
+            <div class="bootcamp-slider slider">
+                <div class="swiper-wrapper bootcamp-slider-wrapper">
+                    <div class="swiper-slide bootcamp-slide bootcamp-steps-slide">
+                        <div class="columns wrapper">
+                            <div class="column-content column-less-content justify-start">
+                                <h4 class="main-title unuppercase">The cloud native bootcamp</h4>
+                                <div class="column-content justify-start">
+                                    <p class="text bold-text medium-size subtitle">
+                                        We’re seeking fast learners that can code.
                                     </p>
-                                    <p class="text big-text medium-text medium-text">
-                                        We’re inviting the best of promising engineering talent to our in-house developed training and recruitment programme: the cloud native bootcamp.
-                                    </p>
+                                    <div class="multiple-text">
+                                        <p class="text big-text medium-text medium-text">
+                                            Do you want to be part of a rapidly growing startup and get to work on the hottest stack in the IT industry? 
+                                        </p>
+                                        <p class="text big-text medium-text medium-text">
+                                            We’re inviting the best of promising engineering talent to our in-house developed training and recruitment programme: the cloud native bootcamp.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column-content justify-center align-end panels-section">
-                            <div class="panel-block">
-                                <span class="panel-header">Tools you’ll master:</span>
-                                <div class="panels-items-block">
-                                    <div class="panel-item active-panel subactive-panel">
-                                        <div class="panel-square">
-                                            <svg class="panel-object">
-                                                <use href="#orange-panel"/>
-                                            </svg>
-                                            <span class="panel-item-name">Kubernetes</span>
+                            <div class="column-content justify-center align-end panels-section">
+                                <div class="panel-block">
+                                    <span class="panel-header">Tools you’ll master:</span>
+                                    <div class="panels-items-block">
+                                        <div class="panel-item active-panel subactive-panel">
+                                            <div class="panel-square">
+                                                <svg class="panel-object">
+                                                    <use href="#orange-panel"/>
+                                                </svg>
+                                                <span class="panel-item-name">Kubernetes</span>
+                                            </div>
+                                            <div class="panel-description">
+                                                <svg class="partners-slide__image">
+                                                    <use href="#kubernetes"/>
+                                                </svg>
+                                                <p class="panel-text">
+                                                    <span class="panel-text-header">
+                                                        Kubernetes: 
+                                                    </span>
+                                                    A system for automating deployment, scaling, and management of containerised applications.
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="panel-description">
-                                            <svg class="partners-slide__image">
-                                                <use href="#kubernetes"/>
-                                            </svg>
-                                            <p class="panel-text">
-                                                <span class="panel-text-header">
-                                                    Kubernetes: 
-                                                </span>
-                                                A system for automating deployment, scaling, and management of containerised applications.
-                                            </p>
+                                        <div class="panel-item active-panel subactive-panel">
+                                            <div class="panel-square">
+                                                <svg class="panel-object">
+                                                    <use href="#pink-panel"/>
+                                                </svg>
+                                                <span class="panel-item-name">Helm</span>
+                                            </div>
+                                            <div class="panel-description">
+                                                <svg class="partners-slide__image">
+                                                    <use href="#helm"/>
+                                                </svg>
+                                                <p class="panel-text">
+                                                    <span class="panel-text-header">
+                                                        Helm: 
+                                                    </span>
+                                                    The Kubernetes package manager.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="panel-item active-panel subactive-panel">
-                                        <div class="panel-square">
-                                            <svg class="panel-object">
-                                                <use href="#pink-panel"/>
-                                            </svg>
-                                            <span class="panel-item-name">Helm</span>
+                                        <div class="panel-item active-panel subactive-panel">
+                                            <div class="panel-square">
+                                                <svg class="panel-object">
+                                                    <use href="#purple-panel"/>
+                                                </svg>
+                                                <span class="panel-item-name">Terraform</span>
+                                            </div>
+                                            <div class="panel-description">
+                                                <svg class="partners-slide__image">
+                                                    <use href="#terraform"/>
+                                                </svg>
+                                                <p class="panel-text">
+                                                    <span class="panel-text-header">
+                                                        Terraform:  
+                                                    </span>
+                                                    Codifies APIs into declarative configuration that can be shared and treated as code.
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="panel-description">
-                                            <svg class="partners-slide__image">
-                                                <use href="#helm"/>
-                                            </svg>
-                                            <p class="panel-text">
-                                                <span class="panel-text-header">
-                                                    Helm: 
-                                                </span>
-                                                The Kubernetes package manager.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="panel-item active-panel subactive-panel">
-                                        <div class="panel-square">
-                                            <svg class="panel-object">
-                                                <use href="#purple-panel"/>
-                                            </svg>
-                                            <span class="panel-item-name">Terraform</span>
-                                        </div>
-                                        <div class="panel-description">
-                                            <svg class="partners-slide__image">
-                                                <use href="#terraform"/>
-                                            </svg>
-                                            <p class="panel-text">
-                                                <span class="panel-text-header">
-                                                    Terraform:  
-                                                </span>
-                                                Codifies APIs into declarative configuration that can be shared and treated as code.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="panel-item active-panel subactive-panel">
-                                        <div class="panel-square">
-                                            <svg class="panel-object">
-                                                <use href="#blue-panel"/>
-                                            </svg>
-                                            <span class="panel-item-name">Azure DevOps</span>
-                                        </div>
-                                        <div class="panel-description">
-                                            <svg class="partners-slide__image">
-                                                <use href="#alpha"/>
-                                            </svg>
-                                            <p class="panel-text">
-                                                <span class="panel-text-header">
-                                                    Azure DevOps: 
-                                                </span>
-                                                CI/CD for any platform and cloud.
-                                            </p>
+                                        <div class="panel-item active-panel subactive-panel">
+                                            <div class="panel-square">
+                                                <svg class="panel-object">
+                                                    <use href="#blue-panel"/>
+                                                </svg>
+                                                <span class="panel-item-name">Azure DevOps</span>
+                                            </div>
+                                            <div class="panel-description">
+                                                <svg class="partners-slide__image">
+                                                    <use href="#alpha"/>
+                                                </svg>
+                                                <p class="panel-text">
+                                                    <span class="panel-text-header">
+                                                        Azure DevOps: 
+                                                    </span>
+                                                    CI/CD for any platform and cloud.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide bootcamp-slide">
-                    <div class="columns wrapper">
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <h4 class="main-title unuppercase">Cloud native bootcamp</h4>
-                            <div class="column-content justify-start">
-                                <p class="text bold-text medium-size subtitle">
-                                    How does it work?
-                                </p>
-                                <div class="multiple-text">
-                                    <p class="text big-text medium-text medium-text">
-                                        You’ll pair with a training partner and be mentored by one of our senior professionals. The bootcamp is fully remote, and you’ll take part from the comfort of your home office.
+                    <div class="swiper-slide bootcamp-slide show-hero">
+                        <div class="columns wrapper">
+                            <div class="column-content column-less-content justify-start">
+                                <h4 class="main-title unuppercase">Cloud native bootcamp</h4>
+                                <div class="column-content justify-start">
+                                    <p class="text bold-text medium-size subtitle">
+                                        How does it work?
                                     </p>
-                                    <p class="text big-text medium-text medium-text">
-                                        On average, it takes five weeks to complete the bootcamp. Along the way we’ll get to know you, you’ll get to know us, and we’ll help you discover what you really want out of your career in software engineering.    
-                                    </p>
-                                    <a data-link="book-consultation" class="button hero-button link-button button-margin">Enquire</a>
+                                    <div class="multiple-text">
+                                        <p class="text big-text medium-text medium-text">
+                                            You’ll pair with a training partner and be mentored by one of our senior professionals. The bootcamp is fully remote, and you’ll take part from the comfort of your home office.
+                                        </p>
+                                        <p class="text big-text medium-text medium-text">
+                                            On average, it takes five weeks to complete the bootcamp. Along the way we’ll get to know you, you’ll get to know us, and we’ll help you discover what you really want out of your career in software engineering.    
+                                        </p>
+                                        <a data-link="book-consultation" class="button hero-button link-button button-margin">Enquire</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                            <div class="hero-animation justify-end">
-                                <img src="./images/bootcamp-hero.png" alt="" class="plug-image">
+                                <div class="hero-animation justify-end"></div>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-scrollbar bootcamp-slider-scrollbar default-slider-scrollbar"></div>
+                </div>
+                <div class="bootcamp-slider-navigation default-slider-navigation">
+                    <div class="bootcamp-slider-prev default-slider-prev">
+                        <svg class="nav-arrow arrow-left">
+                            <use href="#nav-arrow"/>
+                        </svg>
+                    </div>
+                    <div class="bootcamp-slider-next default-slider-next">
+                        <svg class="nav-arrow arrow-right">
+                            <use href="#nav-arrow"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-scrollbar bootcamp-slider-scrollbar default-slider-scrollbar"></div>
-            <div class="bootcamp-slider-navigation default-slider-navigation">
-                <div class="bootcamp-slider-prev default-slider-prev">
-                    <svg class="nav-arrow arrow-left">
-                        <use href="#nav-arrow"/>
-                    </svg>
-                </div>
-                <div class="bootcamp-slider-next default-slider-next">
-                    <svg class="nav-arrow arrow-right">
-                        <use href="#nav-arrow"/>
-                    </svg>
-                </div>
-            </div>
+        </div>
+        <div class="superhero-block justify-end">
+            <img src="./images/bootcamp-hero.png" alt="" class="plug-image">
         </div>
     </section>
     <!-- Bootcamp section end -->
 
     <!-- Case study section -->
-    <section class="section study-section" id="study-section">
-        <div class="study-slider slider">
-            <div class="swiper-wrapper study-slider-wrapper">
-                <div class="swiper-slide study-slide">
-                    <div class="columns wrapper">
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <h4 class="main-title unuppercase">Containering a Microsoft legacy for the UK Government</h4>
-                            <div class="column-content justify-start">
-                                <p class="text bold-text medium-size subtitle">
-                                    Case study
-                                </p>
-                                <div class="multiple-text">
-                                    <p class="text big-text medium-text medium-text">
-                                        This customer needed .NET apps to be shifted to the cloud to complete a data centre obsolesence programme.
+    <section class="section" id="study-section">
+        <div class="study-section">
+            <div class="study-slider slider">
+                <div class="swiper-wrapper study-slider-wrapper">
+                    <div class="swiper-slide study-slide">
+                        <div class="columns wrapper">
+                            <div class="column-content column-less-content justify-start mt-l">
+                                <h4 class="main-title unuppercase">Containering a Microsoft legacy for the UK Government</h4>
+                                <div class="column-content justify-start">
+                                    <p class="text bold-text medium-size subtitle">
+                                        Case study
                                     </p>
-                                    <p class="text big-text medium-text medium-text">
-                                        As well as refactoring, apps had to be optimised for secure cloud native operations (containers in the cloud) with minimal overhead in Azure, the pre-select cloud partner.
-                                    </p>
-                                    <p class="text big-text medium-text medium-text">
-                                        Multi-cloud operations are a strategic ambition for the department and as containers are separate from underlying infrastructure, they’re portable between environments and can be run in any cloud.
-                                    </p>
+                                    <div class="multiple-text">
+                                        <p class="text big-text medium-text medium-text">
+                                            This customer needed .NET apps to be shifted to the cloud to complete a data centre obsolesence programme.
+                                        </p>
+                                        <p class="text big-text medium-text medium-text">
+                                            As well as refactoring, apps had to be optimised for secure cloud native operations (containers in the cloud) with minimal overhead in Azure, the pre-select cloud partner.
+                                        </p>
+                                        <p class="text big-text medium-text medium-text">
+                                            Multi-cloud operations are a strategic ambition for the department and as containers are separate from underlying infrastructure, they’re portable between environments and can be run in any cloud.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-content align-self-center basis-55">
+                                <div class="study-scheme-block row-content justify-evenly align-center">
+                                    <div class="scheme-image-block">
+                                        <svg class="partners-slide__image scheme-image scheme-big-image">
+                                            <use href="#cloud-door"/>
+                                        </svg>
+                                        <p class="scheme-title"><span class="block-text">Front</span>Door</p>
+                                    </div>
+                                    <div class="column-content align-center">
+                                        <div class="scheme-image-block scheme-background dashed scheme-padding-small">
+                                            <svg class="partners-slide__image scheme-image">
+                                                <use href="#enter-door"/>
+                                            </svg>
+                                            <p class="scheme-title block-text">Ingress</p>
+                                        </div>
+                                        <div class="scheme-image-block scheme-background dashed scheme-padding-small">
+                                            <svg class="partners-slide__image scheme-image">
+                                                <use href="#exit-door"/>
+                                            </svg>
+                                            <p class="scheme-title block-text">Egress</p>
+                                        </div>
+                                    </div>
+                                    <div class="row-content scheme-background dashed scheme-padding align-center justify-evenly h-100 shrink-0 big-scheme">
+                                        <div class="column-content scheme-padding-small-right">
+                                            <p class="scheme-title block-text">Tenant 1</p>
+                                            <p class="scheme-title block-text">Tenant 2</p>
+                                            <p class="scheme-title block-text">Tenant 3</p>
+                                            <p class="scheme-title block-text"></p>
+                                        </div>
+                                        <div class="column-content dashed scheme-padding align-center">
+                                            <div class="row-content">
+                                                <p class="scheme-blue-title block-text">API</p>
+                                                <p class="scheme-blue-title block-text">WebApp</p>
+                                            </div>
+                                            <div class="row-content">
+                                                <p class="scheme-blue-title block-text">API</p>
+                                                <p class="scheme-blue-title block-text">WebApp</p>
+                                            </div>
+                                            <div class="row-content">
+                                                <p class="scheme-blue-title block-text">API</p>
+                                                <p class="scheme-blue-title block-text">WebApp</p>
+                                            </div>
+                                            <p class="scheme-title block-text">Deployment</p>
+                                        </div>
+                                        <div class="column-content scheme-padding-small-left align-center">
+                                            <p class="scheme-blue-title block-text">Job</p>
+                                            <p class="scheme-blue-title block-text">Job</p>
+                                            <p class="scheme-blue-title block-text">Job</p>
+                                            <p class="scheme-title block-text">CronJob</p>
+                                        </div>
+                                        <div class="service-stack-block">
+                                            <div class="scheme-image-block">
+                                                <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                    <use href="#service-stack"/>
+                                                </svg>
+                                                <p class="scheme-title"><span class="block-text">Kubernetes</span> Service</p>
+                                            </div>
+                                        </div>
+                                        <div class="sql-database-block">
+                                            <div class="scheme-image-block">
+                                                <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                    <use href="#sql-cloud"/>
+                                                </svg>
+                                                <p class="scheme-title"><span class="block-text">SQL</span>Database</p>
+                                            </div>
+                                        </div>                                    
+                                        <div class="container-registry-block">
+                                            <div class="scheme-image-block">
+                                                <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                    <use href="#cloud-container"/>
+                                                </svg>
+                                                <p class="scheme-title"><span class="block-text">Container</span>Registry</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="column-content justify-center basis-55">
-                            <div class="study-scheme-block row-content justify-evenly align-center h-50">
-                                <div class="scheme-image-block">
-                                    <svg class="partners-slide__image scheme-image scheme-big-image">
-                                        <use href="#cloud-door"/>
-                                    </svg>
-                                    <p class="scheme-title"><span class="block-text">Front</span>Door</p>
-                                </div>
-                                <div class="column-content align-center">
-                                    <div class="scheme-image-block scheme-background dashed scheme-padding-small">
-                                        <svg class="partners-slide__image scheme-image">
-                                            <use href="#enter-door"/>
-                                        </svg>
-                                        <p class="scheme-title block-text">Ingress</p>
-                                    </div>
-                                    <div class="scheme-image-block scheme-background dashed scheme-padding-small">
-                                        <svg class="partners-slide__image scheme-image">
-                                            <use href="#exit-door"/>
-                                        </svg>
-                                        <p class="scheme-title block-text">Egress</p>
+                    </div>
+                    <div class="swiper-slide study-slide">
+                        <div class="columns wrapper">
+                            <div class="column-content justify-start mt-l">
+                                <h4 class="main-title unuppercase">What were the results?</h4>
+                                <div class="column-content justify-start">
+                                    <p class="text bold-text medium-size subtitle">
+                                        Zero to DevOps heros
+                                    </p>
+                                    <div class="multiple-text">
+                                        <p class="text big-text medium-text medium-text">
+                                            The department was starting from no operational experience of Kubernetes, so we began with training in Docker fundamentals, Terraform and site relibaility engineering practice.
+                                        </p>
+                                        <p class="text big-text medium-text medium-text">
+                                            Azure DevOps was selected as it is easy to learn for inexperienced engineers and gives a unified end-to-end development experience.
+                                        </p>
+                                        <a data-link="book-consultation" class="button hero-button link-button pink-button button-margin big-button">Book A free consultation</a>
                                     </div>
                                 </div>
-                                <div class="row-content scheme-background dashed scheme-padding align-center justify-evenly h-100 shrink-0 big-scheme">
-                                    <div class="column-content scheme-padding-small-right">
-                                        <p class="scheme-title block-text">Tenant 1</p>
-                                        <p class="scheme-title block-text">Tenant 2</p>
-                                        <p class="scheme-title block-text">Tenant 3</p>
-                                        <p class="scheme-title block-text"></p>
-                                    </div>
-                                    <div class="column-content dashed scheme-padding align-center">
-                                        <div class="row-content">
-                                            <p class="scheme-blue-title block-text">API</p>
-                                            <p class="scheme-blue-title block-text">WebApp</p>
+                            </div>
+                            <div class="column-content column-less-content justify-start mt-l">
+                                <h4 class="main-title unuppercase hidden">Outcomes statistic</h4>
+                                <div class="column-content justify-start">
+                                    <p class="text bold-text medium-size subtitle">
+                                        Outcomes
+                                    </p>
+                                    <div class="column-content">
+                                        <div class="row-content dynamic-statistic-item align-center">
+                                            <span class="dynamic-statistic-number">40%</span>
+                                            <span class="dynamic-statistic-text big-text bold-text medium-height">Reduction in IT infrastructure footprint</span>
                                         </div>
-                                        <div class="row-content">
-                                            <p class="scheme-blue-title block-text">API</p>
-                                            <p class="scheme-blue-title block-text">WebApp</p>
+                                        <div class="row-content dynamic-statistic-item align-center">
+                                            <span class="dynamic-statistic-number">60%</span>
+                                            <span class="dynamic-statistic-text big-text bold-text medium-height">Improvement in release velocity</span>
                                         </div>
-                                        <div class="row-content">
-                                            <p class="scheme-blue-title block-text">API</p>
-                                            <p class="scheme-blue-title block-text">WebApp</p>
+                                        <div class="row-content dynamic-statistic-item align-center">
+                                            <span class="dynamic-statistic-number">0</span>
+                                            <span class="dynamic-statistic-text big-text bold-text medium-height">Changes to the code base</span>
                                         </div>
-                                        <p class="scheme-title block-text">Deployment</p>
-                                    </div>
-                                    <div class="column-content scheme-padding-small-left align-center">
-                                        <p class="scheme-blue-title block-text">Job</p>
-                                        <p class="scheme-blue-title block-text">Job</p>
-                                        <p class="scheme-blue-title block-text">Job</p>
-                                        <p class="scheme-title block-text">CronJob</p>
-                                    </div>
-                                    <div class="service-stack-block">
-                                        <div class="scheme-image-block">
-                                            <svg class="partners-slide__image scheme-image scheme-big-image">
-                                                <use href="#service-stack"/>
-                                            </svg>
-                                            <p class="scheme-title"><span class="block-text">Kubernetes</span> Service</p>
-                                        </div>
-                                    </div>
-                                    <div class="sql-database-block">
-                                        <div class="scheme-image-block">
-                                            <svg class="partners-slide__image scheme-image scheme-big-image">
-                                                <use href="#sql-cloud"/>
-                                            </svg>
-                                            <p class="scheme-title"><span class="block-text">SQL</span>Database</p>
-                                        </div>
-                                    </div>                                    
-                                    <div class="container-registry-block">
-                                        <div class="scheme-image-block">
-                                            <svg class="partners-slide__image scheme-image scheme-big-image">
-                                                <use href="#cloud-container"/>
-                                            </svg>
-                                            <p class="scheme-title"><span class="block-text">Container</span>Registry</p>
+                                        <div class="row-content dynamic-statistic-item align-center">
+                                            <span class="dynamic-statistic-number">72%</span>
+                                            <span class="dynamic-statistic-text big-text bold-text medium-height">Faster operational issue resolution</span>
                                         </div>
                                     </div>
                                 </div>
@@ -807,65 +871,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide study-slide">
-                    <div class="columns wrapper">
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <h4 class="main-title unuppercase">What were the results?</h4>
-                            <div class="column-content justify-start">
-                                <p class="text bold-text medium-size subtitle">
-                                    Zero to DevOps heros
-                                </p>
-                                <div class="multiple-text">
-                                    <p class="text big-text medium-text medium-text">
-                                        The department was starting from no operational experience of Kubernetes, so we began with training in Docker fundamentals, Terraform and site relibaility engineering practice.
-                                    </p>
-                                    <p class="text big-text medium-text medium-text">
-                                        Azure DevOps was selected as it is easy to learn for inexperienced engineers and gives a unified end-to-end development experience.
-                                    </p>
-                                    <a data-link="book-consultation" class="button hero-button link-button pink-button button-margin big-button">Book A free consultation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column-content column-less-content justify-start mt-l">
-                            <h4 class="main-title unuppercase hidden">Outcomes statistic</h4>
-                            <div class="column-content justify-start">
-                                <p class="text bold-text medium-size subtitle">
-                                    Outcomes
-                                </p>
-                                <div class="column-content">
-                                    <div class="row-content dynamic-statistic-item align-center">
-                                        <span class="dynamic-statistic-number">40%</span>
-                                        <span class="dynamic-statistic-text big-text bold-text medium-height">Reduction in IT infrastructure footprint</span>
-                                    </div>
-                                    <div class="row-content dynamic-statistic-item align-center">
-                                        <span class="dynamic-statistic-number">60%</span>
-                                        <span class="dynamic-statistic-text big-text bold-text medium-height">Improvement in release velocity</span>
-                                    </div>
-                                    <div class="row-content dynamic-statistic-item align-center">
-                                        <span class="dynamic-statistic-number">0</span>
-                                        <span class="dynamic-statistic-text big-text bold-text medium-height">Changes to the code base</span>
-                                    </div>
-                                    <div class="row-content dynamic-statistic-item align-center">
-                                        <span class="dynamic-statistic-number">72%</span>
-                                        <span class="dynamic-statistic-text big-text bold-text medium-height">Faster operational issue resolution</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="swiper-scrollbar study-slider-scrollbar default-slider-scrollbar"></div>
+                <div class="study-slider-navigation default-slider-navigation">
+                    <div class="study-slider-prev default-slider-prev">
+                        <svg class="nav-arrow arrow-left">
+                            <use href="#nav-arrow"/>
+                        </svg>
                     </div>
-                </div>
-            </div>
-            <div class="swiper-scrollbar study-slider-scrollbar default-slider-scrollbar"></div>
-            <div class="study-slider-navigation default-slider-navigation">
-                <div class="study-slider-prev default-slider-prev">
-                    <svg class="nav-arrow arrow-left">
-                        <use href="#nav-arrow"/>
-                    </svg>
-                </div>
-                <div class="study-slider-next default-slider-next">
-                    <svg class="nav-arrow arrow-right">
-                        <use href="#nav-arrow"/>
-                    </svg>
+                    <div class="study-slider-next default-slider-next">
+                        <svg class="nav-arrow arrow-right">
+                            <use href="#nav-arrow"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -873,91 +890,104 @@
     <!-- Case study section end -->
 
     <!-- Pricing section -->
-    <section class="section wrapper pricing-section justify-start" id="pricing-section">
-            <h4 class="main-title unuppercase mt-l">Let’s get started</h4>
-            <div class="row-content">
-                <div class="card-item">
-                    <h6 class="card-header">Readiness assessment</h6>
-                    <span class="card-price">£800 Ex VAT</span>
-                    <div class="multiple-text">
-                        <p class="text medium-height">
-                            Are you ready for production workloads in the cloud? Let’s find out.
-                        </p>
-                        <p class="text medium-height">
-                            <span class="block-text">We’ll assess your target operating model (or create one for you, if you prefer) and we’ll assess: </span>
-                            <span class="block-text">CI/CD</span>
-                            <span class="block-text">pipelines</span>
-                            <span class="block-text">Workflow</span>
-                            <span class="block-text">Automation</span>
-                            <span class="block-text">Provisioning</span>
-                            <span class="block-text">Configuration</span>
-                        </p>
+    <section class="section" id="pricing-section">
+        <div class="pricing-section mt-l">
+            <div class="columns wrapper">
+                <div class="column-content">
+                    <h4 class="main-title unuppercase wrapper">Let’s get started</h4>
+                    <div class="row-content">
+                        <div class="card-item">
+                            <h6 class="card-header">Readiness assessment</h6>
+                            <span class="card-price">£800 Ex VAT</span>
+                            <div class="multiple-text">
+                                <p class="text medium-height">
+                                    Are you ready for production workloads in the cloud? Let’s find out.
+                                </p>
+                                <p class="text medium-height">
+                                    <span class="block-text">We’ll assess your target operating model (or create one for you, if you prefer) and we’ll assess: </span>
+                                    <span class="block-text">CI/CD</span>
+                                    <span class="block-text">pipelines</span>
+                                    <span class="block-text">Workflow</span>
+                                    <span class="block-text">Automation</span>
+                                    <span class="block-text">Provisioning</span>
+                                    <span class="block-text">Configuration</span>
+                                </p>
+                            </div>
+                            <a href="##" data-link="" class="button hero-button link-button pink-button">Check availability</a>
+                        </div>
+                        <div class="card-item">
+                            <h6 class="card-header">Docker PoC and accelerator</h6>
+                            <span class="card-price">£2,800 Ex VAT</span>
+                            <div class="multiple-text">
+                                <p class="text medium-height">We’ll create a cloud adoption roadmap for your chosen cloud provider</p>
+                                <p class="text medium-height">We’ll Grade your applications by ROI and complexity for Cloud Native migration</p>
+                                <p class="text medium-height">We’ll create a Docker image of your chosen app</p>
+                                <p class="text medium-height">We’ll produce your microservice reference target architecture (Agnostic/AKS/EKS/GKE)</p>
+                            </div>
+                            <a href="##" data-link="" class="button hero-button link-button pink-button">Check availability</a>
+                        </div>
+                        <div class="card-item">
+                            <h6 class="card-header">Cloud Native Bootcamp</h6>
+                            <span class="card-price">£3,800 Ex VAT</span>
+                            <div class="multiple-text">
+                                <p class="text medium-height">If you don’t know what any of this means, but think you’re going Cloud soon, bring up to 4 participants from your organisation and in 1 week  we’ll cover:</p>
+                                <p class="text medium-height">CI/CD with Azure DevOps (or your tool) Docker essentials Kubernetes fundamental operations Cloud migration roadmap & training plan</p>
+                            </div>
+                            <a href="##" data-link="" class="button hero-button link-button pink-button">Check availability</a>
+                        </div>
                     </div>
-                    <a href="##" data-link="" class="button hero-button link-button pink-button">Check availability</a>
-                </div>
-                <div class="card-item">
-                    <h6 class="card-header">Docker PoC and accelerator</h6>
-                    <span class="card-price">£2,800 Ex VAT</span>
-                    <div class="multiple-text">
-                        <p class="text medium-height">We’ll create a cloud adoption roadmap for your chosen cloud provider</p>
-                        <p class="text medium-height">We’ll Grade your applications by ROI and complexity for Cloud Native migration</p>
-                        <p class="text medium-height">We’ll create a Docker image of your chosen app</p>
-                        <p class="text medium-height">We’ll produce your microservice reference target architecture (Agnostic/AKS/EKS/GKE)</p>
-                    </div>
-                    <a href="##" data-link="" class="button hero-button link-button pink-button">Check availability</a>
-                </div>
-                <div class="card-item">
-                    <h6 class="card-header">Cloud Native Bootcamp</h6>
-                    <span class="card-price">£3,800 Ex VAT</span>
-                    <div class="multiple-text">
-                        <p class="text medium-height">If you don’t know what any of this means, but think you’re going Cloud soon, bring up to 4 participants from your organisation and in 1 week  we’ll cover:</p>
-                        <p class="text medium-height">CI/CD with Azure DevOps (or your tool) Docker essentials Kubernetes fundamental operations Cloud migration roadmap & training plan</p>
-                    </div>
-                    <a href="##" data-link="" class="button hero-button link-button pink-button">Check availability</a>
                 </div>
             </div>
+        </div>
+            
     </section>
     <!-- Pricing section end -->
 
     <!-- Join us section -->
-    <section class="section wrapper join-section justify-start mt-l" id="join-section">
-        <h4 class="main-title unuppercase">Join our team!</h4>
-        <p class="text bold-text medium-size subtitle">
-            We are hands on Software Engineers. Pretenders need not apply.
-        </p>
-        <div class="row-content">
-            <div class="card-item">
-                <h6 class="card-header">Junior Engineer</h6>
-                <div class="multiple-text">
-                    <p class="text medium-height">
-                        You’re a First Class Master of Computer Science and you’ve made a compelling contribution to an open source project.
+    <section class="section" id="join-section">
+        <div class="join-section mt-l">
+            <div class="columns wrapper">
+                <div class="column-content">
+                    <h4 class="main-title unuppercase">Join our team!</h4>
+                    <p class="text bold-text medium-size subtitle">
+                        We are hands on Software Engineers. Pretenders need not apply.
                     </p>
-                    <p class="text medium-height">
-                        You’re a fast and conscientious learner, with least four years programming experience.
-                    </p>
-                </div>
-                <p class="card-header unuppercase text-bold">£ v. competitive <span class="block-text">+ training & mentoring</span></p>
-                <a href="##" data-link="" class="button hero-button link-button pink-button">Apply</a>
-            </div>
-            <div class="card-item">
-                <h6 class="card-header">Senior Engineer</h6>
-                <div class="multiple-text">
-                    <p class="text medium-height">
-                        You have over 10 years experience as a software engineer and are an expert in the design and implementation of distributed systems with an oustanding track record of fixing deep technical problems.
-                    </p>
-                </div>
-                <p class="card-header unuppercase text-bold">£ v. competitive <span class="block-text">+ benefits</span></p>
-                <a href="##" data-link="" class="button hero-button link-button pink-button">Apply</a>
-            </div>
-            <div class="card-item">
-                <h6 class="card-header">Lead Engineer</h6>
-                <div class="multiple-text">
-                    <p class="text medium-height">
-                        You’re an industry leader and distguished engineer, with a demonstrable history of key roles in high consequence software engineering projects.
-                    </p>
-                </div>
-                <p class="card-header unuppercase text-bold">£ v. competitive <span class="block-text">+ benefits</span> <span class="block-text">+ options</span></p>
-                <a href="##" data-link="" class="button hero-button link-button pink-button">Apply</a>
+                    <div class="row-content">
+                        <div class="card-item">
+                            <h6 class="card-header">Junior Engineer</h6>
+                            <div class="multiple-text">
+                                <p class="text medium-height">
+                                    You’re a First Class Master of Computer Science and you’ve made a compelling contribution to an open source project.
+                                </p>
+                                <p class="text medium-height">
+                                    You’re a fast and conscientious learner, with least four years programming experience.
+                                </p>
+                            </div>
+                            <p class="card-header unuppercase text-bold">£ v. competitive <span class="block-text">+ training & mentoring</span></p>
+                            <a href="##" data-link="" class="button hero-button link-button pink-button">Apply</a>
+                        </div>
+                        <div class="card-item">
+                            <h6 class="card-header">Senior Engineer</h6>
+                            <div class="multiple-text">
+                                <p class="text medium-height">
+                                    You have over 10 years experience as a software engineer and are an expert in the design and implementation of distributed systems with an oustanding track record of fixing deep technical problems.
+                                </p>
+                            </div>
+                            <p class="card-header unuppercase text-bold">£ v. competitive <span class="block-text">+ benefits</span></p>
+                            <a href="##" data-link="" class="button hero-button link-button pink-button">Apply</a>
+                        </div>
+                        <div class="card-item">
+                            <h6 class="card-header">Lead Engineer</h6>
+                            <div class="multiple-text">
+                                <p class="text medium-height">
+                                    You’re an industry leader and distguished engineer, with a demonstrable history of key roles in high consequence software engineering projects.
+                                </p>
+                            </div>
+                            <p class="card-header unuppercase text-bold">£ v. competitive <span class="block-text">+ benefits</span> <span class="block-text">+ options</span></p>
+                            <a href="##" data-link="" class="button hero-button link-button pink-button">Apply</a>
+                        </div>
+                    </div>
+                </>
             </div>
         </div>
     </section>
