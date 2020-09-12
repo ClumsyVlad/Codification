@@ -519,7 +519,14 @@
     display: inline-flex;
     width: auto;
 }
+.swiper-scrollbar-drag {
+    cursor: move;
+    cursor: grab;
 
+    &:active {
+        cursor: grabbing;
+    }
+}
 .slider {
     height: 100%;
 }
@@ -721,6 +728,7 @@
 }
 .study-scheme-block {
     height: clamp(400px, 450px, 500px);
+    pointer-events: none;
 }
 .study-scheme-block .column-content {
     justify-content: space-evenly;
@@ -880,6 +888,7 @@
     width: 85px;
     height: 85px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .default-slider-navigation .default-slider-next {
     background-color: $blue;
@@ -1031,11 +1040,11 @@
     max-width: 150px;
 }
 .form-input:not(:placeholder-shown) + .form-placeholder {
-    transform: translateY(-10px) scale(0.75);
+    transform: translateY(-20px) scale(0.75);
 
 }
 .form-input:focus + .form-placeholder {
-    transform: translateY(-10px) scale(0.75);
+    transform: translateY(-20px) scale(0.75);
 }
 
 
@@ -1094,6 +1103,7 @@
 
     &.subactive-panel .panel-item-name {
         opacity: 0;
+        visibility: hidden;
     }
 }
 

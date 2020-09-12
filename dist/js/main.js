@@ -69,6 +69,7 @@ let cloudSlider = new Swiper('.cloud-slider', {
     scrollbar: {
         el: '.cloud-slider-scrollbar',
         hide: false,
+        draggable: true,
     },
     navigation: {
         nextEl: '.cloud-slider-next',
@@ -83,6 +84,7 @@ let aboutSlider = new Swiper('.about-slider', {
     scrollbar: {
         el: '.about-slider-scrollbar',
         hide: false,
+        draggable: true,
     },
     navigation: {
         nextEl: '.about-slider-next',
@@ -96,6 +98,7 @@ let gallerySlider = new Swiper('.team-gallery-slider', {
     scrollbar: {
         el: '.team-slider-scrollbar',
         hide: false,
+        draggable: true,
     },
     navigation: {
         nextEl: '.team-slider-next',
@@ -111,6 +114,7 @@ let aboutTabs = new Swiper('.about-tabs', {
     scrollbar: {
         el: '.tabs-slider-scrollbar',
         hide: false,
+        draggable: true,
     },
 });
 let studySlider = new Swiper('.study-slider', {
@@ -120,6 +124,7 @@ let studySlider = new Swiper('.study-slider', {
     scrollbar: {
         el: '.study-slider-scrollbar',
         hide: false,
+        draggable: true,
     },
     navigation: {
         nextEl: '.study-slider-next',
@@ -133,6 +138,7 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
     scrollbar: {
         el: '.bootcamp-slider-scrollbar',
         hide: false,
+        draggable: true,
     },
     navigation: {
         nextEl: '.bootcamp-slider-next',
@@ -158,18 +164,13 @@ aboutTabs.on('slideChange', function (){
     });
 });
 
-// Здесь начало
-bootcampSlider.on('slideChangeTransitionStart', function (event) {
+bootcampSlider.on('transitionStart', function (event) {
     if (document.querySelector('.swiper-slide-active.bootcamp-slide.show-hero')) {
         document.querySelector('.superhero-block').classList.add('show-hero');
-        console.log('work');
     } else {
         document.querySelector('.superhero-block').classList.remove('show-hero');
-        console.log('worknt');
     }
 });
-//  Конец
-
 
 // Video
 const player = new Plyr('#player', {});

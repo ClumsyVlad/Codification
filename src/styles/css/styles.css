@@ -602,6 +602,12 @@ input {
   display: inline-flex;
   width: auto; }
 
+.swiper-scrollbar-drag {
+  cursor: move;
+  cursor: grab; }
+  .swiper-scrollbar-drag:active {
+    cursor: grabbing; }
+
 .slider {
   height: 100%; }
 
@@ -789,7 +795,8 @@ input {
   padding: 25px 0px 25px 25px; }
 
 .study-scheme-block {
-  height: clamp(400px, 450px, 500px); }
+  height: clamp(400px, 450px, 500px);
+  pointer-events: none; }
 
 .study-scheme-block .column-content {
   justify-content: space-evenly; }
@@ -926,7 +933,8 @@ input {
   padding: 30px 20px;
   width: 85px;
   height: 85px;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  cursor: pointer; }
 
 .default-slider-navigation .default-slider-next {
   background-color: #009fe9; }
@@ -1068,10 +1076,10 @@ input {
   max-width: 150px; }
 
 .form-input:not(:placeholder-shown) + .form-placeholder {
-  transform: translateY(-10px) scale(0.75); }
+  transform: translateY(-20px) scale(0.75); }
 
 .form-input:focus + .form-placeholder {
-  transform: translateY(-10px) scale(0.75); }
+  transform: translateY(-20px) scale(0.75); }
 
 .bootcamp-section .panels-section {
   opacity: 0;
@@ -1122,7 +1130,8 @@ input {
   height: 100px;
   opacity: 1; }
   .panel-item.subactive-panel .panel-item-name {
-    opacity: 0; }
+    opacity: 0;
+    visibility: hidden; }
 
 .panel-item:nth-child(1) .panel-object {
   z-index: 25; }
@@ -1561,9 +1570,9 @@ input:focus {
   .contact-form .form-input {
     padding: 5px 0; }
   .form-input:not(:placeholder-shown) + .form-placeholder {
-    transform: translateY(-15px) scale(0.75); }
+    transform: translateY(-20px) scale(0.75); }
   .form-input:focus + .form-placeholder {
-    transform: translateY(-15px) scale(0.75); }
+    transform: translateY(-20px) scale(0.75); }
   .panel-item {
     height: 80px; }
   .panel-object {
