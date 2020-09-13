@@ -5,15 +5,8 @@ let svgObects = document.querySelectorAll('partners-slide__image');
 let svgUses = document.querySelectorAll('partners-slide__image use');
 let tabsList = document.querySelector('.about-tabs-pagination');
 let tabsLink = document.querySelectorAll('.about-tabs-logo');
-// let panelsItems = document.querySelectorAll('.bootcamp-section .panel-item');
-// let numberOfPanels = panelsItems.length;
-// let panelsActive = document.querySelectorAll('.bootcamp-section .panel-item.active-panel');
-// let numberOfActive = panelsActive.length;
-// svgUses.forEach((element) => setSizes());
-
-// function setSizes() {
-
-// };
+let burgerButton = document.querySelector('.burger-button');
+let headerList = document.querySelector('.header-nav__list');
 
 body.addEventListener('click', function(event){
     if (event.target.classList.contains('link-button')) {
@@ -26,6 +19,11 @@ body.addEventListener('click', function(event){
         });
         event.target.classList.add('active-section-link');
         document.querySelector(`#${event.target.dataset.link}`).classList.add('active-section');
+        burgerButton.classList.toggle('active');
+        headerList.classList.toggle('active');
+    } else if (event.target == burgerButton) {
+        burgerButton.classList.toggle('active');
+        headerList.classList.toggle('active');
     } else if (!event.target.classList.contains('link-button')) {
         // console.log('Работает не то');
     } else {

@@ -36,9 +36,7 @@ main {
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow: hidden; }
 
 section {
   height: 100%; }
@@ -214,11 +212,12 @@ input {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-top: 80px;
+  padding-top: 80px;
   z-index: 100;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  z-index: 20100; }
 
 .team-section {
   display: flex;
@@ -229,9 +228,23 @@ input {
   margin-top: 45px; }
 
 .header-nav__list {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 100px 200px;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+  transform: translateX(100%);
+  background: linear-gradient(-45deg, transparent 12%, rgba(255, 255, 255, 0.3) 14%, transparent 19%, transparent 60%, rgba(255, 255, 255, 0.4) 70%, transparent 78%, transparent);
+  transition: transform 0.5s ease; }
+  .header-nav__list.active {
+    transform: translateX(0); }
 
 .header-nav__item {
   display: flex; }
@@ -316,7 +329,13 @@ input {
   display: flex;
   transition: filter 0.3s ease; }
   .logo__link:hover {
-    filter: drop-shadow(0px 0px 4px #009fe9); }
+    filter: drop-shadow(0px 0px 15px #009fe9); }
+    .logo__link:hover .logo-image {
+      fill: #009fe9; }
+
+.header-nav__link.disabled {
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none; }
 
 .header-nav__link,
 .active-link {
@@ -333,7 +352,8 @@ input {
   height: 1px;
   position: absolute;
   bottom: 2px;
-  left: -100%;
+  left: 0;
+  transform: translateX(-120%);
   background-color: #ffffff;
   transition: all 0.3s ease; }
 
@@ -345,7 +365,7 @@ input {
 .header-nav__link:hover.header-nav__link:after,
 .header-nav__link.active-section-link.header-nav__link:after,
 .active-link:hover.active-link:after {
-  left: 0; }
+  transform: translateX(0); }
 
 .button {
   display: block;
@@ -395,8 +415,8 @@ input {
   object-fit: contain; }
 
 .logo-image {
-  width: 150px;
-  height: 80px;
+  width: 195px;
+  height: 105px;
   pointer-events: none; }
 
 .images-svg-doc {
@@ -412,7 +432,7 @@ input {
 
 .partners-slide__image {
   fill: #ffffff;
-  height: 45px;
+  height: 50px;
   width: 150px;
   object-fit: contain; }
 
@@ -541,7 +561,8 @@ input {
 
 .hero-text {
   line-height: 1.9;
-  width: 65%; }
+  width: 80%;
+  font-size: 22px; }
 
 .bold-text {
   font-weight: 700; }
@@ -1255,6 +1276,33 @@ input {
 input:focus {
   outline: none; }
 
+.burger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer; }
+  .burger-button .burger-line {
+    height: 4px;
+    border-radius: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, filter 0.3s ease, transform 0.5s ease, opacity 0.3s ease;
+    pointer-events: none; }
+  .burger-button:hover .burger-line {
+    background-color: #009fe9;
+    filter: drop-shadow(0 0 15px #009fe9); }
+  .burger-button.active .burger-line:nth-child(1) {
+    transform: translate(0%, 13px) rotate(45deg); }
+  .burger-button.active .burger-line:nth-child(2) {
+    transform: scaleX(0);
+    opacity: 0; }
+  .burger-button.active .burger-line:nth-child(3) {
+    transform: translate(0%, -13px) rotate(-45deg); }
+
 .body {
   background: radial-gradient(ellipse at 50% 50%, #005190 5%, #001029 85%);
   background-size: 200% 200%;
@@ -1271,6 +1319,7 @@ input:focus {
   background-color: #fe018a; }
 
 .logo-image {
+  transition: all 0.3s ease;
   fill: #ffffff; }
 
 .blue-text {
@@ -1442,7 +1491,7 @@ input:focus {
   .wrapper {
     max-width: calc(100vw - 100px); }
   .header {
-    margin-top: 40px; }
+    padding-top: 40px; }
     .header .logo-image {
       height: 50px;
       width: 100px; }
@@ -1466,7 +1515,8 @@ input:focus {
   .text {
     font-size: 16px; }
   .hero-text {
-    line-height: 1.5; }
+    line-height: 1.5;
+    width: 65%; }
   .cloud-slide-content {
     margin-top: 0px; }
   .main-title {

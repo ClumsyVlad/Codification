@@ -9,7 +9,7 @@
         max-width: calc(100vw - 100px);
     }
     .header {
-        margin-top: 40px;
+        padding-top: 40px;
 
         .logo-image {
             height: 50px;
@@ -47,6 +47,7 @@
     }
     .hero-text {
         line-height: 1.5;
+        width: 65%;
     }
     .cloud-slide-content {
         margin-top: 0px;
