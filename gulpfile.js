@@ -37,7 +37,7 @@ function images() {
 };
 
 function htmlBuild() {
-    return gulp.src('./src/**/*.html')
+    return gulp.src('./src/*.html')
         .pipe(rigger())
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.stream())
