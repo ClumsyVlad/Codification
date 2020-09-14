@@ -642,7 +642,7 @@
 .gallery-slide-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -651,7 +651,7 @@
     bottom: 0;
     left: 0;
     background: linear-gradient(180deg, transparent, transparentize($color: $galleryblue, $amount: 0.5), $galleryblue);
-    padding: 20px;
+    padding: 120px 20px 20px;
     transform: translateY(60%);
     transition: all 0.5s ease;
 }
