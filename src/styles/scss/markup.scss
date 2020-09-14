@@ -238,7 +238,7 @@
     text-align: left;
 }
 .about-progress-info-item:last-child .progress-info-text {
-    text-align: right;
+    text-align: left;
 }
 
     // Links
@@ -594,6 +594,9 @@
     border-radius: 2px;
     box-shadow: 0px 0px 15px $blue;
     top: -150%;
+}
+.swiper-scrollbar.default-slider-scrollbar {
+    display: none;
 }
 .swiper-wrapper {
     align-items: center;

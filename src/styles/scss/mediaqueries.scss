@@ -110,10 +110,16 @@
     .about-tabs-logo .partners-slide__image {
         width: 110px;
     }
+    .bottom-logo-slider-title {
+        font-size: 16px;
+    }
 }
 
 /* height */
 @media screen and (max-height: 1000px) {
+    .bottom-logo-slider-title {
+        font-size: 16px;
+    }
     .columns {
         width: 100%;
     }

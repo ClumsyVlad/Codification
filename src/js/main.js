@@ -19,11 +19,13 @@ body.addEventListener('click', function(event){
         });
         event.target.classList.add('active-section-link');
         document.querySelector(`#${event.target.dataset.link}`).classList.add('active-section');
-        burgerButton.classList.toggle('active');
-        headerList.classList.toggle('active');
+        burgerButton.classList.remove('active');
+        headerList.classList.remove('active');
     } else if (event.target == burgerButton) {
         burgerButton.classList.toggle('active');
         headerList.classList.toggle('active');
+    } else if (event.target == headerList) {
+        headerList.classList.remove('active');
     } else if (!event.target.classList.contains('link-button')) {
         // console.log('Работает не то');
     } else {
@@ -64,11 +66,11 @@ let cloudSlider = new Swiper('.cloud-slider', {
     spaceBetween: 250,
     speed: 750,
     // centeredSlides: true,
-    scrollbar: {
-        el: '.cloud-slider-scrollbar',
-        hide: false,
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: '.cloud-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
     navigation: {
         nextEl: '.cloud-slider-next',
         prevEl: '.cloud-slider-prev',
@@ -79,11 +81,11 @@ let aboutSlider = new Swiper('.about-slider', {
     spaceBetween: 250,
     speed: 750,
     // centeredSlides: true,
-    scrollbar: {
-        el: '.about-slider-scrollbar',
-        hide: false,
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: '.about-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
     navigation: {
         nextEl: '.about-slider-next',
         prevEl: '.about-slider-prev',
@@ -93,11 +95,11 @@ let gallerySlider = new Swiper('.team-gallery-slider', {
     slidesPerView: 'auto',
     spaceBetween: 40,
     speed: 300,
-    scrollbar: {
-        el: '.team-slider-scrollbar',
-        hide: false,
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: '.team-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
     navigation: {
         nextEl: '.team-slider-next',
         prevEl: '.team-slider-prev',
@@ -109,21 +111,21 @@ let aboutTabs = new Swiper('.about-tabs', {
     spaceBetween: 0,
     speed: 0,
     allowTouchMove: false,
-    scrollbar: {
-        el: '.tabs-slider-scrollbar',
-        hide: false,
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: '.tabs-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
 });
 let studySlider = new Swiper('.study-slider', {
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
-    scrollbar: {
-        el: '.study-slider-scrollbar',
-        hide: false,
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: '.study-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
     navigation: {
         nextEl: '.study-slider-next',
         prevEl: '.study-slider-prev',
@@ -133,11 +135,11 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
-    scrollbar: {
-        el: '.bootcamp-slider-scrollbar',
-        hide: false,
-        draggable: true,
-    },
+    // scrollbar: {
+    //     el: '.bootcamp-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
     navigation: {
         nextEl: '.bootcamp-slider-next',
         prevEl: '.bootcamp-slider-prev',

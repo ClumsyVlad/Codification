@@ -323,7 +323,7 @@ input {
   text-align: left; }
 
 .about-progress-info-item:last-child .progress-info-text {
-  text-align: right; }
+  text-align: left; }
 
 .logo__link {
   display: flex;
@@ -651,6 +651,9 @@ input {
   border-radius: 2px;
   box-shadow: 0px 0px 15px #009fe9;
   top: -150%; }
+
+.swiper-scrollbar.default-slider-scrollbar {
+  display: none; }
 
 .swiper-wrapper {
   align-items: center; }
@@ -1558,10 +1561,14 @@ input:focus {
   .aliance-section {
     bottom: 60px; }
   .about-tabs-logo .partners-slide__image {
-    width: 110px; } }
+    width: 110px; }
+  .bottom-logo-slider-title {
+    font-size: 16px; } }
 
 /* height */
 @media screen and (max-height: 1000px) {
+  .bottom-logo-slider-title {
+    font-size: 16px; }
   .columns {
     width: 100%; }
   .default-slider-navigation {
