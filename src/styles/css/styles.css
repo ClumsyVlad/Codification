@@ -237,7 +237,7 @@ input {
   width: 100%;
   left: 0;
   top: 0;
-  padding: 100px 200px;
+  padding: 150px 200px 100px;
   z-index: 10000;
   backdrop-filter: blur(5px);
   transform: translateX(100%);
@@ -262,6 +262,8 @@ input {
   align-items: center;
   flex-basis: 30%;
   position: relative; }
+  .about-progress-info-item:not(:first-child) {
+    margin-left: 20px; }
 
 .about-progress-info-item:first-child:after {
   content: '';
@@ -317,13 +319,8 @@ input {
   box-shadow: 0px 0px 15px #ffffff; }
 
 .progress-info-text {
-  text-align: center; }
-
-.about-progress-info-item:first-child .progress-info-text {
-  text-align: left; }
-
-.about-progress-info-item:last-child .progress-info-text {
-  text-align: left; }
+  text-align: left;
+  font-size: 20px; }
 
 .logo__link {
   display: flex;
@@ -708,30 +705,32 @@ input {
   left: 0;
   background: linear-gradient(180deg, transparent, rgba(0, 64, 115, 0.5), #004073);
   padding: 120px 20px 20px;
-  transform: translateY(60%);
+  transform: translateY(55%);
   transition: all 0.5s ease; }
 
 .gallery-slide:hover {
   box-shadow: 0px 0px 75px rgba(255, 255, 255, 0.8); }
   .gallery-slide:hover .gallery-slide-info {
-    background: linear-gradient(180deg, transparent, rgba(0, 64, 115, 0.5), #004073);
+    background: linear-gradient(180deg, transparent, rgba(0, 64, 115, 0.75), #004073);
     transform: translateY(0); }
-  .gallery-slide:hover .gallery-slide-title {
+  .gallery-slide:hover .gallery-slide-title,
+  .gallery-slide:hover .gallery-slide-subtitle {
     color: #ffffff; }
 
 .gallery-slide-title {
   font-size: 32px;
-  margin-bottom: 30px;
-  height: 60px;
+  min-height: 80px;
   line-height: 1;
   color: #004073;
   transition: color 0.5s ease; }
 
 .gallery-slide-subtitle {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 20px;
-  height: 30px; }
+  min-height: 40px;
+  color: #004073;
+  transition: color 0.5s ease; }
 
 .card-item {
   display: flex;
@@ -1544,7 +1543,8 @@ input:focus {
     font-size: 30px; }
   .about-progress-info-item:last-child:before,
   .about-progress-info-item:first-child:after {
-    top: 90px; }
+    top: 90px;
+    width: 38vw; }
   .default-slider-navigation {
     width: 140px; }
   .default-slider-next,
@@ -1566,7 +1566,7 @@ input:focus {
     font-size: 16px; } }
 
 /* height */
-@media screen and (max-height: 1000px) {
+@media screen and (max-height: 1050px) {
   .bottom-logo-slider-title {
     font-size: 16px; }
   .columns {
@@ -1611,11 +1611,11 @@ input:focus {
       width: 100%;
       height: 100%; }
   .gallery-slide-info {
-    transform: translateY(70%);
-    padding: 50px 20px 20px; }
+    transform: translateY(55%);
+    padding: 60px 20px 20px; }
   .gallery-slide-title {
     font-size: 22px;
-    margin-bottom: 15px; }
+    min-height: 55px; }
   .gallery-slide-subtitle {
     font-size: 15px; }
   .gallery-slide-info-text {
@@ -1745,3 +1745,53 @@ input:focus {
       font-weight: 600;
       line-height: 1.3;
       width: 220px; } }
+
+@media screen and (max-width: 1024px) {
+  .section {
+    padding: 10% 0; }
+  .columns {
+    flex-direction: column;
+    align-self: center; }
+  .info-with-pic {
+    flex-basis: auto; }
+  .plug-image {
+    margin-top: 100px;
+    height: 350px; }
+  .about-tabs-logo {
+    margin: 0px 5px; }
+    .about-tabs-logo .partners-slide__image {
+      width: 75px;
+      height: 70px; }
+  .about-progress-info {
+    flex-direction: column;
+    margin-top: 50px; }
+    .about-progress-info .about-progress-info-item {
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-left: 100px;
+      width: 100%;
+      margin-bottom: 50px; }
+      .about-progress-info .about-progress-info-item:not(:first-child) {
+        margin-left: 0; }
+      .about-progress-info .about-progress-info-item:first-child:after, .about-progress-info .about-progress-info-item:last-child:before {
+        width: 5px;
+        height: 25vh;
+        left: 25px;
+        right: 100%; }
+      .about-progress-info .about-progress-info-item:first-child:after {
+        top: 0;
+        bottom: auto; }
+      .about-progress-info .about-progress-info-item:last-child:before {
+        top: auto;
+        bottom: 100%; }
+      .about-progress-info .about-progress-info-item .progress-info-circle {
+        position: absolute;
+        left: 0; }
+      .about-progress-info .about-progress-info-item .small-info-header {
+        display: block;
+        margin-bottom: 0;
+        font-size: 35px;
+        margin-bottom: 20px; }
+      .about-progress-info .about-progress-info-item .progress-info-text {
+        flex-basis: 85%; } }

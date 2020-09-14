@@ -81,7 +81,7 @@ function watch () {
     gulp.watch ('./src/**/*.css', prefixMin);
     gulp.watch ('./src/**/*.html', htmlBuild);
     gulp.watch ('./src/**/*.js', scriptsBuild);
-    gulp.watch ('./src/imgs/*', images);
+    gulp.watch ('./src/images/*', images);
 };
 
 function cleangit () {

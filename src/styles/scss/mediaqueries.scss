@@ -86,6 +86,7 @@
     .about-progress-info-item:last-child:before,
     .about-progress-info-item:first-child:after {
         top: 90px;
+        width: 38vw;
     }
     .default-slider-navigation {
         width: 140px;
@@ -116,7 +117,7 @@
 }
 
 /* height */
-@media screen and (max-height: 1000px) {
+@media screen and (max-height: 1050px) {
     .bottom-logo-slider-title {
         font-size: 16px;
     }
@@ -180,12 +181,12 @@
     }
     
     .gallery-slide-info {
-        transform: translateY(70%);
-        padding: 50px 20px 20px;
+        transform: translateY(55%);
+        padding: 60px 20px 20px;
     }
     .gallery-slide-title {
         font-size: 22px;
-        margin-bottom: 15px;
+        min-height: 55px;
     }
     .gallery-slide-subtitle {
         font-size: 15px;
@@ -368,4 +369,74 @@
         }
     }
     
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        padding: 10% 0;
+
+    }
+    .columns {
+        flex-direction: column;
+        align-self: center;
+    }
+    .info-with-pic {
+        flex-basis: auto;
+    }
+    .plug-image {
+        margin-top: 100px;
+        height: 350px;
+    }
+    .about-tabs-logo {
+        margin: 0px 5px;
+        .partners-slide__image {
+            width: 75px;
+            height: 70px;
+        }
+    }
+    .about-progress-info {
+        flex-direction: column;
+        margin-top: 50px;
+
+        .about-progress-info-item {
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            padding-left: 100px;
+            width: 100%;
+            margin-bottom: 50px;
+            
+            &:not(:first-child) {
+                margin-left: 0;
+            }
+            &:first-child:after,
+            &:last-child:before {
+                width: 5px;
+                height: 25vh;
+                left: 25px;
+                right: 100%;
+            }
+            &:first-child:after {
+                top: 0;
+                bottom: auto;
+            }
+            &:last-child:before {
+                top: auto;
+                bottom: 100%;
+            }
+            .progress-info-circle {
+                position: absolute;
+                left: 0;
+            }
+            .small-info-header {
+                display: block;
+                margin-bottom: 0;
+                font-size: 35px;
+                margin-bottom: 20px;
+            }
+            .progress-info-text {
+                flex-basis: 85%;
+            }
+        }
+    }
 }

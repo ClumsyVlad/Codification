@@ -133,7 +133,7 @@
     width: 100%;
     left: 0;
     top: 0;
-    padding: 100px 200px;
+    padding: 150px 200px 100px;
     z-index: 10000;
     backdrop-filter: blur(5px);
     transform: translateX(100%);
@@ -162,6 +162,10 @@
     align-items: center;
     flex-basis: 30%;
     position: relative;
+
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
 }
 .about-progress-info-item:first-child {
     &:after {
@@ -188,17 +192,6 @@
         background-color: $blue;
         box-shadow: 0px 0px 15px $blue;
     }
-    // .progress-info-circle {
-    //     border-radius: 0;
-    //     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    //     transform: rotate(90deg);
-        
-    //     &:after {
-    //         border-radius: 0;
-    //         clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    //         top: 53%;
-    //     }
-    // }
 }
 .small-info-header {
     font-size: 40px;
@@ -232,13 +225,8 @@
     box-shadow: 0px 0px 15px $light;
 }
 .progress-info-text {
-    text-align: center;
-}
-.about-progress-info-item:first-child .progress-info-text {
     text-align: left;
-}
-.about-progress-info-item:last-child .progress-info-text {
-    text-align: left;
+    font-size: 20px;
 }
 
     // Links
@@ -652,33 +640,35 @@
     left: 0;
     background: linear-gradient(180deg, transparent, transparentize($color: $galleryblue, $amount: 0.5), $galleryblue);
     padding: 120px 20px 20px;
-    transform: translateY(60%);
+    transform: translateY(55%);
     transition: all 0.5s ease;
 }
 .gallery-slide:hover {
     box-shadow: 0px 0px 75px transparentize($color: $light, $amount: 0.2);
 
     .gallery-slide-info {
-        background: linear-gradient(180deg, transparent, transparentize($color: $galleryblue, $amount: 0.5), $galleryblue);
+        background: linear-gradient(180deg, transparent, transparentize($color: $galleryblue, $amount: 0.25), $galleryblue);
         transform: translateY(0);
     }
-    .gallery-slide-title {
+    .gallery-slide-title,
+    .gallery-slide-subtitle {
         color: $light;
     }
 }
 .gallery-slide-title {
     font-size: 32px;
-    margin-bottom: 30px;
-    height: 60px;
+    min-height: 80px;
     line-height: 1;
     color: $galleryblue;
     transition: color 0.5s ease
 }
 .gallery-slide-subtitle {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 600;
     margin-bottom: 20px;
-    height: 30px;
+    min-height: 40px;
+    color: $galleryblue;
+    transition: color 0.5s ease
 }
 
 .card-item {
