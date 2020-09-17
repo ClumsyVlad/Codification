@@ -1,33 +1,4 @@
 <header class="header-block">
-    <ul class="header-nav__list">
-        <li class="header-nav__item">
-            <a data-link="cloud-section" class="header-nav__link link-button">Go Cloud Native</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="about-section" class="header-nav__link link-button">About</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="team-section" class="header-nav__link link-button">Team</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="blog-section" class="header-nav__link link-button disabled">Blog</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="workshop-section" class="header-nav__link link-button">Workshop</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="bootcamp-section" class="header-nav__link link-button">Bootcamp</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="study-section" class="header-nav__link link-button">Case Study</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="pricing-section" class="header-nav__link link-button">Pricing</a>
-        </li>
-        <li class="header-nav__item">
-            <a data-link="join-section" class="header-nav__link button pink-button link-button">Join us</a>
-        </li>
-    </ul>
     <nav class="header header-nav wrapper">
         <div class="logo">
             <a data-link="hero-section" class="logo__link link-button">
@@ -41,5 +12,46 @@
             <span class="burger-line"></span>
             <span class="burger-line"></span>
         </div>
+        <ul class="header-nav__list">
+            <li class="header-nav__item">
+                <a data-link="cloud-section" class="header-nav__link link-button">Go Cloud Native</a>
+            </li>
+            <li class="header-nav__item drop-item">About
+                <ul class="header-nav__sublist">
+                    <li class="header-nav__subitem">
+                        <a data-link="about-section" class="header-nav__link link-button">History and method</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                        <a data-link="team-section" class="header-nav__link link-button">Meet the team</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                        <a href="/blog" data-link="blog-section" class="header-nav__link link-button disabled">Blog</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header-nav__item drop-item">Get started
+                <ul class="header-nav__sublist">
+                    <li class="header-nav__subitem">
+                        <a data-link="workshop-section" class="header-nav__link link-button">Next workshop</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                        <a data-link="study-section" class="header-nav__link link-button">Case studies</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                        <a data-link="pricing-section" class="header-nav__link link-button">Pricing</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header-nav__item drop-item">Join us
+                <ul class="header-nav__sublist">
+                    <li class="header-nav__subitem">
+                        <a data-link="join-section" class="header-nav__link link-button">Open positions</a>
+                    </li>
+                    <li class="header-nav__subitem">
+                        <a data-link="bootcamp-section" class="header-nav__link link-button">Bootcamp</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 </header>

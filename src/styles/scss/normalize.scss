@@ -102,6 +102,10 @@ a {
 
 img {
   border-style: none;
+  user-select: none;
+}
+svg {
+  user-select: none;
 }
 
 button,

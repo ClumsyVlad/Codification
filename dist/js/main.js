@@ -86,6 +86,7 @@ let aboutSlider = new Swiper('.about-slider', {
     //     hide: false,
     //     draggable: true,
     // },
+    freeMode: true,
     navigation: {
         nextEl: '.about-slider-next',
         prevEl: '.about-slider-prev',
@@ -172,6 +173,15 @@ bootcampSlider.on('transitionStart', function (event) {
     }
 });
 
+alianceSlider.el.addEventListener('mouseover', function() {
+    alianceSlider.speed = 0;
+    alianceSlider.autoplay.stop();
+});
+
+alianceSlider.el.addEventListener('mouseout', function() {
+    alianceSlider.speed = 5000;
+    alianceSlider.autoplay.start();
+});
 // Video
 const player = new Plyr('#player', {});
 
