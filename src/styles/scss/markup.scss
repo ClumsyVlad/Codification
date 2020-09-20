@@ -36,6 +36,16 @@
     display: flex;
     flex-basis: 50%;
 }
+.full-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.full-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 .hero-animation {
     align-items: flex-start;
 }
@@ -46,8 +56,8 @@
     width: 45vw;
     opacity: 0;
     transition: opacity 0.3s ease;
-    // animation: showpanelheader .5s reverse ease;
-    // animation-direction: reverse;
+    max-height: calc(100vh - 200px);
+    max-width: 1000px;
 }
 .superhero-block.show-hero {
     opacity: 1;
@@ -135,11 +145,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: baseline;
+    line-height: 2;
+    margin-top: auto;
 }
 
 .header-nav__item {
     display: flex;
+    user-select: none;
 }
 .header-nav__item:not(:first-child) {
     margin-left: 20px;
@@ -184,6 +197,37 @@
         height: 5px;
         background-color: $blue;
         box-shadow: 0px 0px 15px $blue;
+    }
+    
+    .progress-info-circle {
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+
+        &:after {
+            visibility: hidden;
+        }
+
+        .circle-to-triangle {
+            transform: rotate(90deg);
+            &:first-child {
+                fill: $blue;
+                filter: drop-shadow(0px 0px 15px $blue);
+                width: 55px;
+                height: 55px;
+            }
+            &:last-child {
+                position: absolute;
+                right: 28%;
+                fill: $light;
+                filter: drop-shadow(0px 0px 15px $light);
+                width: 30px;
+                height: 30px;
+            }
+        }
     }
 }
 .small-info-header {
@@ -248,7 +292,7 @@
     width: max-content;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     background: transparentize($color: $blue, $amount: 0.7);
-    border-radius: 10px;
+    border-radius: 5px;
     position: absolute;
     left: 0;
     top: 100%;
@@ -257,8 +301,9 @@
     .header-nav__subitem {
         display: inline-block;
         width: 100%;
-        padding: 10px 0px;
+        padding: 5px 0px;
         overflow: hidden;
+        line-height: 1;
     }
 }
 .header-nav__link,
@@ -277,7 +322,7 @@
     display: flex;
     position: relative;
     overflow: visible;
-    height: 30px;
+    height: 35px;
     cursor: pointer;
     
     &:hover {
@@ -301,7 +346,7 @@
     transform: translateX(-120%);
     opacity: 0;
     background-color: $light;
-    transition: all 0.3s ease, opacity 0s linear;
+    transition: all 0.2s ease, opacity 0s linear;
 }
 .header-nav__link:hover,
 .header-nav__link.active-section-link,
@@ -342,7 +387,7 @@
     font-weight: 600;
     border: 1px solid $pink;
 }
-.pink-button:after {
+.pink-button:before {
     display: none;
 }
 .pink-button:hover {
@@ -394,7 +439,7 @@
     flex-basis: 350px;
     flex-grow: 0;
     flex-shrink: 1;
-    margin: 45px 0;
+    margin: 20px 0;
 }
 .info-pic {
     fill: $light;
@@ -417,13 +462,14 @@
     height: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
 }
 .video-player {
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0px 0px 50px $blue;
-    width: 930px;
-    height: 520px;
+    width: 650px;
+    height: 360px;
 }
 .video-plug {
     width: 840px;
@@ -489,6 +535,9 @@
     font-size: 18px;
     font-weight: 400;
 }
+.hero-section .bottom-logo-slider-title {
+    font-size: 12px;
+}
     // Text
 .main-title {
     font-size: 50px;
@@ -534,7 +583,7 @@
     font-weight: 700;
 }
 .big-text {
-    font-size: 22px;
+    font-size: 20px;
 }
 .medium-text {
     line-height: 1.5;
@@ -583,6 +632,9 @@
 }
 .aliance-section {
     bottom: 80px;
+}
+.aliance-slider:hover .swiper-wrapper {
+    transition: all 0ms ease 0s !important;
 }
 .aliance-slider.bottom-logo-slider-mask {
     width: 85%;
@@ -636,9 +688,6 @@
 .cloud-slide {
     display: flex;
     flex-direction: column;
-}
-.cloud-slide-content {
-    margin-top: 80px;
 }
 
 .gallery-slide {
@@ -711,15 +760,18 @@
     font-weight: 600;
     margin-bottom: 20px;
     min-height: 40px;
-    color: $galleryblue;
+    color: $light;
     transition: color 0.5s ease
 }
-
+.team-section .gallery-slide-subtitle {
+    color: $galleryblue;
+}
 .card-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
     flex-basis: 385px;
     padding: 40px;
     border-radius: 20px;

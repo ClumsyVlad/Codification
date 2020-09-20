@@ -54,11 +54,11 @@ let alianceSlider = new Swiper('.aliance-slider', {
     loop: true,
     autoplay: {
         delay: 0,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
     },
-    allowTouchMove: false,
+    // allowTouchMove: false,
     speed: 5000,
-    centeredSlides: true,
+    centeredSlides: false,
     loopAdditionalSlides: 1
 });
 let cloudSlider = new Swiper('.cloud-slider', {
@@ -86,7 +86,7 @@ let aboutSlider = new Swiper('.about-slider', {
     //     hide: false,
     //     draggable: true,
     // },
-    freeMode: true,
+    freeMode: false,
     navigation: {
         nextEl: '.about-slider-next',
         prevEl: '.about-slider-prev',
@@ -174,12 +174,10 @@ bootcampSlider.on('transitionStart', function (event) {
 });
 
 alianceSlider.el.addEventListener('mouseover', function() {
-    alianceSlider.speed = 0;
     alianceSlider.autoplay.stop();
 });
 
 alianceSlider.el.addEventListener('mouseout', function() {
-    alianceSlider.speed = 5000;
     alianceSlider.autoplay.start();
 });
 // Video

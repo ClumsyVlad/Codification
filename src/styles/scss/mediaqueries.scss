@@ -1,7 +1,7 @@
 /* width */
 @media screen and (min-width: 1600px) {
     .multiple-text .text:not(:first-child) {
-        margin-top: 45px;
+        margin-top: 25px;
     }
 }
 @media screen and (max-width: 1600px) {
@@ -116,12 +116,18 @@
     .bottom-logo-slider-title {
         font-size: 16px;
     }
+    .hero-section .bottom-logo-slider-title {
+        font-size: 10px;
+    }
 }
 
 /* height */
 @media screen and (max-height: 1050px) {
     .bottom-logo-slider-title {
         font-size: 16px;
+    }
+    .hero-section .bottom-logo-slider-title {
+        font-size: 10px;
     }
     .columns {
         width: 100%;
@@ -546,5 +552,12 @@
                 flex-basis: 85%;
             }
         }
+    }
+    .about-progress-info-item:last-child .progress-info-circle .circle-to-triangle {
+        transform: rotate(180deg) translateY(15px);
+    }
+    .about-progress-info-item:last-child .progress-info-circle .circle-to-triangle:last-child {
+        right: 22%;
+        top: 16%;
     }
 }
