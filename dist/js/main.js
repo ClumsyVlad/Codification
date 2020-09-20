@@ -146,7 +146,24 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
         prevEl: '.bootcamp-slider-prev',
     },
 });
-
+let pricingSlider = new Swiper ('.pricing-slider', {
+    slidesPerView: 'auto',
+    speed: 750,
+    // scrollbar: {
+    //     el: '.bootcamp-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
+});
+let joinSlider = new Swiper ('.join-slider', {
+    slidesPerView: 'auto',
+    speed: 750,
+    // scrollbar: {
+    //     el: '.bootcamp-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
+});
 
 
 tabsLink[0].classList.add('active');

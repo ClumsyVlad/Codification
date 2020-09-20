@@ -631,7 +631,7 @@
     height: auto;
 }
 .aliance-section {
-    bottom: 80px;
+    bottom: 40px;
 }
 .aliance-slider:hover .swiper-wrapper {
     transition: all 0ms ease 0s !important;
@@ -757,7 +757,6 @@
 }
 .gallery-slide-subtitle {
     font-size: 20px;
-    font-weight: 600;
     margin-bottom: 20px;
     min-height: 40px;
     color: $light;
@@ -765,6 +764,7 @@
 }
 .team-section .gallery-slide-subtitle {
     color: $galleryblue;
+    font-weight: 600;
 }
 .card-item {
     display: flex;

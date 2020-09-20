@@ -108,7 +108,7 @@
         top: -80%;
     }
     .aliance-section {
-        bottom: 60px;
+        bottom: 40px;
     }
     .about-tabs-logo .partners-slide__image {
         width: 110px;
@@ -502,11 +502,14 @@
         height: 350px;
     }
     .about-tabs-logo {
-        margin: 0px 5px;
+        margin: 0px;
         .partners-slide__image {
-            width: 75px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
         }
+    }
+    .about-tabs-slide {
+        width: 100%;
     }
     .about-progress-info {
         flex-direction: column;
@@ -559,5 +562,110 @@
     .about-progress-info-item:last-child .progress-info-circle .circle-to-triangle:last-child {
         right: 22%;
         top: 16%;
+    }
+    .about-tabs-column {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .contact-form-block {
+        margin-top: 50px;
+    }
+    .study-scheme-block {
+        height: clamp(350px, 400px, 420px);
+        width: 100%;
+        flex-basis: 100%;
+        margin-top: 80px;
+    }
+    .study-section .basis-55 {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .cards-container {
+        width: 100%;
+        height: 100%;
+        align-items: stretch;
+
+        .card-item {
+            min-height: 100%;
+            height: 570px;
+        }
+    }
+    .panel-block {
+        margin-top: 80px;
+    }
+    .bootcamp-section {
+        .superhero-block {
+            right: 10vw;
+
+            .plug-image {
+                height: 40vh;
+                width: auto;
+            }
+        }
+    }
+    .cloud-section {
+        .columns.auto-height {
+            flex-direction: row;
+        }
+    }
+    .video-plug {
+        margin-top: 50px;
+        width: 100%;
+        align-self: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .workshop-timer {
+        padding: 10px;
+        height: 180px;
+        margin-top: 20px;
+        width: 50%;
+        .workshop-timer-header {
+            font-size: 18px;
+        }
+        .workshop-timer-time .workshop-timer-time-units .time-number {
+            font-size: 40px;
+        }
+    }
+    .contact-form-block {
+        padding: 20px;
+    }
+    .study-scheme-block {
+        height: clamp(250px,300px,320px);
+    }
+    .cards-container .card-item {
+        height: 400px;
+        .card-header {
+            height: 50px;
+        }
+        .text {
+            font-size: 14px;
+        }
+    }
+    .video-player {
+        width: 550px;
+        height: 300px;
+    }
+    .plug-image {
+        margin-top: 50px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .text {
+        font-size: 14px;
+    }
+    .header-block .header {
+        padding-top: 20px;
+    }
+    .wrapper {
+        padding: 0px 20px;
+    }
+    .hero-section .button-margin {
+        margin-top: 40px;
+    }
+    .plug-image {
+        margin-top: 20px;
     }
 }
