@@ -773,11 +773,12 @@
     align-items: center;
     flex-shrink: 0;
     flex-basis: 385px;
+    height: 575px;
     padding: 40px;
     border-radius: 20px;
     border: 3px solid $light;
     background: linear-gradient(0deg, transparent -30%, transparentize($color: $blue, $amount: 0.3));
-    box-shadow: 0px 0px 15px 10px $blue;
+    box-shadow: 0px 0px 8px 4px $blue;
     &:not(:first-child) {
         margin-left: 100px;
     }
@@ -787,7 +788,9 @@
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        height: 50px;
+        padding: 0;
 
         &.unuppercase {
             text-transform: unset;
@@ -1383,4 +1386,7 @@ input:focus {
 //Burger-menu
 .burger-button {
     display: none;
+}
+iframe#tidio-chat-iframe {
+    left: 10px !important;
 }

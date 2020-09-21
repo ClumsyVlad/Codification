@@ -827,11 +827,12 @@ input {
   align-items: center;
   flex-shrink: 0;
   flex-basis: 385px;
+  height: 575px;
   padding: 40px;
   border-radius: 20px;
   border: 3px solid #ffffff;
   background: linear-gradient(0deg, transparent -30%, rgba(0, 159, 233, 0.7));
-  box-shadow: 0px 0px 15px 10px #009fe9; }
+  box-shadow: 0px 0px 8px 4px #009fe9; }
   .card-item:not(:first-child) {
     margin-left: 100px; }
   .card-item .card-header {
@@ -839,7 +840,9 @@ input {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 40px;
+    height: 50px;
+    padding: 0; }
     .card-item .card-header.unuppercase {
       text-transform: unset; }
   .card-item .card-price {
@@ -1370,6 +1373,9 @@ input:focus {
 .burger-button {
   display: none; }
 
+iframe#tidio-chat-iframe {
+  left: 10px !important; }
+
 .body {
   background: radial-gradient(ellipse at 50% 50%, #005190 5%, #001029 85%);
   background-size: 200% 200%;
@@ -1781,14 +1787,19 @@ input:focus {
     .join-section .card-item .card-header {
       font-size: 18px;
       margin-bottom: 10px;
-      padding: 0; }
+      padding: 0;
+      height: 40px; }
+    .card-item p.card-header,
+    .join-section .card-item p.card-header {
+      height: auto;
+      margin-bottom: 15px; }
     .card-item .card-price,
     .join-section .card-item .card-price {
       font-size: 18px;
       margin-bottom: 10px; }
     .card-item .text,
     .join-section .card-item .text {
-      font-size: 10px; }
+      font-size: 12px; }
     .card-item .multiple-text .text:not(:first-child),
     .join-section .card-item .multiple-text .text:not(:first-child) {
       margin-top: 5px; }
@@ -2008,6 +2019,16 @@ input:focus {
     height: 250px; } }
 
 @media screen and (max-width: 420px) {
+  .header-block .burger-button {
+    width: 30px;
+    height: 20px; }
+    .header-block .burger-button .burger-line {
+      height: 2px; }
+    .header-block .burger-button.active .burger-line:nth-child(1) {
+      transform: translate(0, 5px) rotate(45deg); }
+  .header-block .logo-image {
+    height: 30px;
+    width: 65px; }
   .text {
     font-size: 14px; }
   .header-block .header {
@@ -2016,5 +2037,181 @@ input:focus {
     padding: 0px 20px; }
   .hero-section .button-margin {
     margin-top: 40px; }
+  .main-title {
+    margin-bottom: 10px;
+    font-size: 22px; }
+  .subtitle {
+    margin-bottom: 10px; }
   .plug-image {
-    margin-top: 20px; } }
+    margin-top: 0px;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
+    width: calc(100vw - 40px); }
+  .bottom-logo-slider {
+    bottom: 20px; }
+    .bottom-logo-slider .bottom-logo-slider-title {
+      padding-bottom: 5px; }
+  .partners-section .partners-slide__image {
+    height: 25px; }
+  .about-progress-info {
+    margin-top: 0px; }
+    .about-progress-info .about-progress-info-item {
+      margin-bottom: 15px;
+      padding-left: 50px; }
+      .about-progress-info .about-progress-info-item .small-info-header {
+        font-size: 18px;
+        margin-bottom: 5px; }
+      .about-progress-info .about-progress-info-item .progress-info-text {
+        font-size: 12px; }
+      .about-progress-info .about-progress-info-item .progress-info-circle {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0px; }
+        .about-progress-info .about-progress-info-item .progress-info-circle:after {
+          width: 25px;
+          height: 25px; }
+      .about-progress-info .about-progress-info-item:first-child:after {
+        left: 20px;
+        top: 10px;
+        transform: translateX(-50%); }
+      .about-progress-info .about-progress-info-item:last-child .progress-info-circle .circle-to-triangle {
+        transform: rotate(180deg) translateY(5px); }
+        .about-progress-info .about-progress-info-item:last-child .progress-info-circle .circle-to-triangle:first-child {
+          width: 40px;
+          height: 40px;
+          top: 0;
+          bottom: 0; }
+        .about-progress-info .about-progress-info-item:last-child .progress-info-circle .circle-to-triangle:last-child {
+          width: 25px;
+          height: 25px;
+          right: 20%; }
+      .about-progress-info .about-progress-info-item:last-child:before {
+        left: 20px;
+        bottom: 100%;
+        transform: translateX(-50%); }
+  .about-tabs .about-tabs-pagination {
+    margin: 15px 0px 10px; }
+    .about-tabs .about-tabs-pagination .about-tabs-logo .partners-slide__image {
+      width: 40px;
+      height: 40px; }
+  .about-tabs .gallery-slide-subtitle {
+    font-size: 14px; }
+  .about-tabs .medium-size {
+    font-size: 20px;
+    padding-bottom: 5px; }
+  .about-tabs .about-tabs-wrapper {
+    align-items: flex-start; }
+  .basis-55 {
+    display: none; }
+  .study-scheme-block {
+    position: absolute;
+    visibility: hidden; }
+  .button-margin {
+    margin-top: 15px; }
+  .dynamic-statistic-item:not(:first-child) {
+    margin-top: 5px; }
+  .dynamic-statistic-item .dynamic-statistic-number {
+    font-size: 30px; }
+  .study-slide {
+    display: flex; }
+    .study-slide .columns.wrapper {
+      align-self: center; }
+  .hidden {
+    max-height: 0px; }
+  .panel-block {
+    margin-top: 20px; }
+    .panel-block .panel-header {
+      font-size: 20px;
+      margin-bottom: 15px; }
+    .panel-block .panels-items-block .panel-item {
+      height: 50px; }
+      .panel-block .panels-items-block .panel-item .panel-square {
+        flex-basis: 30%;
+        width: auto;
+        height: 65px; }
+        .panel-block .panels-items-block .panel-item .panel-square:before {
+          width: 5px;
+          height: 5px;
+          top: 50%;
+          right: 10px; }
+        .panel-block .panels-items-block .panel-item .panel-square:after {
+          width: 40px;
+          top: 36px;
+          right: -25px; }
+        .panel-block .panels-items-block .panel-item .panel-square .panel-object {
+          width: 100px;
+          height: 65px; }
+        .panel-block .panels-items-block .panel-item .panel-square .panel-item-name {
+          font-size: 0px; }
+      .panel-block .panels-items-block .panel-item .panel-description {
+        flex-basis: 60%;
+        z-index: 100; }
+        .panel-block .panels-items-block .panel-item .panel-description .partners-slide__image {
+          width: 25px;
+          height: 25px;
+          max-width: 25px;
+          max-height: 25px;
+          flex-basis: 25px;
+          flex-grow: 0;
+          margin-right: 5px;
+          position: absolute;
+          transform: translateX(-105px); }
+        .panel-block .panels-items-block .panel-item .panel-description .panel-text {
+          font-size: 12px; }
+  .superhero-block {
+    height: 35vh;
+    width: 40vw;
+    right: 5vw;
+    width: 100%; }
+    .superhero-block .plug-image {
+      opacity: 1; }
+  .video-plug {
+    margin-top: 25px;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .video-plug .video-player {
+      width: 280px;
+      height: 140px; }
+      .video-plug .video-player .plyr button.plyr__control--overlaid {
+        width: 50px;
+        height: 50px; }
+        .video-plug .video-player .plyr button.plyr__control--overlaid svg {
+          height: 30px;
+          width: 30px; }
+  .multiple-text .text:not(:first-child) {
+    margin-top: 5px; }
+  .cloud-section .columns.auto-height.info-with-pic-block {
+    flex-direction: column;
+    margin: 5px 0; }
+    .cloud-section .columns.auto-height.info-with-pic-block .info-with-pic {
+      flex-direction: row;
+      margin: 0px 0 5px;
+      flex-basis: 45%;
+      flex-grow: 0; }
+      .cloud-section .columns.auto-height.info-with-pic-block .info-with-pic .info-pic {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+        min-width: 35px;
+        margin-bottom: 0;
+        margin-right: 5px; }
+      .cloud-section .columns.auto-height.info-with-pic-block .info-with-pic .info-text {
+        font-size: 12px;
+        width: auto; }
+  .cloud-section .button {
+    font-size: 14px; }
+  .cloud-section .cloud-animation {
+    bottom: 50px;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; }
+    .cloud-section .cloud-animation .plug-image {
+      opacity: 0.5;
+      width: 100%;
+      object-fit: contain; } }
