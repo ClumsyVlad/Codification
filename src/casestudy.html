@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Containerising .NET for UK Gov | Codification.io</title>
+        //= partials/head.html
+    </head>
+    <body class="body">
+        //= partials/header.html
+        <main class="main">
+        <!-- Case study section -->
+            <section class="section" id="study-section">
+                <div class="study-section">
+                    <div class="study-slider slider">
+                        <div class="swiper-wrapper study-slider-wrapper">
+                            <div class="swiper-slide study-slide">
+                                <div class="columns wrapper">
+                                    <div class="column-content column-less-content justify-start mt-l">
+                                        <h4 class="main-title unuppercase">Containering a Microsoft legacy for the UK Government</h4>
+                                        <div class="column-content justify-start">
+                                            <p class="text bold-text medium-size subtitle">
+                                                Case study
+                                            </p>
+                                            <div class="multiple-text">
+                                                <p class="text big-text medium-text medium-text">
+                                                    This customer needed .NET apps to be shifted to the cloud to complete a data centre obsolesence programme.
+                                                </p>
+                                                <p class="text big-text medium-text medium-text">
+                                                    As well as refactoring, apps had to be optimised for secure cloud native operations (containers in the cloud) with minimal overhead in Azure, the pre-select cloud partner.
+                                                </p>
+                                                <p class="text big-text medium-text medium-text">
+                                                    Multi-cloud operations are a strategic ambition for the department and as containers are separate from underlying infrastructure, they’re portable between environments and can be run in any cloud.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column-content align-self-center basis-55">
+                                        <div class="study-scheme-block row-content justify-evenly align-center">
+                                            <div class="scheme-image-block">
+                                                <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                    <use href="#cloud-door"/>
+                                                </svg>
+                                                <p class="scheme-title"><span class="block-text">Front</span>Door</p>
+                                            </div>
+                                            <div class="column-content align-center">
+                                                <div class="scheme-image-block scheme-background dashed scheme-padding-small">
+                                                    <svg class="partners-slide__image scheme-image">
+                                                        <use href="#enter-door"/>
+                                                    </svg>
+                                                    <p class="scheme-title block-text">Ingress</p>
+                                                </div>
+                                                <div class="scheme-image-block scheme-background dashed scheme-padding-small">
+                                                    <svg class="partners-slide__image scheme-image">
+                                                        <use href="#exit-door"/>
+                                                    </svg>
+                                                    <p class="scheme-title block-text">Egress</p>
+                                                </div>
+                                            </div>
+                                            <div class="row-content scheme-background dashed scheme-padding align-center justify-evenly h-100 shrink-0 big-scheme">
+                                                <div class="column-content scheme-padding-small-right">
+                                                    <p class="scheme-title block-text">Tenant 1</p>
+                                                    <p class="scheme-title block-text">Tenant 2</p>
+                                                    <p class="scheme-title block-text">Tenant 3</p>
+                                                    <p class="scheme-title block-text"></p>
+                                                </div>
+                                                <div class="column-content dashed scheme-padding align-center">
+                                                    <div class="row-content">
+                                                        <p class="scheme-blue-title block-text">API</p>
+                                                        <p class="scheme-blue-title block-text">WebApp</p>
+                                                    </div>
+                                                    <div class="row-content">
+                                                        <p class="scheme-blue-title block-text">API</p>
+                                                        <p class="scheme-blue-title block-text">WebApp</p>
+                                                    </div>
+                                                    <div class="row-content">
+                                                        <p class="scheme-blue-title block-text">API</p>
+                                                        <p class="scheme-blue-title block-text">WebApp</p>
+                                                    </div>
+                                                    <p class="scheme-title block-text">Deployment</p>
+                                                </div>
+                                                <div class="column-content scheme-padding-small-left align-center">
+                                                    <p class="scheme-blue-title block-text">Job</p>
+                                                    <p class="scheme-blue-title block-text">Job</p>
+                                                    <p class="scheme-blue-title block-text">Job</p>
+                                                    <p class="scheme-title block-text">CronJob</p>
+                                                </div>
+                                                <div class="service-stack-block">
+                                                    <div class="scheme-image-block">
+                                                        <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                            <use href="#service-stack"/>
+                                                        </svg>
+                                                        <p class="scheme-title"><span class="block-text">Kubernetes</span> Service</p>
+                                                    </div>
+                                                </div>
+                                                <div class="sql-database-block">
+                                                    <div class="scheme-image-block">
+                                                        <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                            <use href="#sql-cloud"/>
+                                                        </svg>
+                                                        <p class="scheme-title"><span class="block-text">SQL</span>Database</p>
+                                                    </div>
+                                                </div>                                    
+                                                <div class="container-registry-block">
+                                                    <div class="scheme-image-block">
+                                                        <svg class="partners-slide__image scheme-image scheme-big-image">
+                                                            <use href="#cloud-container"/>
+                                                        </svg>
+                                                        <p class="scheme-title"><span class="block-text">Container</span>Registry</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide study-slide">
+                                <div class="columns wrapper">
+                                    <div class="column-content justify-start mt-l">
+                                        <h4 class="main-title unuppercase">What were the results?</h4>
+                                        <div class="column-content justify-start">
+                                            <p class="text bold-text medium-size subtitle">
+                                                Zero to DevOps heros
+                                            </p>
+                                            <div class="multiple-text">
+                                                <p class="text big-text medium-text medium-text">
+                                                    The department was starting from no operational experience of Kubernetes, so we began with training in Docker fundamentals, Terraform and site relibaility engineering practice.
+                                                </p>
+                                                <p class="text big-text medium-text medium-text">
+                                                    Azure DevOps was selected as it is easy to learn for inexperienced engineers and gives a unified end-to-end development experience.
+                                                </p>
+                                                <a href="mailto:info@codification.io" data-link="book-consultation" class="button hero-button link-button pink-button button-margin big-button">Book A free consultation</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column-content column-less-content justify-start mt-l">
+                                        <h4 class="main-title unuppercase hidden">Outcomes statistic</h4>
+                                        <div class="column-content justify-start">
+                                            <p class="text bold-text medium-size subtitle">
+                                                Outcomes
+                                            </p>
+                                            <div class="column-content">
+                                                <div class="row-content dynamic-statistic-item align-center">
+                                                    <span class="dynamic-statistic-number">40%</span>
+                                                    <span class="dynamic-statistic-text big-text bold-text medium-height">Reduction in IT infrastructure footprint</span>
+                                                </div>
+                                                <div class="row-content dynamic-statistic-item align-center">
+                                                    <span class="dynamic-statistic-number">60%</span>
+                                                    <span class="dynamic-statistic-text big-text bold-text medium-height">Improvement in release velocity</span>
+                                                </div>
+                                                <div class="row-content dynamic-statistic-item align-center">
+                                                    <span class="dynamic-statistic-number">0</span>
+                                                    <span class="dynamic-statistic-text big-text bold-text medium-height">Changes to the code base</span>
+                                                </div>
+                                                <div class="row-content dynamic-statistic-item align-center">
+                                                    <span class="dynamic-statistic-number">72%</span>
+                                                    <span class="dynamic-statistic-text big-text bold-text medium-height">Faster operational issue resolution</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar study-slider-scrollbar default-slider-scrollbar"></div>
+                        <div class="study-slider-navigation default-slider-navigation">
+                            <div class="study-slider-prev default-slider-prev">
+                                <svg class="nav-arrow arrow-left">
+                                    <use href="#nav-arrow"/>
+                                </svg>
+                            </div>
+                            <div class="study-slider-next default-slider-next">
+                                <svg class="nav-arrow arrow-right">
+                                    <use href="#nav-arrow"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- Case study section end -->
+            <div id="background-nets" class="background-nets"></div>
+        </main>
+        //= images/svg.html
+        //= partials/scripts.html
+    </body>
+</html>

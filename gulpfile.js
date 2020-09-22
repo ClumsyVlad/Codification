@@ -43,6 +43,11 @@ function htmlBuild() {
         .pipe(browserSync.stream())
 };
 
+function moveHtaccess() {
+    return gulp.src('./src/.htaccess')
+        .pipe(gulp.dest('./dist'))
+};
+
 function scriptsBuild() {
     return gulp.src('./src/js/*.js')
         // .pipe(uglify())
@@ -97,6 +102,7 @@ exports.video = video;
 exports.fontsBuild = fontsBuild;
 exports.images = images;
 exports.htmlBuild = htmlBuild;
+exports.moveHtaccess = moveHtaccess;
 exports.scriptsBuild = scriptsBuild;
 exports.sassBuild = sassBuild;
 exports.prefixMin = prefixMin;
@@ -106,7 +112,7 @@ exports.mediaBuild = series(images);
 exports.styleBuild = series (sassBuild, prefixMin);
 exports.build = series(images, htmlBuild, scriptsBuild, sassBuild, prefixMin);
 exports.watch = watch;
-exports.magic = series(fontsBuild, video, htmlBuild, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
+exports.magic = series(fontsBuild, video, htmlBuild, moveHtaccess, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
 
 exports.cleangit = cleangit;
 exports.buildgit = buildgit;

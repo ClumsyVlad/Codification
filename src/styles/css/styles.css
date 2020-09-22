@@ -136,18 +136,7 @@ input {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out; }
-
-.section.active-section {
-  position: static;
-  top: 0;
-  left: 0;
-  opacity: 1; }
+  height: 100%; }
 
 .column-content,
 .hero-animation {
@@ -841,7 +830,6 @@ input {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 40px;
-    height: 50px;
     padding: 0; }
     .card-item .card-header.unuppercase {
       text-transform: unset; }
@@ -874,6 +862,16 @@ input {
 
 .join-section .card-item .button {
   margin-top: 0; }
+
+.blog-section .blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 385px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 10px #009fe9; }
 
 .scheme-image-block {
   display: flex;
@@ -1165,7 +1163,7 @@ input {
   align-items: center;
   padding: 50px 60px;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #f0f0f0;
   box-shadow: 0px 0px 50px 0px #ffffff; }
   .contact-form-block .form-title {
     color: #009fe9; }
@@ -1216,23 +1214,23 @@ input {
   transition: opacity 0.3s ease;
   flex-basis: 55%; }
 
-.bootcamp-section.active-section .swiper-slide.swiper-slide-active .panel-block,
-.bootcamp-section.active-section .swiper-slide.swiper-slide-active .panels-section,
-.bootcamp-section.active-section .swiper-slide.swiper-slide-active .panel-description {
+.bootcamp-section .swiper-slide.swiper-slide-active .panel-block,
+.bootcamp-section .swiper-slide.swiper-slide-active .panels-section,
+.bootcamp-section .swiper-slide.swiper-slide-active .panel-description {
   display: flex;
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s ease; }
 
-.bootcamp-section.active-section .swiper-slide.swiper-slide-active .panel-square:before,
-.bootcamp-section.active-section .swiper-slide.swiper-slide-active .panel-square:after {
+.bootcamp-section .swiper-slide.swiper-slide-active .panel-square:before,
+.bootcamp-section .swiper-slide.swiper-slide-active .panel-square:after {
   display: block; }
 
-.bootcamp-section.active-section .swiper-slide.swiper-slide-active .panel-header {
+.bootcamp-section .swiper-slide.swiper-slide-active .panel-header {
   animation: showpanelheader 1s ease;
   visibility: visible; }
 
-.bootcamp-section.active-section .swiper-slide .panel-block {
+.bootcamp-section .swiper-slide .panel-block {
   position: relative;
   display: flex;
   opacity: 0;
@@ -1509,50 +1507,50 @@ iframe#tidio-chat-iframe {
   animation: timer-background 15s ease-in-out infinite; }
 
 /* Panels animation */
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(4) {
   animation: hidepanelitem 0.5s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(3) {
   animation: hidepanelitem 1s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(2) {
   animation: hidepanelitem 1.5s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(1) {
   animation: hidepanelitem 2s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) .panel-object {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(4) .panel-object {
   animation: showpanelitem 0.5s ease;
   animation-delay: 0.5s; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) .panel-object {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(3) .panel-object {
   animation: showpanelitem 0.5s ease;
   animation-delay: 1s; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) .panel-object {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(2) .panel-object {
   animation: showpanelitem 0.5s ease;
   animation-delay: 1.5s; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) .panel-object {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(1) .panel-object {
   animation: showpanelitem 0.5s ease;
   animation-delay: 2s; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item .panel-square:before {
+.bootcamp-section .swiper-slide-active .panel-item .panel-square:before {
   animation: showpaneldot 2.5s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item .panel-square:after {
+.bootcamp-section .swiper-slide-active .panel-item .panel-square:after {
   animation: showpanelline 3s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(1) .panel-description {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(1) .panel-description {
   animation: showpaneldescription 5s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(2) .panel-description {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(2) .panel-description {
   animation: showpaneldescription 4.5s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(3) .panel-description {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(3) .panel-description {
   animation: showpaneldescription 4s linear; }
 
-.bootcamp-section.active-section .swiper-slide-active .panel-item:nth-child(4) .panel-description {
+.bootcamp-section .swiper-slide-active .panel-item:nth-child(4) .panel-description {
   animation: showpaneldescription 3.5s linear; }
 
 /* width */
@@ -1787,8 +1785,7 @@ iframe#tidio-chat-iframe {
     .join-section .card-item .card-header {
       font-size: 18px;
       margin-bottom: 10px;
-      padding: 0;
-      height: 40px; }
+      padding: 0; }
     .card-item p.card-header,
     .join-section .card-item p.card-header {
       height: auto;
