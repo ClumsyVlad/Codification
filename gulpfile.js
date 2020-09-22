@@ -110,7 +110,7 @@ exports.prefixMin = prefixMin;
 
 exports.mediaBuild = series(images);
 exports.styleBuild = series (sassBuild, prefixMin);
-exports.build = series(images, htmlBuild, scriptsBuild, sassBuild, prefixMin);
+exports.build = series(images, htmlBuild, moveHtaccess, scriptsBuild, sassBuild, prefixMin);
 exports.watch = watch;
 exports.magic = series(fontsBuild, video, htmlBuild, moveHtaccess, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
 
