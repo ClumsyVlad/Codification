@@ -199,6 +199,53 @@ bootcampSlider.on('transitionStart', function (event) {
         document.querySelector('.superhero-block').classList.remove('show-hero');
     }
 });
+
+// Particles initialization
+if (document.querySelector('.hero-section')) {
+    anime({
+        targets: '#path-neon-line',
+        strokeDashoffset: [
+            anime.setDashoffset, 0
+        ],
+        strokeDasharray: [
+            anime.setDasharray, 1220
+        ],
+        easing: 'linear',
+        duration: 10000,
+        delay: function(el, i) { return i * 250 },
+        loop: true
+    });
+    particlesJS.load('particles-js', '/js/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+    VanillaTilt.init(document.querySelector(".hero-animation-canvas"), {
+        max: 25,
+        transition: true,
+        speed: 400,
+        reverse: true,
+        gyroscope: true
+	});
+} else if(!(document.querySelector('.hero-section'))) {
+    let netsParent = document.querySelector('.background-nets');
+    let netsWidth = netsParent.offsetWidth;
+    let netsHeight = netsParent.offsetHeight;
+    VANTA.NET({
+        el: "#background-nets",
+        mouseControls: true,
+        touchControls: false,
+        gyroControls: true,
+        height: netsHeight,
+        width: netsWidth,
+        scale: 1.25,
+        scaleMobile: 1.00,
+        color: 0x000000,
+        backgroundColor: 0x001029,
+        backgroundAlpha: 0,
+        points: 7.00,
+        maxDistance: 25.00,
+        spacing: 20.00,
+    });
+};
 // Video
 const player = new Plyr('#player', {});
 

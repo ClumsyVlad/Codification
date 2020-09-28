@@ -632,6 +632,70 @@ input {
   width: 80%;
   font-size: 22px; }
 
+.hero-animation-canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: all 0.2s linear; }
+  .hero-animation-canvas .hero-animation-image {
+    display: block;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px); }
+    .hero-animation-canvas .hero-animation-image:before, .hero-animation-canvas .hero-animation-image:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 35%;
+      height: 6%;
+      background: radial-gradient(#4fbbf2, rgba(79, 187, 242, 0.5) 20%, rgba(79, 187, 242, 0.2) 40%, rgba(79, 187, 242, 0.05) 60%, transparent 80%, transparent);
+      bottom: 0;
+      border-radius: 50%;
+      opacity: 0.8;
+      transform: translateZ(45px); }
+    .hero-animation-canvas .hero-animation-image:before {
+      left: 30%;
+      transform: translateX(-50%); }
+    .hero-animation-canvas .hero-animation-image:after {
+      right: 30%;
+      transform: translateX(50%); }
+    .hero-animation-canvas .hero-animation-image .hero-animation-svg {
+      display: block;
+      position: relative;
+      transform: translateZ(40px); }
+      .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line {
+        fill: none;
+        stroke-width: 1%;
+        stroke: #009fe9;
+        stroke-dasharray: 1220 !important;
+        stroke-dashoffset: 2440;
+        stroke-linecap: round;
+        opacity: 0.7;
+        transform: translateZ(25px); }
+    .hero-animation-canvas .hero-animation-image .hero-animation-dots {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-style: preserve-3d;
+      transform: perspective(1500px);
+      transform: translateZ(60px); }
+  .hero-animation-canvas .hero-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    mask-image: radial-gradient(closest-side, black, black 80%, transparent 95%, transparent);
+    transform: translateZ(65px); }
+
 .bold-text {
   font-weight: 700; }
 

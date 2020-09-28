@@ -48,6 +48,12 @@ function moveHtaccess() {
         .pipe(gulp.dest('./dist'))
 };
 
+function jsonBuild() {
+    return gulp.src('./src/js/*.json')
+        .pipe(gulp.dest('./dist/js/'))
+        .pipe(browserSync.stream())
+};
+
 function scriptsBuild() {
     return gulp.src('./src/js/*.js')
         // .pipe(uglify())
@@ -86,6 +92,7 @@ function watch () {
     gulp.watch ('./src/**/*.css', prefixMin);
     gulp.watch ('./src/**/*.html', htmlBuild);
     gulp.watch ('./src/**/*.js', scriptsBuild);
+    gulp.watch ('./src/**/*.json', jsonBuild);
     gulp.watch ('./src/images/*', images);
 };
 
@@ -103,6 +110,7 @@ exports.fontsBuild = fontsBuild;
 exports.images = images;
 exports.htmlBuild = htmlBuild;
 exports.moveHtaccess = moveHtaccess;
+exports.jsonBuild = jsonBuild;
 exports.scriptsBuild = scriptsBuild;
 exports.sassBuild = sassBuild;
 exports.prefixMin = prefixMin;
@@ -112,7 +120,7 @@ exports.mediaBuild = series(images);
 exports.styleBuild = series (sassBuild, prefixMin);
 exports.build = series(images, htmlBuild, moveHtaccess, scriptsBuild, sassBuild, prefixMin);
 exports.watch = watch;
-exports.magic = series(fontsBuild, video, htmlBuild, moveHtaccess, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
+exports.magic = series(fontsBuild, video, htmlBuild, moveHtaccess, jsonBuild, scriptsBuild, sassBuild, prefixMin, watch); /* add 'images' to image optimization + minify */
 
 exports.cleangit = cleangit;
 exports.buildgit = buildgit;

@@ -569,6 +569,82 @@
     width: 80%;
     font-size: 22px;
 }
+.hero-animation-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: all 0.2s linear;
+
+    .hero-animation-image {
+        display: block;
+        width: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+
+        &:before, 
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 35%;
+            height: 6%;
+            background: radial-gradient(#4fbbf2, transparentize($color: #4fbbf2, $amount: 0.5) 20%, transparentize($color: #4fbbf2, $amount: 0.8) 40%, transparentize($color: #4fbbf2, $amount: 0.95) 60%, transparent 80%, transparent);
+            bottom: 0;
+            border-radius: 50%;
+            opacity: 0.8;
+            transform: translateZ(45px);
+        }
+        &:before {
+            left: 30%;
+            transform: translateX(-50%);
+        }
+        &:after {
+            right: 30%;
+            transform: translateX(50%);
+        }
+        .hero-animation-svg {
+            display: block;
+            position: relative;
+            transform: translateZ(40px);
+            
+            .hero-neon-line {
+                fill: none;
+                stroke-width: 1%;
+                stroke: $blue;
+                stroke-dasharray: 1220 !important;
+                stroke-dashoffset: 2440;
+                stroke-linecap: round;
+                opacity: 0.7;
+                transform: translateZ(25px);
+            }
+        }
+        .hero-animation-dots {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            transform: perspective(1500px);
+            transform: translateZ(60px);
+        }
+    }
+    .hero-particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        mask-image: radial-gradient(closest-side, black, black 80%, transparent 95%, transparent);
+        transform: translateZ(65px);
+    }
+}
 .bold-text {
     font-weight: 700;
 }
