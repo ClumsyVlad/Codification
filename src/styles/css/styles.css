@@ -642,6 +642,10 @@ input {
   transform-style: preserve-3d;
   transform: perspective(1000px);
   transition: all 0.2s linear; }
+  .hero-animation-canvas:hover .hero-animation-svg {
+    filter: drop-shadow(0px 0px 10px rgba(0, 159, 233, 0.5)); }
+  .hero-animation-canvas:hover .animation-cloudnative-hat-link {
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5)); }
   .hero-animation-canvas .hero-animation-image {
     display: block;
     width: 100%;
@@ -668,16 +672,29 @@ input {
     .hero-animation-canvas .hero-animation-image .hero-animation-svg {
       display: block;
       position: relative;
-      transform: translateZ(40px); }
+      transform: translateZ(40px);
+      transition: filter 0.5s ease; }
       .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line {
         fill: none;
-        stroke-width: 1%;
+        stroke-width: 1.5%;
         stroke: #009fe9;
-        stroke-dasharray: 1220 !important;
-        stroke-dashoffset: 2440;
+        stroke-dasharray: 1214 !important;
+        stroke-dashoffset: -2428;
         stroke-linecap: round;
-        opacity: 0.7;
+        opacity: 0.1;
         transform: translateZ(25px); }
+      .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line.hero-neon-line-main {
+        opacity: 1;
+        stroke: #ffffff;
+        stroke-width: 0.5%; }
+      .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line#path-neon-line-2 {
+        stroke-width: 2%; }
+      .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line#path-neon-line-3 {
+        stroke-width: 3%; }
+      .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line#path-neon-line-4 {
+        stroke-width: 4%; }
+      .hero-animation-canvas .hero-animation-image .hero-animation-svg .hero-neon-line#path-neon-line-5 {
+        stroke-width: 5%; }
     .hero-animation-canvas .hero-animation-image .hero-animation-dots {
       display: block;
       width: 100%;
@@ -695,6 +712,23 @@ input {
     z-index: 5;
     mask-image: radial-gradient(closest-side, black, black 80%, transparent 95%, transparent);
     transform: translateZ(65px); }
+  .hero-animation-canvas .animation-cloudnative-hat-link {
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    width: 15%;
+    filter: drop-shadow(0px 0px 5px #ffffff);
+    transform: translateZ(70px);
+    transition: filter 0.3s ease;
+    transform-origin: bottom;
+    transform-box: fill-box; }
+    .hero-animation-canvas .animation-cloudnative-hat-link:hover {
+      filter: drop-shadow(0px 0px 10px #ffffff); }
+    .hero-animation-canvas .animation-cloudnative-hat-link .animation-cloudnative-hat {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain; }
 
 .bold-text {
   font-weight: 700; }
@@ -927,7 +961,7 @@ input {
 .join-section .card-item .button {
   margin-top: 0; }
 
-.blog-section .blog-item {
+.blog-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -936,6 +970,68 @@ input {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 0px 20px 10px #009fe9; }
+
+.blog-image-block {
+  height: 230px; }
+  .blog-image-block .blog-image {
+    display: block;
+    height: 100%;
+    object-fit: cover; }
+
+.blog-content {
+  background: #ffffff;
+  padding: 25px 25px 30px; }
+
+.blog-header {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #004073;
+  padding: 0;
+  margin-bottom: 15px; }
+
+.blog-info-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px; }
+
+.blog-date {
+  color: #737373;
+  font-size: 14px; }
+
+.blog-author {
+  color: #009fe9;
+  font-size: 14px; }
+
+.blog-article-content {
+  margin-bottom: 35px; }
+
+.blog-article {
+  color: #2E313B;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 0px 0px #2E313B;
+  text-align: justify;
+  max-height: 180px;
+  overflow: hidden; }
+
+.blog-nav-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.blog-button.button {
+  font-size: 16px;
+  flex-basis: 95px;
+  flex-grow: 0;
+  padding: 5px 20px 3px;
+  line-height: 1;
+  vertical-align: middle; }
+
+.blog-info-link {
+  color: #009fe9;
+  font-size: 14px; }
 
 .scheme-image-block {
   display: flex;

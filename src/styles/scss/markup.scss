@@ -580,6 +580,15 @@
     transform: perspective(1000px);
     transition: all 0.2s linear;
 
+    &:hover {
+        .hero-animation-svg {
+            filter: drop-shadow(0px 0px 10px transparentize($color: $blue, $amount: 0.5));
+        }
+        .animation-cloudnative-hat-link {
+            filter: drop-shadow(0px 0px 15px transparentize($color: $light, $amount: 0.5));
+        }
+    }
+
     .hero-animation-image {
         display: block;
         width: 100%;
@@ -612,16 +621,34 @@
             display: block;
             position: relative;
             transform: translateZ(40px);
+            transition: filter 0.5s ease;
             
             .hero-neon-line {
                 fill: none;
-                stroke-width: 1%;
+                stroke-width: 1.5%;
                 stroke: $blue;
-                stroke-dasharray: 1220 !important;
-                stroke-dashoffset: 2440;
+                stroke-dasharray: 1214 !important;
+                stroke-dashoffset: -2428;
                 stroke-linecap: round;
-                opacity: 0.7;
+                opacity: 0.1;
                 transform: translateZ(25px);
+            }
+            .hero-neon-line.hero-neon-line-main {
+                opacity: 1;
+                stroke: $light;
+                stroke-width: 0.5%; 
+            }
+            .hero-neon-line#path-neon-line-2 {
+                stroke-width: 2%;
+            }
+            .hero-neon-line#path-neon-line-3 {
+                stroke-width: 3%;
+            }
+            .hero-neon-line#path-neon-line-4 {
+                stroke-width: 4%;
+            }
+            .hero-neon-line#path-neon-line-5 {
+                stroke-width: 5%;
             }
         }
         .hero-animation-dots {
@@ -643,6 +670,28 @@
         z-index: 5;
         mask-image: radial-gradient(closest-side, black, black 80%, transparent 95%, transparent);
         transform: translateZ(65px);
+    }
+    .animation-cloudnative-hat-link {
+        position: absolute;
+        top: -15%;
+        left: -10%;
+        width: 15%;
+        filter: drop-shadow(0px 0px 5px $light);
+        transform: translateZ(70px);
+        transition: filter 0.3s ease;
+        transform-origin: bottom;
+        transform-box: fill-box;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 10px $light);
+        }
+
+        .animation-cloudnative-hat {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
     }
 }
 .bold-text {
@@ -897,17 +946,78 @@
 .join-section .card-item .button {
     margin-top: 0;
 }
-.blog-section {
-    .blog-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        flex-basis: 385px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0px 0px 20px 10px $blue;
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 385px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 10px $blue;
+}
+.blog-image-block {
+    height: 230px;
+    .blog-image {
+        display: block;
+        height: 100%;
+        object-fit: cover;
     }
+}
+.blog-content {
+    background: $light;
+    padding: 25px 25px 30px;
+}
+.blog-header {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $galleryblue;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.blog-info-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.blog-date {
+    color: $bloggray;
+    font-size: 14px;
+}
+.blog-author {
+    color: $blue;
+    font-size: 14px;
+}
+.blog-article-content {
+    margin-bottom: 35px;
+}
+.blog-article {
+    color: $dark;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-shadow: 0px 0px $dark;
+    text-align: justify;
+    max-height: 180px;
+    overflow: hidden;
+}
+.blog-nav-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog-button.button {
+    font-size: 16px;
+    flex-basis: 95px;
+    flex-grow: 0;
+    padding: 5px 20px 3px;
+    line-height: 1;
+    vertical-align: middle;
+}
+.blog-info-link {
+    color: $blue;
+    font-size: 14px;
 }
 .scheme-image-block {
     display: flex;

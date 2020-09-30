@@ -104,8 +104,7 @@ let gallerySlider = new Swiper('.team-gallery-slider', {
     navigation: {
         nextEl: '.team-slider-next',
         prevEl: '.team-slider-prev',
-    },
-    parallax: true,
+    }
 });
 let aboutTabs = new Swiper('.about-tabs', {
     slidesPerView: 1,
@@ -200,31 +199,53 @@ bootcampSlider.on('transitionStart', function (event) {
     }
 });
 
-// Particles initialization
+
 if (document.querySelector('.hero-section')) {
-    anime({
-        targets: '#path-neon-line',
+    let animationCanvas = document.querySelector('.hero-animation-canvas');
+    let neonLines = document.querySelectorAll('.hero-neon-line');
+    let line1 = document.querySelector('#path-neon-line-1');
+    let animationDuration = 10000;
+    // let canvasAnimation = anime({
+    //     autoplay: true
+    // });
+    var tl = anime.timeline({
+        easing: 'linear',
+        duration: animationDuration,
+        loop: true
+    });
+    let path = anime.path('#path-neon-line-path');  
+
+    tl
+    .add({
+        targets: '#animate-cloudnative-hat',
+        translateX: path('x'),
+        translateY: path('y'),
+        translateZ: [70, 70],
+    }, 0)
+    .add({
+        targets: neonLines,
         strokeDashoffset: [
             anime.setDashoffset, 0
         ],
         strokeDasharray: [
-            anime.setDasharray, 1220
+            anime.setDasharray, 2428
         ],
-        easing: 'linear',
-        duration: 10000,
-        delay: function(el, i) { return i * 250 },
-        loop: true
-    });
+    }, 0);
+
+    animationCanvas.onmouseover = tl.pause;
+    animationCanvas.onmouseout = tl.play;
+
+
     particlesJS.load('particles-js', '/js/particlesjs-config.json', function() {
-        console.log('callback - particles.js config loaded');
     });
-    VanillaTilt.init(document.querySelector(".hero-animation-canvas"), {
+    VanillaTilt.init(animationCanvas, {
         max: 25,
         transition: true,
         speed: 400,
         reverse: true,
         gyroscope: true
-	});
+    });
+    
 } else if(!(document.querySelector('.hero-section'))) {
     let netsParent = document.querySelector('.background-nets');
     let netsWidth = netsParent.offsetWidth;
@@ -244,6 +265,42 @@ if (document.querySelector('.hero-section')) {
         points: 7.00,
         maxDistance: 25.00,
         spacing: 20.00,
+    });
+};
+// Blog section
+if (document.querySelector('.blog-section')) {
+    // Blog slider
+    let blogSlider = new Swiper('.blog-slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 70,
+        speed: 300,
+        // scrollbar: {
+        //     el: '.blog-slider-scrollbar',
+        //     hide: false,
+        //     draggable: true,
+        // },
+        navigation: {
+            nextEl: '.blog-slider-next',
+            prevEl: '.blog-slider-prev',
+        }
+    });
+    // Blog article cut
+    let blogArticles = document.querySelectorAll(".blog-article");
+    blogArticles.forEach((element) => {
+        $clamp(element, {
+            clamp: 8,
+            useNativeClamp: false
+        });
+    });
+    let readMoreParrent = document.querySelector('.blog-slider');
+    let readMoreList = document.querySelectorAll('.read-more-button');
+    console.log(readMoreList);
+    readMoreList.forEach((element, i) => element.dataset.article = i);
+
+    readMoreParrent.addEventListener('click', function(event) {
+        if (event.target.classList.contains('read-more-button')) {
+           console.log(event.target.dataset.article);
+        }
     });
 };
 // Video
