@@ -9,6 +9,9 @@
     justify-content: space-between;
     height: auto;
 }
+.main-page-columns {
+    width: 100%;
+}
 .half-screen {
     flex-basis: 50%;
 }
@@ -114,7 +117,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 40px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -126,10 +129,23 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
 }
 .team-gallery-slider {
     margin-top: 45px;
+    height: 100%;
+    width: 100%;
 }
+
+/*.team-slider-navigation {
+    .team-slider-prev .nav-arrow {
+        transform: rotate(-90deg);
+    }
+    .team-slider-next .nav-arrow {
+        transform: rotate(90deg);
+    }
+} */
+
     // Lists 
 .header-nav__list {
     display: flex;
@@ -526,7 +542,7 @@
     font-weight: 400;
 }
 .hero-section .bottom-logo-slider-title {
-    font-size: 12px;
+    font-size: 18px;
 }
     // Text
 .main-title {
@@ -540,7 +556,7 @@
 }
 .hero-title {
     font-size: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 
     .blue-text {
         font-size: 125%;
@@ -671,7 +687,9 @@
         mask-image: radial-gradient(closest-side, black, black 80%, transparent 95%, transparent);
         transform: translateZ(65px);
     }
+    /* remove display: none to show logo at the loop animation */
     .animation-cloudnative-hat-link {
+        display: none;
         position: absolute;
         top: -15%;
         left: -10%;
@@ -799,13 +817,22 @@
 }
 .swiper-wrapper {
     align-items: center;
+    cursor: grab;
 }
 .cloud-slide {
     display: flex;
     flex-direction: column;
 }
 
-.gallery-slide {
+.swiper-slide.gallery-multiple-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    transition: opacity 1.5s ease;
+}
+.gallery-item {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -817,7 +844,12 @@
     background: linear-gradient(180deg, $blue, $darkblue);
     transition: all 0.5s ease;
     overflow: hidden;
+
+    &:not(:last-child) {
+        margin-right: auto;
+    }
 }
+
 .gallery-parallax {
     overflow-x: auto;
     overflow-y: hidden;
@@ -829,11 +861,13 @@
 .gallery-parallax-base {
     transform: translateZ(0);
 }
-.gallery-slide .gallery-image {
-    object-fit: contain;
+.gallery-item .gallery-image {
+    object-fit: cover;
     display: block;
+    width: 100%;
     height: 100%;
-    width: auto;
+    user-select: none;
+    pointer-events: none;
 }
 .gallery-slide-info {
     display: flex;
@@ -846,21 +880,30 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(180deg, transparent, transparentize($color: $galleryblue, $amount: 0.5), $galleryblue);
-    padding: 120px 20px 20px;
-    transform: translateY(55%);
+    background: linear-gradient(180deg, transparentize($color: $light, $amount: 1), transparentize($color: $light, $amount: 0.5), transparentize($color: $light, $amount: 0.5), $light);
+    padding: 30px 20px 20px;
+    transform: translateY(67%);
     transition: all 0.5s ease;
+    transition-delay: background-color 0.3s;
+    user-select: none;
+    
+    .gallery-slide-info-text {
+        font-size: 16px;
+        color: $galleryblue;
+        text-shadow: none;
+    }
 }
-.gallery-slide:hover {
+.gallery-item:hover {
     box-shadow: 0px 0px 75px transparentize($color: $light, $amount: 0.2);
 
     .gallery-slide-info {
-        background: linear-gradient(180deg, transparent, transparentize($color: $galleryblue, $amount: 0.25), $galleryblue);
+        background-color: $light;
         transform: translateY(0);
+        transition: all 0.5s ease;
     }
     .gallery-slide-title,
     .gallery-slide-subtitle {
-        color: $light;
+        color: $galleryblue;
     }
 }
 .gallery-slide-title {
@@ -872,9 +915,9 @@
 }
 .gallery-slide-subtitle {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     min-height: 40px;
-    color: $light;
+    color: $galleryblue;
     transition: color 0.5s ease
 }
 .team-section .gallery-slide-subtitle {
@@ -1046,6 +1089,11 @@
 .scheme-big-image {
     width: 95px;
 }
+.cloud-svg-element {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
 .dashed {
     border-radius: 15px;
     border: 2px dashed $blue;
@@ -1182,6 +1230,7 @@
     .gallery-slide-subtitle {
         margin-bottom: 0;
         height: auto;
+        color: $light;
     }
 }
 .about-tabs .swiper-slide {
@@ -1548,7 +1597,7 @@
     }
 }
 .hero-section .button-margin {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 .hero-section .plug-image {
     filter: drop-shadow(0px 0px 75px $blue);

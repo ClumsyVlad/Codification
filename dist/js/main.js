@@ -61,22 +61,8 @@ let alianceSlider = new Swiper('.aliance-slider', {
     centeredSlides: false,
     loopAdditionalSlides: 1
 });
-let cloudSlider = new Swiper('.cloud-slider', {
-    slidesPerView: 'auto',
-    spaceBetween: 250,
-    speed: 750,
-    // centeredSlides: true,
-    // scrollbar: {
-    //     el: '.cloud-slider-scrollbar',
-    //     hide: false,
-    //     draggable: true,
-    // },
-    navigation: {
-        nextEl: '.cloud-slider-next',
-        prevEl: '.cloud-slider-prev',
-    },
-});
 let aboutSlider = new Swiper('.about-slider', {
+    mousewheel: true,
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
@@ -93,9 +79,11 @@ let aboutSlider = new Swiper('.about-slider', {
     },
 });
 let gallerySlider = new Swiper('.team-gallery-slider', {
+    // direction: 'horizontal',
     slidesPerView: 'auto',
     spaceBetween: 40,
     speed: 300,
+    mousewheel: true,
     // scrollbar: {
     //     el: '.team-slider-scrollbar',
     //     hide: false,
@@ -118,6 +106,7 @@ let aboutTabs = new Swiper('.about-tabs', {
     // },
 });
 let studySlider = new Swiper('.study-slider', {
+    mousewheel: true,
     slidesPerView: 'auto',
     spaceBetween: 250,
     speed: 750,
@@ -132,7 +121,8 @@ let studySlider = new Swiper('.study-slider', {
     },
 });
 let bootcampSlider = new Swiper('.bootcamp-slider', {
-    slidesPerView: 'auto',
+    mousewheel: true,
+    slidesPerView: 1,
     spaceBetween: 250,
     speed: 750,
     // scrollbar: {
@@ -146,6 +136,7 @@ let bootcampSlider = new Swiper('.bootcamp-slider', {
     },
 });
 let pricingSlider = new Swiper ('.pricing-slider', {
+    mousewheel: true,
     slidesPerView: 'auto',
     speed: 750,
     // scrollbar: {
@@ -155,6 +146,7 @@ let pricingSlider = new Swiper ('.pricing-slider', {
     // },
 });
 let joinSlider = new Swiper ('.join-slider', {
+    mousewheel: true,
     slidesPerView: 'auto',
     speed: 750,
     // scrollbar: {
@@ -216,12 +208,12 @@ if (document.querySelector('.hero-section')) {
     let path = anime.path('#path-neon-line-path');  
 
     tl
-    .add({
-        targets: '#animate-cloudnative-hat',
-        translateX: path('x'),
-        translateY: path('y'),
-        translateZ: [70, 70],
-    }, 0)
+    // .add({
+    //     targets: '#animate-cloudnative-hat',
+    //     translateX: path('x'),
+    //     translateY: path('y'),
+    //     translateZ: [70, 70],
+    // }, 0)
     .add({
         targets: neonLines,
         strokeDashoffset: [
@@ -232,8 +224,8 @@ if (document.querySelector('.hero-section')) {
         ],
     }, 0);
 
-    animationCanvas.onmouseover = tl.pause;
-    animationCanvas.onmouseout = tl.play;
+    // animationCanvas.onmouseover = tl.pause;
+    // animationCanvas.onmouseout = tl.play;
 
 
     particlesJS.load('particles-js', '/js/particlesjs-config.json', function() {
@@ -285,7 +277,7 @@ if (document.querySelector('.blog-section')) {
         }
     });
     // Blog article cut
-    let blogArticles = document.querySelectorAll(".blog-article");
+    let blogArticles = document.querySelectorAll('.blog-article');
     blogArticles.forEach((element) => {
         $clamp(element, {
             clamp: 8,
@@ -303,8 +295,34 @@ if (document.querySelector('.blog-section')) {
         }
     });
 };
-// Video
-const player = new Plyr('#player', {});
+if (document.querySelector('.cloud-section')) {
+    let cloudSlider = new Swiper('.cloud-slider', {
+        mousewheel: true,
+        slidesPerView: 'auto',
+        spaceBetween: 250,
+        speed: 750,
+        // centeredSlides: true,
+        // scrollbar: {
+        //     el: '.cloud-slider-scrollbar',
+        //     hide: false,
+        //     draggable: true,
+        // },
+        navigation: {
+            nextEl: '.cloud-slider-next',
+            prevEl: '.cloud-slider-prev',
+        },
+    });
+    console.log('Работают?');
+    // Video
+    const player = new Plyr('#player', {});
 
-// Expose player so it can be used from the console
-window.player = player;
+    // Expose player so it can be used from the console
+    window.player = player;
+    // anime({
+    //     targets: '#circle',
+    //     strokeDashoffset: [anime.setDashoffset, 0],
+    //     easing: 'linear',
+    //     duration: 5000,
+    //     loop: true
+    // });
+};

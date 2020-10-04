@@ -117,17 +117,17 @@
         font-size: 16px;
     }
     .hero-section .bottom-logo-slider-title {
-        font-size: 10px;
+        font-size: 14px;
     }
 }
 
 /* height */
-@media screen and (max-height: 1050px) {
+@media screen and (max-height: 950px) {
     .bottom-logo-slider-title {
         font-size: 16px;
     }
     .hero-section .bottom-logo-slider-title {
-        font-size: 10px;
+        font-size: 14px;
     }
     .columns {
         width: 100%;
@@ -176,8 +176,9 @@
     }
     .team-gallery-slider {
         margin-top: 0px;
+        // height: clamp(300px,350px,400px);
     }
-    .gallery-slide {
+    .gallery-item {
         height: clamp(300px,350px,400px);
         width: clamp(200px,230px,250px);
 
@@ -189,8 +190,12 @@
     }
     
     .gallery-slide-info {
-        transform: translateY(55%);
-        padding: 60px 20px 20px;
+        transform: translateY(67%);
+        padding: 20px;
+
+        .gallery-slide-info-text {
+            font-size: 12px;
+        }
     }
     .gallery-slide-title {
         font-size: 22px;
@@ -199,9 +204,7 @@
     .gallery-slide-subtitle {
         font-size: 15px;
     }
-    .gallery-slide-info-text {
-        font-size: 14px;
-    }
+    
     .workshop-timer {
         height: clamp(200px, 250px, 300px);
         padding: 25px;
@@ -497,6 +500,9 @@
     .columns {
         flex-direction: column;
         align-self: center;
+    }
+    .hero-animation-canvas {
+        margin-top: 50px;
     }
     .info-with-pic {
         flex-basis: auto;
