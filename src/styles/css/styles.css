@@ -232,6 +232,12 @@ input {
     stroke-linecap: round;
     stroke-dasharray: 14;
     opacity: 0; }
+  .cloud-animation-canvas .cloud-animation-svg .screenlogos {
+    opacity: 0; }
+  .cloud-animation-canvas .cloud-animation-svg .screenlogoslines {
+    stroke-width: 1;
+    fill: transparent;
+    stroke: #ffffff; }
 
 .mt-0 {
   margin-top: 0; }
@@ -592,8 +598,16 @@ input {
 .video-player .plyr button.plyr__control {
   color: #009fe9;
   border-radius: 50%; }
-  .video-player .plyr button.plyr__control:hover {
+  .video-player .plyr button.plyr__control:hover, .video-player .plyr button.plyr__control:active, .video-player .plyr button.plyr__control:focus {
     color: #ffffff; }
+
+.video-player .plyr .plyr__control--forvard {
+  border-radius: 0;
+  background-color: 0; }
+
+.video-player .plyr .plyr__menu__container {
+  background-color: #009fe9;
+  background: #009fe9; }
 
 .video-player .plyr button.plyr__control--overlaid {
   display: flex;

@@ -120,6 +120,14 @@
             stroke-dasharray: 14;
             opacity: 0;
         }
+        .screenlogos {
+            opacity: 0;
+        }
+        .screenlogoslines {
+            stroke-width: 1;
+            fill: transparent;
+            stroke: $light;
+        }
     }
 }
 .mt-0 {
@@ -522,9 +530,19 @@
     button.plyr__control {
         color: $blue;
         border-radius: 50%;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             color: $light;
         }
+    }
+    .plyr__control--forvard {
+        border-radius: 0;
+        background-color: 0;
+    }
+    .plyr__menu__container {
+        background-color: $blue;
+        background: $blue;
     }
     button.plyr__control--overlaid {
         display: flex;

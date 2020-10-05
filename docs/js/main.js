@@ -419,6 +419,8 @@ if (document.querySelector('.cloud-section')) {
     let cloudCables = document.querySelectorAll('.cloudcable');
     let cloudLights = document.querySelectorAll('.cloudlight');
     let cloudArrow = document.querySelector('.cloudarrowforward');
+    let screenLogos = document.querySelector('.screenlogos');
+    let screenLines = document.querySelectorAll('.screenlogoslines');
     let cloudDuration = 10000;
     anime({
         targets: cabelLines,
@@ -522,6 +524,41 @@ if (document.querySelector('.cloud-section')) {
         duration: 2000,
         direction: 'normal'
     }, 10000)
+    .add({
+        targets: screenLogos,
+        opacity: 1,
+        easing: 'linear',
+        duration: 500,
+        direction: 'normal'
+    }, 10000)
+    .add({
+        targets: screenLines,
+        easing: 'linear',
+        duration: 1000,
+        direction: 'normal',
+        strokeDashoffset: [anime.setDashoffset, 0]
+    }, 10500)
+    .add({
+        targets: screenLines,
+        easing: 'linear',
+        duration: 2000,
+        direction: 'normal',
+        fill: '#ffffff'
+    }, 11500)
+    .add({
+        targets: screenLogos,
+        opacity: 0,
+        easing: 'linear',
+        duration: 2000,
+        direction: 'normal'
+    }, 15000)
+    .add({
+        targets: [cabelGroup, stacksGroup, cloudConnectionsGroup],
+        opacity: 1,
+        easing: 'linear',
+        duration: 2000,
+        direction: 'normal'
+    }, 15000)
 
     // Video
     const player = new Plyr('#player', {});
