@@ -27,9 +27,8 @@ body.addEventListener('click', function(event){
     } else if (event.target == headerList) {
         headerList.classList.remove('active');
     } else if (!event.target.classList.contains('link-button')) {
-        // console.log('Работает не то');
     } else {
-        // console.log('Не работает');
+        // console.log('Some trouble');
     }
 });
 
@@ -78,9 +77,22 @@ let aboutSlider = new Swiper('.about-slider', {
         prevEl: '.about-slider-prev',
     },
 });
+if (window.matchMedia('(max-width: 450px)').matches) {
+    cardsNumber = 'auto';
+    cardsGroup = 1;
+} else if (window.matchMedia('(max-width: 850px)').matches) {
+    cardsNumber = 2;
+    cardsGroup = 2;
+} else if (window.matchMedia('(max-width: 1050px)').matches) {
+    cardsNumber = 3;
+    cardsGroup = 3;
+} else if (window.matchMedia('(min-width: 1050px)').matches) {
+    cardsNumber = 4;
+    cardsGroup = 4;
+};
 let gallerySlider = new Swiper('.team-gallery-slider', {
-    // direction: 'horizontal',
-    slidesPerView: 'auto',
+    slidesPerView: cardsNumber,
+    slidesPerGroup: cardsGroup,
     spaceBetween: 40,
     speed: 300,
     mousewheel: true,
@@ -242,22 +254,22 @@ if (document.querySelector('.hero-section')) {
     let netsParent = document.querySelector('.background-nets');
     let netsWidth = netsParent.offsetWidth;
     let netsHeight = netsParent.offsetHeight;
-    VANTA.NET({
-        el: "#background-nets",
-        mouseControls: true,
-        touchControls: false,
-        gyroControls: true,
-        height: netsHeight,
-        width: netsWidth,
-        scale: 1.25,
-        scaleMobile: 1.00,
-        color: 0x000000,
-        backgroundColor: 0x001029,
-        backgroundAlpha: 0,
-        points: 7.00,
-        maxDistance: 25.00,
-        spacing: 20.00,
-    });
+    // VANTA.NET({
+    //     el: "#background-nets",
+    //     mouseControls: true,
+    //     touchControls: false,
+    //     gyroControls: true,
+    //     height: netsHeight,
+    //     width: netsWidth,
+    //     scale: 1.25,
+    //     scaleMobile: 1.00,
+    //     color: 0x000000,
+    //     backgroundColor: 0x001029,
+    //     backgroundAlpha: 0,
+    //     points: 7.00,
+    //     maxDistance: 25.00,
+    //     spacing: 20.00,
+    // });
 };
 // Blog section
 if (document.querySelector('.blog-section')) {
@@ -286,12 +298,12 @@ if (document.querySelector('.blog-section')) {
     });
     let readMoreParrent = document.querySelector('.blog-slider');
     let readMoreList = document.querySelectorAll('.read-more-button');
-    console.log(readMoreList);
+    // console.log(readMoreList);
     readMoreList.forEach((element, i) => element.dataset.article = i);
 
     readMoreParrent.addEventListener('click', function(event) {
         if (event.target.classList.contains('read-more-button')) {
-           console.log(event.target.dataset.article);
+        //    console.log(event.target.dataset.article);
         }
     });
 };
@@ -312,17 +324,205 @@ if (document.querySelector('.cloud-section')) {
             prevEl: '.cloud-slider-prev',
         },
     });
-    console.log('Работают?');
+    // Slide 1 animation
+    let tlSlide1 = anime.timeline({
+        easing: 'linear',
+        loop: false
+    });
+    let cog = document.querySelector('#cog-element');
+    let lock = document.querySelector('#lock-element');
+    let cogPath = document.querySelector('#cog');
+    let circlePath = document.querySelector('#circle');
+    let firstArrowPath = document.querySelector('#arrow1');
+    let firstLinePath = document.querySelector('#line1');
+    let secondLinePath = document.querySelector('#line2');
+    let secondArrowPath = document.querySelector('#arrow2');
+    let keyholePath = document.querySelector('#keyhole');
+    let keyLine1 = document.querySelector('#lock1');
+    let keyLine2 = document.querySelector('#lock2');
+    let keyLine3 = document.querySelector('#lock3');
+    let keyLine4 = document.querySelector('#lock4');
+
+    tlSlide1
+    .add({
+        targets: cogPath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 0+2000)
+    .add({
+        targets: circlePath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1000
+    }, 0+2000)
+    .add({
+        targets: firstArrowPath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 1500+2000)
+    .add({
+        targets: firstLinePath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 500
+    }, 3000+2000)
+    .add({
+        targets: secondLinePath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 500
+    }, 3000+2000)
+    .add({
+        targets: secondArrowPath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 3500+2000)
+    .add({
+        targets: keyLine1,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 0+2000)
+    .add({
+        targets: keyLine4,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 0+2000)
+    .add({
+        targets: keyLine2,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 1500+2000)
+    .add({
+        targets: keyLine3,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 1500
+    }, 1500+2000)
+    .add({
+        targets: keyholePath,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        duration: 2000
+    }, 3000+2000)
+
+    // Slide 2 animation 
+    let tlSlide2 = anime.timeline({
+        easing: 'linear',
+        loop: true
+    });
+    let cabelGroup = document.querySelector('#cabellines');
+    let stacksGroup = document.querySelector('#stacks');
+    let cloudConnectionsGroup = document.querySelector('#cloudconnections');
+    let cabelLines = document.querySelectorAll('.cabelline');
+    let firstBoxLights = document.querySelectorAll('.box1light');
+    let secondBoxLights = document.querySelectorAll('.box2light');
+    let thirdBoxLights = document.querySelectorAll('.box3light');
+    let firstBoxForvardLight = document.querySelector('#box1forvardlight');
+    let thirdBoxForvardLight = document.querySelector('#box3forvardlight');
+    let thirdBoxBottomLight = document.querySelector('#box3bottomsidelight');
+    let thirdBoxSideLights = document.querySelectorAll('.box3sidelight');
+    let cloudCables = document.querySelectorAll('.cloudcable');
+    let cloudLights = document.querySelectorAll('.cloudlight');
+    let cloudArrow = document.querySelector('.cloudarrowforward');
+    let cloudDuration = 10000;
+    anime({
+        targets: cabelLines,
+        easing: 'linear',
+        duration: function(el, i) { return anime.random(1000, 2000) },
+        direction: 'normal',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        strokeDasharray: function(el, i) { return anime.random(10, 20) },
+        loop: true
+    });
+    anime({
+        targets: firstBoxForvardLight,
+        easing: 'linear',
+        duration: 300,
+        direction: 'alternate',
+        loop: true,
+        fill: '#009580',
+    });
+    anime({
+        targets: thirdBoxForvardLight,
+        easing: 'linear',
+        duration: 300,
+        delay: 150,
+        direction: 'alternate',
+        loop: true,
+        fill: '#009580',
+    });
+    tlSlide2
+    .add({
+        targets: firstBoxLights,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 1000,
+        direction: 'normal',
+        delay: function(el, i) { return i * 250 },
+    }, 0)
+    .add({
+        targets: secondBoxLights,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 1000,
+        direction: 'normal',
+        delay: function(el, i) { return i * 250 },
+    }, 1000)
+    .add({
+        targets: thirdBoxLights,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 1000,
+        direction: 'normal',
+        delay: function(el, i) { return i * 250 },
+    }, 2000)
+    .add({
+        targets: thirdBoxBottomLight,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 500,
+        direction: 'normal'
+    }, 3500)
+    .add({
+        targets: thirdBoxSideLights,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 500,
+        direction: 'normal',
+        delay: function(el, i) { return i * 250 },
+    }, 4000)
+    .add({
+        targets: cloudCables,
+        easing: 'linear',
+        duration: 3000,
+        opacity: 1,
+        direction: 'normal',
+        strokeDashoffset: [anime.setDashoffset, 0],
+    }, 4500)
+    .add({
+        targets: cloudLights,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 1000,
+        direction: 'normal'
+    }, 6000)
+    .add({
+        targets: cloudArrow,
+        fill: '#fe018a',
+        easing: 'linear',
+        duration: 500,
+        direction: 'normal'
+    }, 6000)
+    .add({
+        targets: cloudArrow,
+        fill: '#009580',
+        easing: 'linear',
+        duration: 2000,
+        direction: 'normal'
+    }, 7000)
+    .add({
+        targets: [cabelGroup, stacksGroup, cloudConnectionsGroup],
+        opacity: 0,
+        easing: 'linear',
+        duration: 2000,
+        direction: 'normal'
+    }, 10000)
+
     // Video
     const player = new Plyr('#player', {});
-
-    // Expose player so it can be used from the console
-    window.player = player;
-    // anime({
-    //     targets: '#circle',
-    //     strokeDashoffset: [anime.setDashoffset, 0],
-    //     easing: 'linear',
-    //     duration: 5000,
-    //     loop: true
-    // });
 };

@@ -75,6 +75,9 @@
 }
 .about-tabs-column {
     width: 50%;
+    flex-basis: 50%;
+    max-width: 800px;
+    flex-grow: 0;
 }
 .hero-content {
     height: 65%;
@@ -91,10 +94,32 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
-    .cloud-animation-object {
-        width: 80%;
-        filter: drop-shadow(0px 0px 50px $blue);
+}
+.cloud-animation-canvas {
+    width: 75%;
+    filter: drop-shadow(0px 0px 50px $blue);
+    .cloud-animation-svg {
+        .cabel {
+            fill: transparentize($color: $light, $amount: 0.85);
+            stroke: $blue;
+            stroke-width: 4;
+        }
+        .cabelline {
+            fill: none;
+            stroke: $blue;
+            stroke-width: 3;
+            stroke-dasharray: 15;
+        }
+        .boxlight {
+            fill: $pink;
+        }
+        .cloudcable {
+            stroke: $lightsgreen;
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 14;
+            opacity: 0;
+        }
     }
 }
 .mt-0 {
@@ -111,6 +136,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 20100;
+    max-width: 100vw;
 }
 .header {
     display: flex;
@@ -455,6 +481,7 @@
     width: 135px;
     filter: drop-shadow(0px 0px 4px transparentize($color: $light, $amount: 0.5));
     margin-bottom: 15px;
+    filter: drop-shadow(0px 0px 5px $light);
 }
 .info-pic.tight-pic {
     width: 90px;
@@ -496,7 +523,6 @@
         color: $blue;
         border-radius: 50%;
         &:hover {
-            background: $blue !important;
             color: $light;
         }
     }
@@ -732,6 +758,11 @@
 .info-text {
     line-height: 1.85;
 }
+.cloud-section {
+    .info-text {
+        padding-right: 5px;
+    }
+}
 .subtitle {
     margin-bottom: 35px;
 }
@@ -841,7 +872,7 @@
     justify-content: flex-end;
     align-items: center;
     box-shadow: 0px 0px 75px transparentize($color: $light, $amount: 0.75);
-    background: linear-gradient(180deg, $blue, $darkblue);
+    background: $bloggray;
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -862,12 +893,13 @@
     transform: translateZ(0);
 }
 .gallery-item .gallery-image {
-    object-fit: cover;
-    display: block;
     width: 100%;
     height: 100%;
+    max-height: 100%;
+    object-fit: cover;
     user-select: none;
     pointer-events: none;
+    filter: grayscale(1);
 }
 .gallery-slide-info {
     display: flex;
@@ -897,7 +929,7 @@
     box-shadow: 0px 0px 75px transparentize($color: $light, $amount: 0.2);
 
     .gallery-slide-info {
-        background-color: $light;
+        background-color: transparentize($color: $light, $amount: 0.15);
         transform: translateY(0);
         transition: all 0.5s ease;
     }
@@ -1093,6 +1125,12 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
+    .lockobject-path, 
+    .cogobject-path {
+        fill: none;
+        stroke: $light;
+        stroke-width: 3;
+    }
 }
 .dashed {
     border-radius: 15px;
