@@ -1,7 +1,10 @@
+/*Home button*/
+.home-button {
+    animation: show-home-button 3s ease-in-out;
+}
 /* Body animations */
 .body {
     animation: body-background 100s infinite;
-
 }
 
 /* Workshop animations */

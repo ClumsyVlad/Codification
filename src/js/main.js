@@ -8,6 +8,11 @@ let tabsLink = document.querySelectorAll('.about-tabs-logo');
 let burgerButton = document.querySelector('.burger-button');
 let headerList = document.querySelector('.header-nav__list');
 
+if (document.querySelector('.hero-section')) {
+    let homeButton = document.querySelector('.home-button');
+    homeButton.remove();
+};
+
 body.addEventListener('click', function(event){
     if (event.target.classList.contains('link-button')) {
         event.target.preventDefault;
@@ -240,8 +245,8 @@ if (document.querySelector('.hero-section')) {
     // animationCanvas.onmouseout = tl.play;
 
 
-    particlesJS.load('particles-js', '/js/particlesjs-config.json', function() {
-    });
+    particlesJS.load('particles-js', '/js/main-particles.json', function() {});
+
     VanillaTilt.init(animationCanvas, {
         max: 25,
         transition: true,
@@ -249,27 +254,60 @@ if (document.querySelector('.hero-section')) {
         reverse: true,
         gyroscope: true
     });
-    
 } else if(!(document.querySelector('.hero-section'))) {
-    let netsParent = document.querySelector('.background-nets');
-    let netsWidth = netsParent.offsetWidth;
-    let netsHeight = netsParent.offsetHeight;
-    VANTA.NET({
-        el: "#background-nets",
-        mouseControls: true,
-        touchControls: false,
-        gyroControls: true,
-        height: netsHeight,
-        width: netsWidth,
-        scale: 1.25,
-        scaleMobile: 1.00,
-        color: 0x000000,
-        backgroundColor: 0x001029,
-        backgroundAlpha: 0,
-        points: 7.00,
-        maxDistance: 25.00,
-        spacing: 20.00,
+    // let netsParent = document.querySelector('.background-nets');
+    // let netsWidth = netsParent.offsetWidth;
+    // let netsHeight = netsParent.offsetHeight;
+    particlesJS.load('particles-js', '/js/background-particles.json', function() {
+        if (window.matchMedia('(max-width: 450px)').matches) {
+            pJSDom[0].pJS.particles.number.value = 30;
+            pJSDom[0].pJS.particles.line_linked.distance = 40;
+            pJSDom[0].pJS.fn.particlesRefresh();
+            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
+        } else if (window.matchMedia('(max-width: 1024px)').matches) {
+            pJSDom[0].pJS.particles.number.value = 100;
+            pJSDom[0].pJS.particles.line_linked.distance = 60;
+            pJSDom[0].pJS.fn.particlesRefresh();
+            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
+        } else if (window.matchMedia('(max-width: 1440px)').matches) {
+            pJSDom[0].pJS.particles.number.value = 100;
+            pJSDom[0].pJS.particles.line_linked.distance = 70;
+            pJSDom[0].pJS.fn.particlesRefresh();
+            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
+        } else if (window.matchMedia('(max-width: 1600px)').matches) {
+            pJSDom[0].pJS.particles.number.value = 150;
+            pJSDom[0].pJS.particles.line_linked.distance = 80;
+            pJSDom[0].pJS.fn.particlesRefresh();
+            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
+        } else if (window.matchMedia('(max-width: 1920px)').matches) {
+            pJSDom[0].pJS.particles.number.value = 200;
+            pJSDom[0].pJS.particles.line_linked.distance = 125;
+            pJSDom[0].pJS.fn.particlesRefresh();
+            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
+        } else if (window.matchMedia('(min-width: 1920px)').matches) {
+            pJSDom[0].pJS.particles.number.value = 200;
+            pJSDom[0].pJS.particles.line_linked.distance = 125;
+            pJSDom[0].pJS.fn.particlesRefresh();
+            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
+        };
     });
+    
+    // VANTA.NET({
+    //     el: "#background-nets",
+    //     mouseControls: true,
+    //     touchControls: false,
+    //     gyroControls: true,
+    //     height: netsHeight,
+    //     width: netsWidth,
+    //     scale: 1.25,
+    //     scaleMobile: 1.00,
+    //     color: 0x000000,
+    //     backgroundColor: 0x001029,
+    //     backgroundAlpha: 0,
+    //     points: 7.00,
+    //     maxDistance: 25.00,
+    //     spacing: 20.00,
+    // });
 };
 // Blog section
 if (document.querySelector('.blog-section')) {
