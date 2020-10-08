@@ -12,7 +12,52 @@ if (document.querySelector('.hero-section')) {
     let homeButton = document.querySelector('.home-button');
     homeButton.remove();
 };
+/*Timer setup*/
+if (document.querySelector('.workshop-section')) {
+    let timerDays = document.querySelector('.days-number');
+    let timerHours = document.querySelector('.hours-number');
+    let timerMin = document.querySelector('.minutes-number');
+    let timerHeader = document.querySelector('.workshop-timer-header');
+    let removeItems = document.querySelector('.workshop-timer-time');
+    let pasteLinkObj = document.querySelector('.we-are-online');
 
+    function diffSubtract(date1, date2) {
+        return date2 - date1;
+    }
+    /* Set date with your UTC it is adaptive to world */
+    /* Not more 30 days due to the design in the timer unit */
+    let end_date = {
+        "full_year": "2019",
+        "month": "10",
+        "day": "28",
+        "hours": "07",
+        "minutes": "23",
+        "seconds": "00"
+    }
+    
+    let end_date_str = `${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`;
+    
+    timer = setInterval(function () {
+        let now = new Date();
+        let date = new Date(end_date_str);
+        let ms_left = diffSubtract(now, date);
+        if (ms_left <= 0) {
+            clearInterval(timer);
+            pasteLinkObj.classList.add('show-online');
+            removeItems.classList.add('hide-date');
+        } else {
+            let res = new Date(ms_left);
+            let str_timer = `${res.getUTCFullYear() - 1970}.${res.getUTCMonth()}.${res.getUTCDate() - 1} ${res.getUTCHours()}:${res.getUTCMinutes()}:${res.getUTCSeconds()}`;
+            let daysRemain = `${res.getUTCDate() - 1}`;
+            let hoursRemain = `${res.getUTCHours()}`;
+            let minRemain = `${res.getUTCMinutes()}`;
+            timerDays.innerHTML = daysRemain;
+            timerHours.innerHTML = hoursRemain.padStart(2, '0');
+            timerMin.innerHTML = minRemain.padStart(2, '0');
+        }
+    }, 1000)
+};
+/* Timer setup end */
 body.addEventListener('click', function(event){
     if (event.target.classList.contains('link-button')) {
         event.target.preventDefault;
@@ -137,6 +182,21 @@ let studySlider = new Swiper('.study-slider', {
         prevEl: '.study-slider-prev',
     },
 });
+let containersSlider = new Swiper('.containers-slider', {
+    mousewheel: true,
+    slidesPerView: 'auto',
+    spaceBetween: 250,
+    speed: 750,
+    // scrollbar: {
+    //     el: '.containers-slider-scrollbar',
+    //     hide: false,
+    //     draggable: true,
+    // },
+    navigation: {
+        nextEl: '.containers-slider-next',
+        prevEl: '.containers-slider-prev',
+    },
+});
 let bootcampSlider = new Swiper('.bootcamp-slider', {
     mousewheel: true,
     slidesPerView: 1,
@@ -175,6 +235,25 @@ let joinSlider = new Swiper ('.join-slider', {
 
 
 if (document.querySelector('.about-section')) {
+    /*timeline animation*/
+    let timeLineItems = document.querySelectorAll('.about-progress-info-item');
+    let firstItem = document.querySelector('.about-progress-info-item:first-child:after');
+    let lastItem = document.querySelector('.about-progress-info-item:last-child:before');
+
+    var timeLinetl = anime.timeline({
+        easing: 'linear',
+        duration: 2000,
+        loop: false
+    });
+    timeLinetl
+    .add({
+        targets: timeLineItems,
+        opacity: [0,1],
+        delay: function(el, i) { return i * 500 },
+        duration: 1500
+    }, 0);
+
+    /* about tabs */
     tabsLink[0].classList.add('active');
     tabsLink.forEach((link, i) => link.dataset.slide = i);
 
@@ -263,32 +342,26 @@ if (document.querySelector('.hero-section')) {
             pJSDom[0].pJS.particles.number.value = 30;
             pJSDom[0].pJS.particles.line_linked.distance = 40;
             pJSDom[0].pJS.fn.particlesRefresh();
-            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
         } else if (window.matchMedia('(max-width: 1024px)').matches) {
             pJSDom[0].pJS.particles.number.value = 100;
             pJSDom[0].pJS.particles.line_linked.distance = 60;
             pJSDom[0].pJS.fn.particlesRefresh();
-            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
         } else if (window.matchMedia('(max-width: 1440px)').matches) {
             pJSDom[0].pJS.particles.number.value = 100;
             pJSDom[0].pJS.particles.line_linked.distance = 70;
             pJSDom[0].pJS.fn.particlesRefresh();
-            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
         } else if (window.matchMedia('(max-width: 1600px)').matches) {
             pJSDom[0].pJS.particles.number.value = 150;
             pJSDom[0].pJS.particles.line_linked.distance = 80;
             pJSDom[0].pJS.fn.particlesRefresh();
-            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
         } else if (window.matchMedia('(max-width: 1920px)').matches) {
             pJSDom[0].pJS.particles.number.value = 200;
             pJSDom[0].pJS.particles.line_linked.distance = 125;
             pJSDom[0].pJS.fn.particlesRefresh();
-            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
         } else if (window.matchMedia('(min-width: 1920px)').matches) {
             pJSDom[0].pJS.particles.number.value = 200;
             pJSDom[0].pJS.particles.line_linked.distance = 125;
             pJSDom[0].pJS.fn.particlesRefresh();
-            console.log(pJSDom[0].pJS.particles.number.value + ', ' + pJSDom[0].pJS.particles.line_linked.distance);
         };
     });
     
@@ -328,12 +401,22 @@ if (document.querySelector('.blog-section')) {
     });
     // Blog article cut
     let blogArticles = document.querySelectorAll('.blog-article');
-    blogArticles.forEach((element) => {
-        $clamp(element, {
-            clamp: 8,
-            useNativeClamp: false
+    
+    if (window.matchMedia('(min-height: 850px)').matches) {
+        blogArticles.forEach((element) => {
+            $clamp(element, {
+                clamp: 8,
+                useNativeClamp: false
+            });
         });
-    });
+    } else if (window.matchMedia('(max-height: 850px)').matches) {
+        blogArticles.forEach((element) => {
+            $clamp(element, {
+                clamp: 6,
+                useNativeClamp: false
+            });
+        });
+    };
     let readMoreParrent = document.querySelector('.blog-slider');
     let readMoreList = document.querySelectorAll('.read-more-button');
     // console.log(readMoreList);

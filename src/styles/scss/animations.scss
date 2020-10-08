@@ -1,6 +1,6 @@
 /*Home button*/
 .home-button {
-    animation: show-home-button 3s ease-in-out;
+    animation: show-home-button 1.5s ease-in-out;
 }
 /* Body animations */
 .body {
@@ -63,4 +63,11 @@
 }
 .bootcamp-section .swiper-slide-active .panel-item:nth-child(4) .panel-description {
     animation: showpaneldescription 3.5s linear;
+}
+
+.about-progress-info-item:first-child:after {
+    animation: showfirsttimelinesline 3s linear;
+}
+.about-progress-info-item:last-child:before {
+    animation: showsecondtimelinesline 4.5s linear;
 }

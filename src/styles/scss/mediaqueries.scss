@@ -119,10 +119,56 @@
     .hero-section .bottom-logo-slider-title {
         font-size: 14px;
     }
+    .blog-item {
+        flex-basis: 325px;
+        box-shadow: 0px 0px 20px 10px $blue;
+    }
+    .blog-image-block {
+        flex-basis: 30%;
+        max-height: 180px;
+    }
+    .blog-content {
+        padding: 20px;
+    }
+    .blog-header {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .blog-info-block {
+        margin-bottom: 10px;
+    }
+    .blog-date {
+        font-size: 12px;
+    }
+    .blog-author {
+        font-size: 12px;
+    }
+    .blog-article-content {
+        margin-bottom: 15px;
+    }
+    .blog-article {
+        font-size: 12px;
+        line-height: 1.3;
+        max-height: 150px;
+    }
+    .blog-button.button {
+        font-size: 14px;
+        flex-basis: 65px;
+        padding: 5px 15px 3px;
+    }
+    .blog-info-link {
+        font-size: 12px;
+    }
 }
 
 /* height */
 @media screen and (max-height: 950px) {
+    .blog-image-block {
+        flex-basis: 25%;
+        max-height: 100px;
+    }
     .bottom-logo-slider-title {
         font-size: 16px;
     }
@@ -386,7 +432,120 @@
     
 }
 
+@media screen and (min-width: 1050px) and (max-width: 1440px) {
+    .blog-section {
+        margin-top: 25px;
+    }
+    .blog-item {
+        flex-basis: 280px;
+        box-shadow: 0px 0px 20px 10px $blue;
+    }
+    .blog-image-block {
+        flex-basis: 30%;
+        max-height: 120px;
+    }
+    .blog-content {
+        padding: 15px;
+    }
+    .blog-header {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+    .blog-info-block {
+        margin-bottom: 5px;
+    }
+    .blog-date {
+        font-size: 10px;
+    }
+    .blog-author {
+        font-size: 10px;
+    }
+    .blog-article-content {
+        margin-bottom: 10px;
+    }
+    .blog-article {
+        font-size: 12px;
+        line-height: 1.15;
+        max-height: 130px;
+    }
+    .blog-button.button {
+        font-size: 12px;
+        flex-basis: 65px;
+        padding: 5px 15px 3px;
+    }
+    .blog-info-link {
+        font-size: 12px;
+    }
+    .info-with-pic {
+        margin: 10px 0;
+        .info-text {
+            font-size: 12px;
+            line-height: 1.15;
+        }
+    }
+    .main-title {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .medium-size {
+        line-height: 1.3;
+    }
+    .multiple-text .text:not(:first-child) {
+        margin-top: 10px;
+    }
+    .video-plug {
+        width: 750px;
+    }
+    .video-player {
+        width: 540px;
+        height: 300px;
+    }
+    .contact-form-block {
+        padding: 20px;
+        
+        .form-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .form-item {
+            margin-bottom: 15px;
+        }
+    }
+    .workshop-timer {
+        padding: 20px;
+        height: auto;
+        margin-top: 50px;
+
+        .workshop-timer-header {
+            padding: 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .workshop-timer-time .workshop-timer-time-units .time-number {
+            line-height: 1;
+            font-size: 60px;
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
+    .superhero-block {
+        right: 15vw;
+        width: 80vw;
+        .plug-image {
+            height: 500px;
+        }
+    }
+    .article {
+        width: 90%;
+    }
+    .article-section {
+        max-height: 90%;
+    }
+    .text.article-text {
+        font-size: 14px;
+    }
     .wrapper {
         max-width: 100%;
         padding: 0px 50px;
@@ -405,6 +564,7 @@
         z-index: 20200;
         transform: translateX(100%);
         transition: all 0.3s ease;
+        margin-top: 0;
         &.active {
             transform: translateX(0);
 
@@ -634,8 +794,52 @@
             height: 50%;
         }
     }
+    .workshop-timer {
+        height: auto;
+        padding: 15px;
+
+        .workshop-timer-header {
+            padding-bottom: 0px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .workshop-timer-time {
+            .workshop-timer-time-units {
+                .time-number {
+                    font-size: 40px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    .workshop-section {
+        .columns {
+            flex-direction: row;
+        }
+        .justify-evenly {
+            justify-content: space-between
+        }
+    }
+    .contact-form-block {
+        margin-top: 25px;
+        padding: 25px;
+        .form-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
 }
 @media screen and (max-width: 768px) {
+    .article {
+        width: 90%;
+    }
+    .article-image {
+        width: 80%;
+        align-self: center;
+    }
+    .text.article-text {
+        font-size: 12px;
+    }
     .workshop-timer {
         padding: 10px;
         height: 180px;
@@ -671,8 +875,81 @@
         margin-top: 50px;
         height: 250px;
     }
+    .workshop-section {
+        .columns {
+            flex-direction: column;
+        }
+        .justify-evenly {
+            justify-content: space-between
+        }
+    }
+    .contact-form-block {
+        margin-top: 25px;
+        padding: 25px;
+        .form-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    .about-progress-info {
+        margin-top: 0px;
+
+        .about-progress-info-item {
+            padding-left: 70px;
+            margin-bottom: 10px;
+            height: 85px;
+            
+            &:first-child:after,
+            &:last-child:before {
+                width: 5px;
+                height: 25vh;
+                left: 25px;
+                right: 100%;
+            }
+            .small-info-header {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            .progress-info-text {
+                font-size: 16px;
+                line-height: 1.15;
+            }
+        }
+    }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
+    .header-nav__list {
+        padding: 60px 20px 20px;
+
+        .header-nav__item {
+            &.drop-item {
+                font-size: 16px;
+            }
+            .header-nav__subitem {
+                font-size: 14px;
+            }
+            &:not(:first-child) {
+                margin-top: 0px;
+            }
+            .header-nav__link {
+                font-size: 14px;
+            }
+        }
+    }
+    .article {
+        width: 95%;
+    }
+    .article-info-block {
+        flex-direction: column;
+
+        .article-info:not(:first-child) {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+    .article-image {
+        width: 100%;
+    }
     .header-block {
         .burger-button {
             width: 30px;
@@ -693,7 +970,8 @@
         }
     }
     .text {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 1.15;
     }
     .header-block .header {
         padding-top: 20px;
@@ -702,11 +980,18 @@
         padding: 0px 20px;
     }
     .hero-section .button-margin {
-        margin-top: 40px;
+        margin-top: 20px;
+    }
+    .hero-animation-canvas {
+        margin-top: 20px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 5px 15px;
     }
     .main-title {
-        margin-bottom: 10px;
-        font-size: 22px;
+        margin-bottom: 5px;
+        font-size: 18px;
     }
     .subtitle {
         margin-bottom: 10px;
@@ -732,53 +1017,52 @@
     .about-progress-info {
         margin-top: 0px;
         .about-progress-info-item {
-            margin-bottom: 15px;
-            padding-left: 50px;
+            margin-bottom: 5px;
+            padding-left: 40px;
+            height: 60px;
 
             .small-info-header {
-                font-size: 18px;
+                font-size: 14px;
                 margin-bottom: 5px;
             }
             .progress-info-text {
-                font-size: 12px;
+                font-size: 10px;
             }
             .progress-info-circle {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 margin-bottom: 0px;
 
                 &:after {
-                    width: 25px;
-                    height: 25px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
-
             &:first-child:after {
-                left: 20px;
-                top: 10px;
+                left: 15px;
+                top: 30px;
                 transform: translateX(-50%);
+                height: 200%;
             }
             &:last-child {
                 .progress-info-circle {
                     .circle-to-triangle {
-                        transform: rotate(180deg) translateY(5px);
                         &:first-child {
-                            width: 40px;
-                            height: 40px;
+                            width: 30px;
+                            height: 30px;
                             top: 0;
                             bottom: 0;
                         }
                         &:last-child {
-                            width: 25px;
-                            height: 25px;
-                            right: 20%;
+                            width: 20px;
+                            height: 20px;
+                            right: 17%;
                         }
                     }
                 }
                 &:before {
-                    left: 20px;
-                    bottom: 100%;
-                    transform: translateX(-50%);
+                    left: 12.5px;
+                    height: 200%;
                 }
             }
         } 
@@ -893,6 +1177,7 @@
         width: 100%;
         .plug-image {
             opacity: 1;
+            height: 100%;
         }
     }
     .video-plug {
@@ -958,6 +1243,57 @@
                 opacity: 0.5;
                 width: 100%;
                 object-fit: contain;
+            }
+        }
+    }
+    .workshop-timer {
+        padding: 5px;
+        width: 100%;
+        max-height: 60px;
+        margin-top: 5px;
+        box-shadow: 0px 0px 10px $blue;
+
+        .workshop-timer-header {
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+        .workshop-timer-time {
+            .workshop-timer-time-units {
+                .time-number {
+                    font-size: 16px;
+                    line-height: 1;
+                }
+                .time-subtitle {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .contact-form-block {
+        margin-top: 15px;
+        padding: 15px;
+        .form-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .contact-form {
+            .form-item {
+                margin-bottom: 5px;
+                .form-input {
+                    font-size: 10px;
+                    padding: 0px;
+
+                    &:focus+.form-placeholder {
+                        transform: translateY(-6px) scale(.75);
+                    }
+                }
+            }
+            .form-placeholder {
+                font-size: 10px;
+            }
+            .form-button {
+                font-size: 12px;
+                padding: 5px 10px;
             }
         }
     }

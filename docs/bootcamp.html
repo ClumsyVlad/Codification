@@ -47,7 +47,7 @@
                     <li class="header-nav__item drop-item">Get started
                         <ul class="header-nav__sublist">
                             <li class="header-nav__subitem">
-                                <a href="/workshop.html" data-link="workshop-section" class="header-nav__link link-button disabled">Next workshop</a>
+                                <a href="/workshop.html" data-link="workshop-section" class="header-nav__link link-button">Next workshop</a>
                             </li>
                             <li class="header-nav__subitem">
                                 <a href="/casestudy.html" data-link="study-section" class="header-nav__link link-button">Case studies</a>
@@ -55,6 +55,9 @@
                             <li class="header-nav__subitem">
                                 <a href="/pricing.html" data-link="pricing-section" class="header-nav__link link-button">Pricing</a>
                             </li>
+                            <!-- <li class="header-nav__subitem">
+                                <a href="/containers101.html" data-link="pricing-section" class="header-nav__link link-button">What are containers?</a>
+                            </li> -->
                         </ul>
                     </li>
                     <li class="header-nav__item drop-item">Join us
@@ -73,7 +76,7 @@
                                 <a href="/team.html" data-link="team-section" class="header-nav__link link-button">Meet the team</a>
                             </li>
                             <li class="header-nav__subitem">
-                                <a href="/blog.html" data-link="blog-section" class="header-nav__link link-button disabled">Blog</a>
+                                <a href="/blog.html" data-link="blog-section" class="header-nav__link link-button">Blog</a>
                             </li>
                         </ul>
                     </li>
@@ -85,12 +88,12 @@
         </header>
         <main class="main">
         <!-- Bootcamp section -->
-            <section class="section bootcamp-section" id="bootcamp-section">
-                <div class="columns wrapper">
+            <section class="section" id="bootcamp-section">
+                <div class="bootcamp-section">
                     <div class="bootcamp-slider slider">
                         <div class="swiper-wrapper bootcamp-slider-wrapper">
                             <div class="swiper-slide bootcamp-slide bootcamp-steps-slide">
-                                <div class="columns">
+                                <div class="columns wrapper">
                                     <div class="column-content column-less-content justify-start">
                                         <h4 class="main-title unuppercase">The cloud native bootcamp</h4>
                                         <div class="column-content justify-start">
@@ -113,9 +116,7 @@
                                             <div class="panels-items-block">
                                                 <div class="panel-item active-panel subactive-panel">
                                                     <div class="panel-square">
-                                                        <svg class="panel-object">
-                                                            <use href="#orange-panel"/>
-                                                        </svg>
+                                                        <img src="./images/orange-panel.png" alt="" class="panel-object">
                                                         <span class="panel-item-name">Kubernetes</span>
                                                     </div>
                                                     <div class="panel-description">
@@ -132,9 +133,7 @@
                                                 </div>
                                                 <div class="panel-item active-panel subactive-panel">
                                                     <div class="panel-square">
-                                                        <svg class="panel-object">
-                                                            <use href="#pink-panel"/>
-                                                        </svg>
+                                                        <img src="./images/pink-panel.png" alt="" class="panel-object">
                                                         <span class="panel-item-name">Helm</span>
                                                     </div>
                                                     <div class="panel-description">
@@ -151,9 +150,7 @@
                                                 </div>
                                                 <div class="panel-item active-panel subactive-panel">
                                                     <div class="panel-square">
-                                                        <svg class="panel-object">
-                                                            <use href="#purple-panel"/>
-                                                        </svg>
+                                                        <img src="./images/purple-panel.png" alt="" class="panel-object">
                                                         <span class="panel-item-name">Terraform</span>
                                                     </div>
                                                     <div class="panel-description">
@@ -170,9 +167,7 @@
                                                 </div>
                                                 <div class="panel-item active-panel subactive-panel">
                                                     <div class="panel-square">
-                                                        <svg class="panel-object">
-                                                            <use href="#blue-panel"/>
-                                                        </svg>
+                                                        <img src="./images/blue-panel.png" alt="" class="panel-object">
                                                         <span class="panel-item-name">Azure DevOps</span>
                                                     </div>
                                                     <div class="panel-description">
@@ -193,7 +188,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide bootcamp-slide show-hero">
-                                <div class="columns">
+                                <div class="columns wrapper">
                                     <div class="column-content column-less-content justify-start">
                                         <h4 class="main-title unuppercase">Cloud native bootcamp</h4>
                                         <div class="column-content justify-start">
@@ -3711,6 +3706,11 @@
         
             <symbol id="nav-arrow" viewBox="0 0 22 37">
                 <path d="M0.21752 33.0974C0.214762 32.6205 0.306162 32.1478 0.486474 31.7064C0.666785 31.2649 0.932461 30.8634 1.26827 30.5249L13.2614 18.6042L1.7393 6.64739C1.06446 5.96853 0.685676 5.0502 0.685676 4.09298C0.685676 3.13576 1.06446 2.21743 1.7393 1.53856C2.07613 1.19895 2.47687 0.929402 2.9184 0.745453C3.35994 0.561503 3.83352 0.466796 4.31184 0.466796C4.79015 0.466796 5.26374 0.561503 5.70527 0.745453C6.1468 0.929402 6.54754 1.19895 6.88437 1.53856L20.8703 16.0317C21.5341 16.709 21.906 17.6196 21.906 18.568C21.906 19.5164 21.5341 20.427 20.8703 21.1043L6.37711 35.5975C6.04028 35.9371 5.63954 36.2066 5.19801 36.3906C4.75648 36.5745 4.28289 36.6692 3.80457 36.6692C3.32626 36.6692 2.85267 36.5745 2.41114 36.3906C1.96961 36.2066 1.56887 35.9371 1.23204 35.5975C0.584628 34.9258 0.221234 34.0303 0.21752 33.0974Z"/>    
+            </symbol>
+        
+            <symbol id="back-arrow" viewBox="0 0 45 30">
+                <path d="M4.05273 15.0967C4.05273 14.5598 4.26602 14.0448 4.64567 13.6652C5.02533 13.2855 5.54025 13.0722 6.07716 13.0722L42.5168 13.0722C43.0537 13.0722 43.5686 13.2855 43.9483 13.6652C44.3279 14.0448 44.5412 14.5598 44.5412 15.0967C44.5412 15.6336 44.3279 16.1485 43.9483 16.5282C43.5686 16.9078 43.0537 17.1211 42.5168 17.1211L6.07716 17.1211C5.54025 17.1211 5.02533 16.9078 4.64567 16.5282C4.26602 16.1485 4.05273 15.6336 4.05273 15.0967Z"/>
+                <path d="M0.594749 16.5313C0.406222 16.3432 0.256647 16.1198 0.15459 15.8739C0.0525326 15.6279 -6.07905e-07 15.3642 -6.19544e-07 15.098C-6.31184e-07 14.8317 0.0525325 14.568 0.15459 14.3221C0.256647 14.0761 0.406222 13.8527 0.594749 13.6647L12.7413 1.51814C13.1214 1.13801 13.637 0.924453 14.1746 0.924453C14.7122 0.924453 15.2277 1.13801 15.6079 1.51814C15.988 1.89827 16.2016 2.41384 16.2016 2.95143C16.2016 3.48902 15.988 4.00459 15.6079 4.38472L4.89057 15.098L15.6079 25.8112C15.988 26.1913 16.2016 26.7069 16.2016 27.2445C16.2016 27.7821 15.988 28.2977 15.6079 28.6778C15.2277 29.0579 14.7122 29.2715 14.1746 29.2715C13.637 29.2715 13.1214 29.0579 12.7413 28.6778L0.594749 16.5313Z"/>
             </symbol>
         
             <symbol id="orange-panel" viewBox="0 0 387 243">
